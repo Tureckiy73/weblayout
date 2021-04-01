@@ -1,0 +1,273 @@
+/* common styles -------------------------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 30px 0;
+  font-size: 16px;
+  background-color: #E5E5E5;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+section {
+  margin-top: 70px;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+.top-heading {
+  margin-left: 40px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.btn {
+  padding: 13px 20px;
+  line-height: 1;
+  color: #CC9933;
+  border: 1px solid #CC9933;
+  border-radius: 10px;
+}
+
+/* header -------------------------------------------------------------------------------*/
+.header {
+  min-height: 155px;
+}
+
+.header-logtel {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 40px;
+}
+
+.header-tel-link {
+  color: #666;
+}
+
+.person-info {
+  margin-left: auto;
+}
+
+.header-nav {
+  padding: 25px 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.nav-list {
+  display: flex;
+  color: #666666 ;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.header-btns {
+  margin-right: auto;
+}
+
+/* specoffer -------------------------------------------------------------------------------*/
+.invisible-header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* .section-specoffers {
+  max-height: 600px;
+} */
+
+.section-specoffers-cards {
+  display: flex;
+}
+
+.section-specoffers-allcards {
+  margin-right: 23px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.common-offer-adv:not(:last-child) {
+  margin-bottom: 23px;
+}
+
+.lux-offer-adv {
+  width: 50%;
+}
+
+/* about us -------------------------------------------------------------------------------*/
+.section-aboutus-description {
+  line-height: 2;
+}
+
+/* services -------------------------------------------------------------------------------*/
+.section-services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.section-services-item {
+  flex-basis: 49%;
+}
+
+.section-services-item:not(:nth-last-child(-n+2)) {
+  margin-bottom: 23px;
+}
+
+.section-services-item-text {
+  padding: 0px 40px 50px 40px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.section-services-item-heading {
+  font-size: 20px;
+  line-height: 2;
+  color: #CC9933;
+}
+
+.section-services-description {
+  margin: 0;
+  line-height: 2;
+}
+
+/* advantages -------------------------------------------------------------------------------*/
+.section-advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.section-advantages-item {
+  width: 160px;
+  flex-basis: 23%;
+  padding: 115px 40px 40px 45px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.section-advantages-item:not(:nth-last-child(-n+4)) {
+  margin-bottom: 23px;
+}
+
+.section-advantages-description {
+  line-height: 2;
+}
+
+/* accommodation -------------------------------------------------------------------------------*/
+.section-accommodation-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.section-accommodation-item {
+  flex-basis: 32%;
+  min-height: 440px;
+  max-width: 374px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.section-accommodation-item:not(:nth-last-child(-n+3)) {
+  margin-bottom: 23px;
+}
+
+.accommodation-info {
+  padding: 35px 40px 40px 45px;
+}
+
+.section-accommodation-item-img {
+  border-radius: 15px 15px 0 0;
+}
+
+.accommodation-price-stars {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars {
+  display: inline-block;
+  text-align: right;
+}
+
+.accommodation-price {
+  display: inline-block;
+}
+
+.accommodation-hotel-name {
+  margin-top: 0;
+}
+
+.accommodation-city {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.accomodation-btn {
+  display: inline-block;
+}
+
+.accommodation-other-background {
+  position: relative;
+  height: 440px;
+  background-image: url(../img/rocks.jpg);
+  background-repeat: no-repeat;
+}
+
+.section-accomodation-showall {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  padding: 0 69px 27px 54px;
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 500;
+  color: #fff;
+}
+/* ------------------------------------------------------------------------------- */
