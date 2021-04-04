@@ -61,10 +61,11 @@ img {
 
 html {
   font-family: 'Muller', sans-serif;
+  word-wrap: break-word;
 }
 
-section:not(:last-child) {
-  margin-bottom: 70px;
+.section-padding:not(:last-child) {
+  padding-bottom: 70px;
 }
 
 .container {
@@ -85,10 +86,11 @@ section:not(:last-child) {
 
 .btn {
   padding: 13px 20px;
+  border-radius: 10px;
+  border: 1px solid #CC9933;
+  text-align: center;
   line-height: 1;
   color: #CC9933;
-  border: 1px solid #CC9933;
-  border-radius: 10px;
 }
 
 /* header -------------------------------------------------------------------------------*/
@@ -119,43 +121,43 @@ section:not(:last-child) {
 }
 
 .cabinet-icon {
-  margin-right: 5px;
-  display: inline-block;
-  height: 12px;
-  width: 21px;
-  background: url(../img/svg/Vector.svg) center center no-repeat;
-  background-size: contain;
+  background: url(../img/svg/Vector.svg) left top no-repeat;
 }
 
 .cabinet-link {
+  padding-left: 28px;
   line-height: 1;
   color: #CC9933;
 }
 
 .header-nav {
-  padding: 25px 45px;
   display: flex;
+  padding: 10px 45px;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  min-height: 70px;
   border-radius: 15px;
   background-color: #fff;
 }
 
+.header-btns {
+  display: flex;
+  justify-content: space-between;
+  width: 35.3%;
+  margin-left: 57px;
+}
+
 .nav-list {
   display: flex;
+  padding-right: 56px;
+  justify-content: space-between;
+  width: 64.7%;
   border-right: 1px solid #E1E1E1;
 }
 
-.nav-item:not(:last-child) {
-  margin-right: 45px;
-}
-
-.nav-item:last-child {
-  margin-right: 56px;
-}
-
 .nav-item {
+  max-width: 20%;
+  text-align: center;
   line-height: 50px;
   font-weight: 500;
 }
@@ -169,6 +171,7 @@ section:not(:last-child) {
 }
 
 .btn-nav {
+  max-width: 50%;
   font-weight: 500;
 }
 
@@ -218,15 +221,15 @@ section:not(:last-child) {
 }
 
 .maldives-img {
-  background-image: url(../img/maldives.jpg);
+  background-image: url(../img/maldives.png);
 }
 
 .crete-img {
-  background-image: url(../img/Crete.jpg);
+  background-image: url(../img/Crete.png);
 }
 
 .lux-offer {
-  background-image: url(../img/lux.jpg);
+  background-image: url(../img/lux.png);
 }
 
 .specoffers-description-pos {
@@ -265,17 +268,13 @@ font-size: 40px;
 }
 
 .specoffers-details {
+  padding-right: 15px;
   color: #FFCC66;
   line-height: 1;
 }
 
 .details-icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background: url(../img/svg/Rectangle_1.svg) center center no-repeat;
-  background-size: contain;
-  transform: translateY(4px);
+  background: url(../img/svg/Rectangle_1.svg) right center no-repeat;
 }
 
 /* about us -------------------------------------------------------------------------------*/
@@ -298,7 +297,6 @@ font-size: 40px;
 .section-services-item {
   flex-basis: 48.89%;
   border-radius: 15px;
-  background-color: white;
 }
 
 .section-services-item:not(:nth-last-child(-n+2)) {
@@ -306,27 +304,25 @@ font-size: 40px;
 }
 
 .section-services-item-text {
-  padding: 0px 126px 50px 45px;
+  padding: 191px 126px 50px 45px;
 }
 
 .section-services-item-heading {
+  padding-right: 15px;
   font-size: 20px;
   font-weight: 500;
   line-height: 2;
   color: #CC9933;
 }
 
+.services-details-icon {
+  background: url(../img/svg/Rectangle_4.svg) right center no-repeat;
+}
+
 .section-services-description {
   margin: 0;
   font-weight: 400;
   line-height: 2;
-}
-
-.services-image-glasses, .services-image-meal, .services-image-pool, .services-image-parking {
-  margin-bottom: 26px;
-  border-radius: 15px 15px 0 0;
-  height: 165px;
-  background-size: contain;
 }
 
 .services-image-glasses {
@@ -343,6 +339,11 @@ font-size: 40px;
 
 .services-image-parking {
   background: url(../img/parking.jpg) top center no-repeat;
+}
+
+.services-image-glasses, .services-image-meal, .services-image-pool, .services-image-parking {
+  background-color: white;
+  background-size: contain;
 }
 
 /* advantages -------------------------------------------------------------------------------*/
@@ -421,6 +422,7 @@ font-size: 40px;
 .section-accommodation-item {
   flex-basis: 31.8%;
   min-height: 440px;
+  max-width: 374px;
   border-radius: 15px;
   background-color: white;
 }
@@ -477,6 +479,7 @@ font-size: 40px;
 }
 
 .accommodation-other-background {
+  padding: 40px 40px 27px 54px;
   display: flex;
   height: 440px;
   background-image: url(../img/rocks.jpg);
@@ -485,10 +488,10 @@ font-size: 40px;
 
 .accommodation-other {
   align-self: flex-end;
-  padding: 0 40px 27px 54px;
 }
 
 .section-accomodation-showall {
+  padding-right: 16px;
   font-size: 20px;
   line-height: 2;
   font-weight: 500;
@@ -496,11 +499,6 @@ font-size: 40px;
 }
 
 .accomodation-showall-icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background: url(../img/svg/Rectangle_3.svg) left center no-repeat;
-  background-size: contain;
-  transform: translateY(4px);
+  background: url(../img/svg/Rectangle_3.svg) right center no-repeat;
 }
 /* ------------------------------------------------------------------------------- */
