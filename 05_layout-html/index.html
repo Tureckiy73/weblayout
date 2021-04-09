@@ -383,11 +383,12 @@
     <section class="section-form section-padding">
       <div class="container container-form">
         <h2 class="top-heading section-form-heading">Хочу тур</h2>
-        <form action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" class="tour-form">
+        <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="tour-form">
           <ul class="tour-form-list">
             <li class="tour-form-item">
               <label class="tour-form-label">Город</label>
               <select name="city" required class="tour-form-data tour-form-selector select-arrow">
+                <option label="Выберите город"></option>
                 <option>Канберра</option>
                 <option>Париж</option>
                 <option>Берлин</option>
@@ -402,6 +403,7 @@
             <li class="tour-form-item">
               <label class="tour-form-label">Страна</label>
               <select name="country" required class="tour-form-data tour-form-selector select-arrow">
+                <option label="Выберите страну"></option>
                 <option>Австралия</option>
                 <option>Франция</option>
                 <option>Германия</option>
