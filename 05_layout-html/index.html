@@ -379,10 +379,146 @@
         </ul>
       </div>
     </section>
+
+    <section class="section-form section-padding">
+      <div class="container container-form">
+        <h2 class="top-heading section-form-heading">Хочу тур</h2>
+        <form action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" class="tour-form">
+          <ul class="tour-form-list">
+            <li class="tour-form-item">
+              <label class="tour-form-label">Город</label>
+              <select name="city" required class="tour-form-data tour-form-selector select-arrow">
+                <option>Канберра</option>
+                <option>Париж</option>
+                <option>Берлин</option>
+                <option>Рим</option>
+                <option>Токио</option>
+                <option>Москва</option>
+                <option>Лондон</option>
+                <option>Вашингтон</option>
+                <option>Санкт-Петербург</option>
+              </select>
+            </li>
+            <li class="tour-form-item">
+              <label class="tour-form-label">Страна</label>
+              <select name="country" required class="tour-form-data tour-form-selector select-arrow">
+                <option>Австралия</option>
+                <option>Франция</option>
+                <option>Германия</option>
+                <option>Италия</option>
+                <option>Япония</option>
+                <option>Россия</option>
+                <option>Великобритания</option>
+                <option>США</option>
+              </select>
+            </li>
+            <li class="tour-form-item">
+              <label class="tour-form-label">Дата прибытия</label>
+              <input type="date" name="calendar" required class="tour-form-data tour-form-input">
+            </li>
+            <li class="tour-form-item">
+              <label for="nights" class="tour-form-label">Ночей</label>
+              <input id="nights" type="number" required class="tour-form-data tour-form-input tourists-nights-border"
+                value="7" min="4">
+            </li>
+            <li class="tour-form-item">
+              <label for="tourists" class="tour-form-label">Туристы</label>
+              <input id="tourists" type="number" required class="tour-form-data tour-form-input tourists-nights-border"
+                placeholder="Кол-во людей" value="1" min="1">
+            </li>
+          </ul>
+          <button type="submit" class="btn tour-form-btn">
+            Найти
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-contacts section-padding">
+      <div class="container">
+        <h2 class="top-heading">Контакты</h2>
+        <div class="contacts-box">
+          <ul class="contacts-list">
+            <li class="contacts-item">
+              <h3 class="contacts-heading">Адрес</h3>
+              <span class="contacts-info contacts-info-lh">Москва, улица Юности, дом 5 строение 4, офис 2</span>
+            </li>
+            <li class="contacts-item">
+              <h3 class="contacts-heading">Телефоны</h3>
+              <div class="contacts-info">
+                <a href="tel:+74995356434" class="contacts-tel-link contacts-info-lh">
+                  +7 (499) 535-64-34
+                </a>
+                <a href="tel:+74950050544" class="contacts-tel-link contacts-info-lh">
+                  +7 (495) 005-05-44
+                </a>
+              </div>
+            </li>
+            <li class="contacts-item">
+              <h3 class="contacts-heading">E-mail</h3>
+              <div class="contacts-info">
+                <span class="contacts-info-lh">
+                  <a href="mailto:lg.oona@mail.ru" class="contacts-mail">lg.oona@mail.ru</a> по вопросам бронирования
+                </span>
+                <span class="contacts-info-lh">
+                  <a href="mailto:hotels.ln@mail.ru" class="contacts-mail">hotels.ln@mail.ru</a> по вопросам
+                  сотрудничества
+                </span>
+              </div>
+            </li>
+            <li class="contacts-item">
+              <h3 class="contacts-heading">График</h3>
+              <span class="contacts-info contacts-info-lh">
+                Понедельник - пятница, с 10:00 до 19:00
+              </span>
+            </li>
+            <li class="contacts-item">
+              <button class="btn contacts-btn">Построить маршрут</button>
+            </li>
+          </ul>
+          <img src="img/Layer.jpg" alt="Офис Лагуны" class="contacts-image">
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
+  <footer class="container">
+    <div class="footer-container">
+      <ul class="footer-list">
+        <li class="footer-item footer-copyright">
+          <span class="footer-text">© 2012-2020 Управляющая компания Объединенной сети «Лагуна Хотелс»</span>
+          <span class="footer-text">Представленная на сайте информация носит справочный характер и не является публичной офертой</span>
+          <a href="#" class="footer-links">Пользовательское соглашение</a>
+        </li>
+        <li class="footer-item footer-adress">
+          <span class="footer-text footer-text-margin">
+            11710, улица Юности, дом 5 строение 4, офис 2
+          </span>
+          <div class="footer-text-margin">
+            <a href="tel:+74995356434" class="footer-links">
+              +7 (499) 535-64-34
+            </a>
+            <a href="tel:+74950050544" class="footer-links footer-text-margin">
+              +7 (495) 005-05-44
+            </a>
+          </div>
+          <div>
+            <a href="mailto:lg.oona@mail.ru" class="footer-links">lg.oona@mail.ru</a>
+            <a href="mailto:hotels.ln@mail.ru" class="footer-links">hotels.ln@mail.ru</a>
+          </div>
+        </li>
+        <li class="footer-item footer-social-links">
+          <a href="#"><img src="img/svg/tripadvisor.svg" alt="tripadvisor link"></a>
+          <a href="#"><img src="img/svg/twitter.svg" alt="twitter link"></a>
+          <a href="#"><img src="img/svg/facebook.svg" alt="facebook link"></a>
+          <a href="#"><img src="img/svg/social.svg" alt="vk link"></a>
+          <a href="#"><img src="img/svg/instagram.svg" alt="instagram link"></a>
+        </li>
+      </ul>
+    </div>
   </footer>
+
 </body>
 
 </html>
