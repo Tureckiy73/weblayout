@@ -563,16 +563,19 @@ font-size: 40px;
 
 /* contacts -------------------------------------------------------------------------------*/
 .contacts-box {
-  padding: 44px 44px 46px 46px;
   display: flex;
-  justify-content: space-between;
+  padding: 44px 44px 46px 46px;
+  justify-content: flex-start;
   border-radius: 15px;
   background-color: #FFF;
+  min-height: 618px;
 }
 
-.contacts-image {
-  border-radius: 15px;
-  height: fit-content;
+.contacts-box-backimage {
+  background-image: url(../img/Layer.jpg);
+  background-repeat: no-repeat;
+  background-position-x: 91.5%;
+  background-position-y: 50%;
 }
 
 .contacts-list {
@@ -582,13 +585,13 @@ font-size: 40px;
 }
 
 .contacts-item {
-  padding-bottom: 23px;
   display: flex;
   justify-content: space-between;
   width: 375px;
 }
 
 .contacts-item:not(:last-child) {
+  padding-bottom: 23px;
   border-bottom: 1px solid #C4C4C4;
 }
 
@@ -600,12 +603,23 @@ font-size: 40px;
   line-height: 1;
 }
 
+.contacts-info {
+  display: block;
+  width: 60%;
+  line-height: 1.5;
+}
+
+.contacts-info-text {
+  margin: 0;
+}
+
 .contacts-tel-link {
   display: block;
   color: #CC9933;
 }
 
 .contacts-mail {
+  line-height: 1.5;
   color: #CC9933;
 }
 
@@ -614,18 +628,11 @@ font-size: 40px;
   font-weight: 700;
 }
 
-.contacts-info {
-  display: block;
-  width: 60%;
-}
-
-.contacts-info-lh {
-  line-height: 1.5;
-}
-
 /* footer -------------------------------------------------------------------------------*/
 .footer-container {
+  display: flex;
   padding: 44px 51px 55px 52px;
+  min-height: 341px;
   border-radius: 15px;
   background-color: #333;
   background-image: url(../img/svg/logo-footer.svg);
@@ -634,20 +641,14 @@ font-size: 40px;
   background-position-x: 75%;
 }
 
-.footer-list {
-  display: flex;
-  justify-content: space-between;
-  min-height: 242px;
-}
-
-.footer-item {
+.footer-infoblock {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   max-width: 35%;
 }
 
-.footer-item:not(:last-child) {
+.footer-infoblock:not(:last-child) {
   margin-right: 100px;
 }
 .footer-adress {
@@ -659,12 +660,13 @@ font-size: 40px;
 }
 
 .footer-text {
+  margin: 0;
   line-height: 1.9;
   color: #FFF;
 }
 
 .footer-links {
-  display: flex;
+  display: block;
   width: fit-content;
   line-height: 1.5;
   color: #CC9933;
@@ -674,4 +676,31 @@ font-size: 40px;
   margin-left: auto;
   max-width: 10%;
 }
+
+.footer-tripadvisor-image, .footer-twitter-image, .footer-facebook-image, .footer-vkontakte-image, .footer-instagram-image {
+  display: block;
+  height: 25px;
+  width: 25px;
+}
+
+.footer-tripadvisor-image {
+  background-image: url(../img/svg/tripadvisor.svg);
+}
+
+.footer-twitter-image {
+  background-image: url(../img/svg/twitter.svg);
+}
+
+.footer-facebook-image {
+  background-image: url(../img/svg/facebook.svg);
+}
+
+.footer-vkontakte-image {
+  background-image: url(../img/svg/social.svg);
+}
+
+.footer-instagram-image {
+  background-image: url(../img/svg/instagram.svg);
+}
+
 /* end -------------------------------------------------------------------------------*/
