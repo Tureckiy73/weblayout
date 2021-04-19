@@ -13,49 +13,47 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="header-logtel">
-        <a class="logo" href="#">
-          <img class="logo-img" src="img/svg/logo.svg" alt="Логотип">
+      <div class="header__logtel">
+        <a class="header__logo" href="#">
+          <img class="header__img" src="img/logo.png" alt="Логотип">
         </a>
-        <a class="header-tel-link" href="tel:+74953225448">
+        <a class="header__telelink" href="tel:+74953225448">
           +7 495 322 54 48
         </a>
-        <div class="cabinet">
-          <a class="cabinet-link cabinet-icon" href="#">
-            Личный кабинет
-          </a>
-        </div>
+        <a class="header__cabinet" href="#">
+          Личный кабинет
+        </a>
       </div>
-      <div class="header-nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-list-link" href="#">О нас</a>
+      <div class="header__nav nav-header">
+        <ul class="nav-header__list">
+          <li class="nav-header__item">
+            <a class="nav-header__link" href="#">О нас</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-list-link" href="#">Услуги</a>
+          <li class="nav-header__item">
+            <a class="nav-header__link" href="#">Услуги</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-list-link" href="#">Преимущества</a>
+          <li class="nav-header__item">
+            <a class="nav-header__link" href="#">Преимущества</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-list-link" href="#">Размещение</a>
+          <li class="nav-header__item">
+            <a class="nav-header__link" href="#">Размещение</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-list-link" href="#">Блог</a>
+          <li class="nav-header__item">
+            <a class="nav-header__link" href="#">Блог</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-list-link" href="#">Контакты</a>
+          <li class="nav-header__item">
+            <a class="nav-header__link" href="#">Контакты</a>
           </li>
         </ul>
-        <div class="header-btns">
-          <a class="btn btn-nav" href="#">Хочу тур</a>
-          <a class="btn btn-nav" href="#">Обратный звонок</a>
+        <div class="header__btns">
+          <a class="header__btn btn" href="#">Хочу тур</a>
+          <a class="header__btn btn" href="#">Обратный звонок</a>
         </div>
       </div>
     </div>
   </header>
 
-  <main>
+  <main class="lagoona-main">
     <h1 class="invisible-header">Всё об отелях Lagoona</h1>
     <section class="section-specoffers section-padding">
       <div class="container container-specoffers">
@@ -145,6 +143,15 @@
               </p>
             </div>
           </li>
+          <li class="section-services-item services-image-parking">
+            <div class="section-services-item-text">
+              <a class="section-services-item-heading services-details-icon" href="#">Охраняемые автомобильные
+                стоянки</a>
+              <p class="section-services-description">
+                Не следует, однако забывать, что начало повседневной работы по формированию позиции
+              </p>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
@@ -194,6 +201,16 @@
             <div class="advantages-img-swimming-pool"></div>
             <p class="section-advantages-description">Значимость этого настолько очевидна, что консультация наших
               экспертов помогает</p>
+          </li>
+          <li class="section-advantages-item">
+            <div class="advantages-img-security-box"></div>
+            <p class="section-advantages-description">Повседневная практика показывает, что дальнейшее развитие
+              различных форм</p>
+          </li>
+          <li class="section-advantages-item">
+            <div class="advantages-img-hotel-key"></div>
+            <p class="section-advantages-description">Повседневная практика показывает, что сложившаяся структура
+              организации</p>
           </li>
         </ul>
       </div>
@@ -427,7 +444,7 @@
     <section class="section-contacts section-padding">
       <div class="container">
         <h2 class="top-heading">Контакты</h2>
-        <div class="contacts-box contacts-box-backimage">
+        <div class="contacts-box">
           <ul class="contacts-list">
             <li class="contacts-item">
               <h3 class="contacts-heading">Адрес</h3>
