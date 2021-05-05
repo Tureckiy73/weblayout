@@ -1,0 +1,663 @@
+/* common styles -------------------------------------------------------------------------------*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts_euclid/montserrat-bold-webfont.woff2') format('woff2'),
+    url('../fonts_euclid/montserrat-bold-webfont.woff') format('woff');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts_euclid/montserrat-light-webfont.woff2') format('woff2'),
+    url('../fonts_euclid/montserrat-light-webfont.woff') format('woff');
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts_euclid/montserrat-medium-webfont.woff2') format('woff2'),
+    url('../fonts_euclid/montserrat-medium-webfont.woff') format('woff');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts_euclid/montserrat-regular-webfont.woff2') format('woff2'),
+    url('../fonts_euclid/montserrat-regular-webfont.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: .2s ease-in-out;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  word-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:root {
+  --hover-color: #FF9900;
+  --active-color: #E1670E;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: unset;
+  cursor: pointer;
+}
+
+/* header -------------------------------------------------------------------------------*/
+.header {
+  display: flex;
+  padding: 14px 75px;
+  max-height: 100px;
+  align-items: center;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1px;
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-header__list {
+  margin-right: 66px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-header__link {
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  transition: border, color .1s;
+}
+
+.nav-header__link:hover {
+  border-bottom: var(--hover-color) solid 2px;
+}
+
+.nav-header__link:active {
+  border-bottom: var(--active-color) solid 2px;
+  color: var(--active-color);
+}
+
+.nav-header__item:not(:last-child) {
+  margin-right: 85px;
+}
+
+.nav-header__input {
+  display: none;
+}
+
+.nav-header__btn {
+  background-color: white;
+}
+
+.nav-header__magnifier {
+  margin-right: 11px;
+}
+
+/* main -------------------------------------------------------------------------------*/
+.container {
+  padding: 0 75px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1920px;
+}
+
+.container:not(:first-child):not(:last-child) {
+  margin-bottom: 100px;
+}
+
+.main__headers {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 59px;
+}
+
+.main__mini-title {
+  margin: 0;
+  max-width: 100%;
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.main__text {
+  margin: 0;
+  line-height: 32px;
+}
+
+/* advertisement -------------------------------------------------------------------------------*/
+.advertisement {
+  padding: 103px 855px 91px 78px;
+  min-height: 620px;
+  color: #fff;
+  background-image: url(../images_euclid/jpg+png/advertisement-1.jpg);
+  /* background-image: url(../images_euclid/jpg+png/advertisement-2.jpg);
+  background-image: url(../images_euclid/jpg+png/advertisement-3.jpg); */
+  background-size: cover;
+}
+
+.advertisement__top-title {
+  margin-bottom: 18px;
+  font-size: 70px;
+  font-weight: 800;
+  line-height: 89px;
+  letter-spacing: 1.1px;
+}
+
+.advertisement__description {
+ margin-bottom: 97px;
+ letter-spacing: -0.3px;
+}
+
+.advertisement__text, .advertisement__btn {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.advertisement__btn {
+  padding: 26px 37px;
+  color: #fff;
+  background-color: var(--hover-color);
+  transition: background-color;
+}
+
+.advertisement__btn:hover {
+  background-color: rgba(255, 153, 0, 0.6);;
+}
+
+.advertisement__btn:active {
+  background-color: var(--active-color);
+}
+
+/* about us -------------------------------------------------------------------------------*/
+.aboutus__header {
+  margin-bottom: 26px;
+}
+
+.description-aboutus {
+  display: flex;
+}
+
+.aboutus__info {
+  margin-bottom: 44px;
+  width: 69.77%;
+  line-height: 2;
+}
+
+.description-aboutus__details {
+  position: relative;
+  margin-right: 30px;
+  width: 870px;
+  height: 622px;
+  background: url(../images_euclid/jpg+png/Worker.jpg) no-repeat;
+}
+
+.description-aboutus__reference {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 44px 68px 42px 54px;
+  background: rgba(0,0,0,.5);
+}
+
+.description-aboutus__text {
+  margin-right: 74px;
+  font-weight: 700;
+  line-height: 2;
+  color: #fff;
+}
+
+.description-aboutus__button {
+  padding: 20px 38px;
+  border: 3px solid var(--hover-color);
+  background: transparent;
+  font-weight: 700;
+  color: #fff;
+  transition: background-color, border-color;
+}
+
+.description-aboutus__button:hover {
+  background-color: var(--hover-color);
+}
+
+.description-aboutus__button:active {
+  background-color: var(--active-color);
+  border-color: var(--active-color);
+}
+
+.description-aboutus__advantages {
+  align-self: center;
+}
+
+.description-aboutus__card {
+  padding: 67px 115px 66px 300px;
+  width: 870px;
+  border: 1px solid #CACACA;
+  background-position-x: 63px;
+  background-position-y: 44%;
+  background-repeat: no-repeat;
+}
+
+.description-aboutus__card:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.description-aboutus__card--consulting {
+  background-image: url(../images_euclid/svg/aboutus-consulting.svg);
+}
+
+.description-aboutus__card--intention {
+  background-image: url(../images_euclid/svg/aboutus-intention.svg);
+  background-position-y: 38%;
+}
+
+/* how we work -------------------------------------------------------------------------------*/
+.how-we-work__header {
+  margin-bottom: 47px;
+}
+
+.how-we-work__nav {
+  margin-bottom: 47px;
+}
+
+.main__mini-title--how-we-work {
+  margin-bottom: 3px;
+}
+
+.how-we-work__steps {
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+  color: #333;
+}
+
+.how-we-work__steps:not(:last-child) {
+  margin-right: 89px;
+}
+
+.how-we-work__content {
+  margin-top: 47px;
+}
+
+.how-we-work__checkbox {
+  display: none;
+}
+
+.how-we-work__checkbox:checked + .how-we-work__steps .how-we-work__spoiler {
+  color: var(--hover-color);
+}
+
+.how-we-work__info-box {
+  width: 758px;
+}
+
+.how-we-work__text {
+  margin-bottom: 61px;
+  line-height: 32.5px;
+}
+
+.how-we-work__btn {
+  margin-left: 3px;
+  padding: 20px 38px;
+}
+
+.how-we-work__btn:not(:last-child) {
+  margin-right: 26px;
+}
+
+.how-we-work__btn--details {
+  color: #fff;
+  background-color: var(--hover-color);
+  transition: background-color;
+}
+
+.how-we-work__btn--details:active {
+  background-color: var(--active-color);
+}
+
+.how-we-work__btn--contract {
+  border: 1px solid #333;
+  background-color: #fff;
+  transition: background-color, border-color, color;
+}
+
+.how-we-work__btn--contract:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+.how-we-work__btn--contract:active {
+  background-color: #000;
+  border-color:  #000;
+  color: #fff;
+}
+
+.how-we-work__step {
+  display: none;
+  min-height: 465px;
+}
+
+.how-we-work__step--consulting {
+  background: url(../images_euclid/jpg+png/step1-consultation.jpg) top right no-repeat;
+}
+
+.how-we-work__checkbox[id=step-1]:checked ~ .how-we-work__content .how-we-work__step--consulting {
+  display: block;
+}
+
+.how-we-work__step--estimate {
+  background: url(../images_euclid/jpg+png/step2-estimate.jpg) top right no-repeat;
+}
+
+.how-we-work__checkbox[id=step-2]:checked ~ .how-we-work__content .how-we-work__step--estimate {
+  display: block;
+}
+
+.how-we-work__step--contractors {
+  background: url(../images_euclid/jpg+png/step3-contractor.jpg) top right no-repeat;
+}
+
+.how-we-work__checkbox[id=step-3]:checked ~ .how-we-work__content .how-we-work__step--contractors {
+  display: block;
+}
+
+.how-we-work__step--inspection {
+  background: url(../images_euclid/jpg+png/step4-inspect.jpg) top right no-repeat;
+}
+
+.how-we-work__checkbox[id=step-4]:checked ~ .how-we-work__content .how-we-work__step--inspection {
+  display: block;
+}
+
+.how-we-work__step--consulting, .how-we-work__step--estimate, .how-we-work__step--contractors, .how-we-work__step--inspection {
+  background-position-y: 10px;
+}
+
+/* FAQ -------------------------------------------------------------------------------*/
+.faq__header {
+  margin-bottom: 30px;
+}
+
+.faq__item {
+  padding: 30px 0;
+  border-top: 1px solid #CACACA;
+  line-height: 32px;
+  transition: border-color, color;
+}
+
+.faq__item:last-child {
+  border-bottom: 1px solid #CACACA;
+}
+
+.faq__item:hover {
+  border-color: var(--hover-color);
+}
+
+.faq__item:hover .faq__question{
+  color: var(--hover-color);
+}
+
+.faq__item:hover + .faq__item{
+  border-color: var(--hover-color);
+}
+
+.faq__question-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq__spoiler {
+  display: flex;
+  cursor: pointer;
+}
+
+.faq__question {
+  position: absolute;
+  transform: translateY(4px);
+  display: block;
+  margin-left: 4px;
+  align-self: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.faq__cross {
+  display: block;
+  margin-left: auto;
+  transition: transform .3s;
+}
+
+.faq__checkbox:checked + .faq__question-box .faq__spoiler .faq__cross {
+  transform: rotate(45deg);
+}
+
+.faq__checkbox, .faq__content {
+  display: none;
+}
+
+.faq__checkbox:checked ~ .faq__content {
+  display: block;
+}
+
+.faq__text {
+  width: 1003px;
+}
+
+.faq__text:not(:last-child) {
+  width: 1003px;
+  margin-bottom: 35px;
+}
+/* footer -------------------------------------------------------------------------------*/
+.footer {
+  display: flex;
+  padding: 48px 75px 80px 75px;
+  background-color: #222222;
+  color: #CACACA;
+}
+
+.footer__infoblock {
+  margin-right: 284px;
+  width: 317px;
+}
+
+.infoblock-footer__logo {
+  display: block;
+  margin-bottom: 19px;
+  margin-right: auto;
+}
+
+.infoblock-footer__list {
+  margin: 0;
+}
+
+.infoblock-footer__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.infoblock-footer__link {
+  font-size: 18px;
+  color: #CACACA;
+}
+
+.infoblock-footer__list {
+  margin-bottom: 118px;
+}
+
+.infoblock-footer__socials {
+  display: flex;
+}
+
+.infoblock-footer__social {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.infoblock-footer__social:not(:last-child) {
+  margin-right: 20px;
+}
+
+.infoblock-footer__social--facebook {
+  background-image: url(../images_euclid/svg/fb.svg);
+}
+
+.infoblock-footer__social--vk {
+  background-image: url(../images_euclid/svg/vk.svg);
+}
+
+.infoblock-footer__social--instagram {
+  background-image: url(../images_euclid/svg/instagram.svg);
+}
+
+.footer__application {
+  margin-right: 236px;
+  width: 570px;
+  transform: translateY(11px);
+}
+
+.application-footer__header {
+  display: block;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 59px;
+}
+
+.application-footer__list {
+  margin-bottom: 31px;
+}
+
+.application-footer__item:not(:last-child) {
+  margin-bottom: 23px;
+}
+
+.application-footer__name, .application-footer__mail, .application-footer__message {
+  padding: 14px 24px;
+  width: 100%;
+  background-color: #414141;
+  border: none;
+  line-height: 2;
+  color: #CACACA;
+}
+
+.application-footer__message {
+  height: 150px;
+  resize: none;
+}
+
+.application-footer__submit {
+  display: flex;
+}
+
+.application-footer__button {
+  padding: 20px 52px;
+  margin-right: 22px;
+  text-align: center;
+  background-color: var(--hover-color);
+  font-weight: 700;
+  color: #fff;
+  transition: background-color;
+}
+
+.application-footer__button:active {
+  background-color: var(--active-color);
+}
+
+.application-footer__conditions {
+  align-self: center;
+}
+
+.application-footer__condition {
+  cursor: pointer;
+}
+
+.application-footer__checkbox {
+  display: none;
+}
+
+.fake {
+  position: relative;
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  transform: translateY(1px);
+  border: 1px solid #CACACA;
+}
+
+.fake::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background: url(../images_euclid/svg/chackbox.svg) center center no-repeat;
+  opacity: 0;
+}
+
+.application-footer__checkbox:checked +  .fake::before{
+  opacity: 1;
+}
+
+.footer__other {
+  transform: translateY(78px);
+}
+
+.footer__text {
+  line-height: 2.1;
+  max-width: 363px;
+}
+/*  -----------------------------------------------------------------------------------------------------------------------------------*/
