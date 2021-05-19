@@ -159,10 +159,6 @@ button {
 }
 
 /* main -------------------------------------------------------------------------------*/
-.main {
-  margin-bottom: 100px;
-}
-
 .container {
   padding: 0 75px;
   margin-left: auto;
@@ -171,7 +167,7 @@ button {
   max-width: 1920px;
 }
 
-.container:not(:last-child) {
+section {
   margin-bottom: 100px;
 }
 
@@ -236,6 +232,7 @@ button {
 }
 
 .advertisement__calculation-link {
+  display: inline-block;
   padding: 26px 37px;
   color: #fff;
   background-color: var(--hover-color);
@@ -298,6 +295,7 @@ button {
 }
 
 .description-aboutus__btn-link {
+  display: inline-block;
   padding: 20px 38px;
   border: 3px solid var(--hover-color);
   background: transparent;
@@ -355,6 +353,7 @@ button {
 }
 
 .how-we-work__steps {
+  display: inline-block;
   font-size: 18px;
   line-height: 22px;
   cursor: pointer;
@@ -396,6 +395,7 @@ button {
 }
 
 .how-we-work__btn-link--details {
+  display: inline-block;
   color: #fff;
   background-color: var(--hover-color);
   transition: background-color;
@@ -406,6 +406,7 @@ button {
 }
 
 .how-we-work__btn-link--contract {
+  display: inline-block;
   border: 1px solid #333;
   background-color: #fff;
   transition: background-color, border-color, color;
@@ -517,6 +518,9 @@ button {
   display: block;
   margin-left: auto;
   transition: transform .3s;
+  width: 50px;
+  height: 50px;
+  background: url(../images_euclid/svg/+.svg) center center no-repeat;
 }
 
 .faq__checkbox:checked + .faq__question-box .faq__spoiler .faq__cross {
