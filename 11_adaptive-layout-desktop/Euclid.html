@@ -12,7 +12,7 @@
 
 <body>
 
-  <header class="container header">
+  <header class="header">
     <a class="header__logo" href="#">
       <img class="header__img" src="images_euclid/jpg+png/Euclid-logo.png" alt="Логотип Евклид">
     </a>
@@ -37,23 +37,24 @@
       <form class="nav-header__search" action="#" method="GET">
         <input class="nav-header__input" name="search" type="search">
         <button class="nav-header__btn" type="submit">
-          <img class="nav-header__magnifier" src="images_euclid/svg/Search.svg" alt="Поиск">
+          <svg class="nav-header__magnifier" width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="19.5138" y="18.5495" width="8" height="2" transform="rotate(45 19.5138 18.5495)" fill="#333333"/>
+            <circle cx="11.5" cy="11.5" r="10.5" stroke="#333333" stroke-width="2"/>
+          </svg>
         </button>
       </form>
     </div>
   </header>
 
   <main class="main">
-
     <section class="container">
+      <h1 class="invisible-header">Всё об отелях Lagoona</h1>
       <div class="advertisement">
-        <h1 class="advertisement__top-title">Проектные решения любой сложности</h1>
-        <div class="advertisement__description">
-          <p class="advertisement__text">
-            Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов
-          </p>
-        </div>
-        <button class="advertisement__btn">Заказать расчёт</button>
+        <strong class="advertisement__top-title">Проектные решения любой сложности</strong>
+        <p class="advertisement__text">
+          Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов
+        </p>
+        <a class="advertisement__calculation-link" href="#">Заказать расчёт</a>
       </div>
     </section>
 
@@ -64,11 +65,12 @@
         внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности. А
         также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены отталкиваться от того, что
         убеждённость некоторых оппонентов требует от нас анализа как самодостаточных, так и внешне зависимых
-        концептуальных решений! Следует отметить, что высококачественный прототип <img src="images_euclid/svg/i.svg">
+        концептуальных решений! Следует отметить, что высококачественный прототип <span class="aboutus__info-pic"></span>
         будущего проекта предопределяет высокую востребованность позиций, занимаемых участниками в отношении
         поставленных задач. Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта
         способствует повышению качества экспериментов.
       </p>
+      <!-- <img src="images_euclid/svg/i.svg"> -->
       <div class="aboutus__description description-aboutus">
         <div class="description-aboutus__details">
           <div class="description-aboutus__reference">
@@ -76,7 +78,7 @@
               Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и
               реализации новых принципов.
             </p>
-            <button class="description-aboutus__button">Подробнее</button>
+            <a class="description-aboutus__btn-link" href="#">Подробнее</a>
           </div>
         </div>
         <div class="description-aboutus__advantages">
@@ -131,8 +133,8 @@
                 исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно
                 интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
               </p>
-              <button class="how-we-work__btn how-we-work__btn--details">Подробнее</button>
-              <button class="how-we-work__btn how-we-work__btn--contract">Договор</button>
+              <a class="how-we-work__btn-link how-we-work__btn-link--details" href="#">Подробнее</a>
+              <a class="how-we-work__btn-link how-we-work__btn-link--contract" href="#">Договор</a>
             </div>
           </div>
           <div class="how-we-work__step how-we-work__step--estimate">
@@ -187,9 +189,9 @@
           <input class="faq__checkbox" type="checkbox" id="question-1">
           <div class="faq__question-box">
             <label class="faq__spoiler" for="question-1">
-              <p class="faq__question">
+              <span class="faq__question">
                 Из чего формируется конечная стоимость проекта?
-              </p>
+              </span>
             </label>
             <label class="faq__spoiler" for="question-1">
               <img class="faq__cross" src="images_euclid/svg/+.svg" alt="spoiler">
@@ -218,9 +220,9 @@
           <input class="faq__checkbox" type="checkbox" id="question-2">
           <div class="faq__question-box">
             <label class="faq__spoiler" for="question-2">
-              <p class="faq__question">
+              <span class="faq__question">
                 У меня есть свой проект. Сможем ли мы его доработать / реализовать?
-              </p>
+              </span>
             </label>
             <label class="faq__spoiler" for="question-2">
               <img class="faq__cross" src="images_euclid/svg/+.svg" alt="spoiler">
@@ -238,9 +240,9 @@
           <input class="faq__checkbox" type="checkbox" id="question-3">
           <div class="faq__question-box">
             <label class="faq__spoiler" for="question-3">
-              <p class="faq__question">
+              <span class="faq__question">
                 Я выбираю между разными компаниями. В чём ваше отличие?
-              </p>
+              </span>
             </label>
             <label class="faq__spoiler" for="question-3">
               <img class="faq__cross" src="images_euclid/svg/+.svg" alt="spoiler">
@@ -258,9 +260,9 @@
           <input class="faq__checkbox" type="checkbox" id="question-4">
           <div class="faq__question-box">
             <label class="faq__spoiler" for="question-4">
-              <p class="faq__question">
+              <span class="faq__question">
                 Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?
-              </p>
+              </span>
             </label>
             <label class="faq__spoiler" for="question-4">
               <img class="faq__cross" src="images_euclid/svg/+.svg" alt="spoiler">
@@ -278,9 +280,9 @@
           <input class="faq__checkbox" type="checkbox" id="question-5">
           <div class="faq__question-box">
             <label class="faq__spoiler" for="question-5">
-              <p class="faq__question">
+              <span class="faq__question">
                 Могу ли я вернуть деньги на каком-либо из этапов работ?
-              </p>
+              </span>
             </label>
             <label class="faq__spoiler" for="question-5">
               <img class="faq__cross" src="images_euclid/svg/+.svg" alt="spoiler">
@@ -322,31 +324,23 @@
       </div>
       <div class="footer__application application-footer">
         <h2 class="application-footer__header">Оставить заявку</h2>
-        <form class="application-footer__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-          <ul class="application-footer__list">
-            <li class="application-footer__item">
-              <input class="application-footer__name" type="text" name="name/second name"
-                placeholder="Фамилия, имя и отчество*" required>
-            </li>
-            <li class="application-footer__item">
-              <input class="application-footer__mail" type="text" name="E-mail" placeholder="E-mail*" required>
-            </li>
-            <li class="application-footer__item">
-              <textarea class="application-footer__message" name="message" placeholder="Сообщение"
-                maxlength="160"></textarea>
-            </li>
-          </ul>
-          <div class="application-footer__submit">
-            <button class="application-footer__button">Отправить данные</button>
-            <div class="application-footer__conditions">
-              <label class="application-footer__condition">
-                <input class="application-footer__checkbox" type="checkbox" required>
-                <span class="fake"></span>
-                <span class="application-footer__condition-text">Согласен на обработку данных</span>
-              </label>
+        <div class="application-footer__area">
+          <form class="application-footer__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+            <input class="application-footer__field application-footer__field--name" type="text" name="name/second name" placeholder="Фамилия, имя и отчество*" required>
+            <input class="application-footer__field application-footer__field--mail" type="text" name="E-mail" placeholder="E-mail*" required>
+            <textarea class="application-footer__field application-footer__field--message" name="message" placeholder="Сообщение" maxlength="160"></textarea>
+            <div class="application-footer__submit">
+              <button class="application-footer__button">Отправить данные</button>
+              <div class="application-footer__conditions">
+                <label class="application-footer__condition">
+                  <input class="application-footer__checkbox" type="checkbox" required>
+                  <span class="fake"></span>
+                  <span class="application-footer__condition-text">Согласен на обработку данных</span>
+                </label>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
       <div class="footer__other">
         <p class="footer__text">

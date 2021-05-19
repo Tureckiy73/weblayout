@@ -80,6 +80,7 @@ img {
 button {
   border: unset;
   cursor: pointer;
+  background-color: #fff;
 }
 
 /* header -------------------------------------------------------------------------------*/
@@ -134,13 +135,34 @@ button {
 
 .nav-header__btn {
   background-color: white;
+    transition: fill, stroke;
 }
 
 .nav-header__magnifier {
   margin-right: 11px;
 }
 
+.nav-header__btn:hover .nav-header__magnifier circle{
+  stroke: var(--hover-color);
+}
+
+.nav-header__btn:hover .nav-header__magnifier rect{
+  fill: var(--hover-color);
+}
+
+.nav-header__btn:active .nav-header__magnifier circle{
+  stroke: var(--active-color);
+}
+
+.nav-header__btn:active .nav-header__magnifier rect{
+  fill: var(--active-color);
+}
+
 /* main -------------------------------------------------------------------------------*/
+.main {
+  margin-bottom: 100px;
+}
+
 .container {
   padding: 0 75px;
   margin-left: auto;
@@ -149,8 +171,19 @@ button {
   max-width: 1920px;
 }
 
-.container:not(:first-child):not(:last-child) {
+.container:not(:last-child) {
   margin-bottom: 100px;
+}
+
+.invisible-header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main__headers {
@@ -191,29 +224,29 @@ button {
   letter-spacing: 1.1px;
 }
 
-.advertisement__description {
+.advertisement__text {
  margin-bottom: 97px;
  letter-spacing: -0.3px;
 }
 
-.advertisement__text, .advertisement__btn {
+.advertisement__text, .advertisement__calculation-link {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
 }
 
-.advertisement__btn {
+.advertisement__calculation-link {
   padding: 26px 37px;
   color: #fff;
   background-color: var(--hover-color);
   transition: background-color;
 }
 
-.advertisement__btn:hover {
+.advertisement__calculation-link:hover {
   background-color: rgba(255, 153, 0, 0.6);;
 }
 
-.advertisement__btn:active {
+.advertisement__calculation-link:active {
   background-color: var(--active-color);
 }
 
@@ -230,6 +263,14 @@ button {
   margin-bottom: 44px;
   width: 69.77%;
   line-height: 2;
+}
+
+.aboutus__info-pic {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../images_euclid/svg/i.svg) center center no-repeat;
+  cursor: pointer;
 }
 
 .description-aboutus__details {
@@ -256,7 +297,7 @@ button {
   color: #fff;
 }
 
-.description-aboutus__button {
+.description-aboutus__btn-link {
   padding: 20px 38px;
   border: 3px solid var(--hover-color);
   background: transparent;
@@ -265,11 +306,11 @@ button {
   transition: background-color, border-color;
 }
 
-.description-aboutus__button:hover {
+.description-aboutus__btn-link:hover {
   background-color: var(--hover-color);
 }
 
-.description-aboutus__button:active {
+.description-aboutus__btn-link:active {
   background-color: var(--active-color);
   border-color: var(--active-color);
 }
@@ -345,37 +386,37 @@ button {
   line-height: 32.5px;
 }
 
-.how-we-work__btn {
+.how-we-work__btn-link {
   margin-left: 3px;
   padding: 20px 38px;
 }
 
-.how-we-work__btn:not(:last-child) {
+.how-we-work__btn-link:not(:last-child) {
   margin-right: 26px;
 }
 
-.how-we-work__btn--details {
+.how-we-work__btn-link--details {
   color: #fff;
   background-color: var(--hover-color);
   transition: background-color;
 }
 
-.how-we-work__btn--details:active {
+.how-we-work__btn-link--details:active {
   background-color: var(--active-color);
 }
 
-.how-we-work__btn--contract {
+.how-we-work__btn-link--contract {
   border: 1px solid #333;
   background-color: #fff;
   transition: background-color, border-color, color;
 }
 
-.how-we-work__btn--contract:hover {
+.how-we-work__btn-link--contract:hover {
   background-color: #666;
   color: #fff;
 }
 
-.how-we-work__btn--contract:active {
+.how-we-work__btn-link--contract:active {
   background-color: #000;
   border-color:  #000;
   color: #fff;
@@ -423,6 +464,7 @@ button {
 }
 
 /* FAQ -------------------------------------------------------------------------------*/
+
 .faq__header {
   margin-bottom: 30px;
 }
@@ -497,7 +539,9 @@ button {
   width: 1003px;
   margin-bottom: 35px;
 }
+
 /* footer -------------------------------------------------------------------------------*/
+
 .footer {
   display: flex;
   padding: 48px 75px 80px 75px;
@@ -573,15 +617,15 @@ button {
   line-height: 59px;
 }
 
-.application-footer__list {
+.application-footer__field:last-child {
   margin-bottom: 31px;
 }
 
-.application-footer__item:not(:last-child) {
+.application-footer__field:not(:last-child) {
   margin-bottom: 23px;
 }
 
-.application-footer__name, .application-footer__mail, .application-footer__message {
+.application-footer__field--name, .application-footer__field--mail, .application-footer__field--message {
   padding: 14px 24px;
   width: 100%;
   background-color: #414141;
@@ -590,7 +634,7 @@ button {
   color: #CACACA;
 }
 
-.application-footer__message {
+.application-footer__field--message {
   height: 150px;
   resize: none;
 }
@@ -601,7 +645,7 @@ button {
 
 .application-footer__button {
   padding: 20px 52px;
-  margin-right: 22px;
+  margin-right: 20px;
   text-align: center;
   background-color: var(--hover-color);
   font-weight: 700;
@@ -622,17 +666,22 @@ button {
 }
 
 .application-footer__checkbox {
-  display: none;
+  position: absolute;
+  appearance: none;
 }
 
 .fake {
   position: relative;
-  content: "";
   display: inline-block;
-  width: 14px;
-  height: 14px;
-  transform: translateY(1px);
-  border: 1px solid #CACACA;
+  width: 20px;
+  height: 20px;
+  transform: translateY(4px);
+  background: url(../images_euclid/svg/check_box.svg) center center no-repeat;
+}
+
+.application-footer__checkbox:focus + .fake {
+  border: 1px solid #fff;
+  border-radius: 2px;
 }
 
 .fake::before {
@@ -642,14 +691,18 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 8px;
   background: url(../images_euclid/svg/chackbox.svg) center center no-repeat;
   opacity: 0;
 }
 
-.application-footer__checkbox:checked +  .fake::before{
+.application-footer__checkbox:checked + .fake::before{
   opacity: 1;
+}
+
+.application-footer__condition-text {
+  margin-left: -2px;
 }
 
 .footer__other {
