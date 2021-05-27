@@ -135,7 +135,7 @@ button {
 
 .nav-header__btn {
   background-color: white;
-    transition: fill, stroke;
+  transition: fill, stroke;
 }
 
 .nav-header__magnifier {
@@ -345,6 +345,7 @@ section {
 }
 
 .how-we-work__nav {
+  display: flex;
   margin-bottom: 47px;
 }
 
@@ -353,7 +354,6 @@ section {
 }
 
 .how-we-work__steps {
-  display: inline-block;
   font-size: 18px;
   line-height: 22px;
   cursor: pointer;
@@ -366,14 +366,6 @@ section {
 
 .how-we-work__content {
   margin-top: 47px;
-}
-
-.how-we-work__checkbox {
-  display: none;
-}
-
-.how-we-work__checkbox:checked + .how-we-work__steps .how-we-work__spoiler {
-  color: var(--hover-color);
 }
 
 .how-we-work__info-box {
@@ -429,35 +421,20 @@ section {
 }
 
 .how-we-work__step--consulting {
-  background: url(../images_euclid/jpg+png/step1-consultation.jpg) top right no-repeat;
-}
-
-.how-we-work__checkbox[id=step-1]:checked ~ .how-we-work__content .how-we-work__step--consulting {
   display: block;
+  background: url(../images_euclid/jpg+png/step1-consultation.jpg) top right no-repeat;
 }
 
 .how-we-work__step--estimate {
   background: url(../images_euclid/jpg+png/step2-estimate.jpg) top right no-repeat;
 }
 
-.how-we-work__checkbox[id=step-2]:checked ~ .how-we-work__content .how-we-work__step--estimate {
-  display: block;
-}
-
 .how-we-work__step--contractors {
   background: url(../images_euclid/jpg+png/step3-contractor.jpg) top right no-repeat;
 }
 
-.how-we-work__checkbox[id=step-3]:checked ~ .how-we-work__content .how-we-work__step--contractors {
-  display: block;
-}
-
 .how-we-work__step--inspection {
   background: url(../images_euclid/jpg+png/step4-inspect.jpg) top right no-repeat;
-}
-
-.how-we-work__checkbox[id=step-4]:checked ~ .how-we-work__content .how-we-work__step--inspection {
-  display: block;
 }
 
 .how-we-work__step--consulting, .how-we-work__step--estimate, .how-we-work__step--contractors, .how-we-work__step--inspection {
@@ -485,23 +462,18 @@ section {
   border-color: var(--hover-color);
 }
 
-.faq__item:hover .faq__question{
-  color: var(--hover-color);
-}
-
 .faq__item:hover + .faq__item{
   border-color: var(--hover-color);
+}
+
+.faq__item:hover .faq__question{
+  color: var(--hover-color);
 }
 
 .faq__question-box {
   position: relative;
   display: flex;
   justify-content: space-between;
-}
-
-.faq__spoiler {
-  display: flex;
-  cursor: pointer;
 }
 
 .faq__question {
@@ -512,6 +484,11 @@ section {
   align-self: center;
   font-size: 24px;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.faq__question-slash {
+  color: #CACACA;
 }
 
 .faq__cross {
@@ -521,21 +498,11 @@ section {
   width: 50px;
   height: 50px;
   background: url(../images_euclid/svg/+.svg) center center no-repeat;
-}
-
-.faq__checkbox:checked + .faq__question-box .faq__spoiler .faq__cross {
-  transform: rotate(45deg);
-}
-
-.faq__checkbox, .faq__content {
-  display: none;
-}
-
-.faq__checkbox:checked ~ .faq__content {
-  display: block;
+  cursor: pointer;
 }
 
 .faq__text {
+  display: none;
   width: 1003px;
 }
 
