@@ -114,18 +114,19 @@ button {
 
 .nav-header__link {
   padding-bottom: 10px;
+  border-bottom: transparent solid 2px;
   font-size: 18px;
   font-weight: 600;
   color: #333;
-  transition: border, color .4s;
+  transition-property: border-bottom-color color;
 }
 
 .nav-header__link:hover {
-  border-bottom: var(--hover-color) solid 2px;
+  border-bottom-color: var(--hover-color);
 }
 
 .nav-header__link:active {
-  border-bottom: var(--active-color) solid 2px;
+  border-bottom-color: var(--active-color);
   color: var(--active-color);
 }
 
@@ -139,7 +140,7 @@ button {
 
 .nav-header__btn {
   background-color: white;
-  transition: fill, stroke .3s ease;
+  transition-property: fill stroke;
 }
 
 .nav-header__magnifier {
@@ -236,7 +237,7 @@ button {
   padding: 26px 37px;
   color: #fff;
   background-color: var(--hover-color);
-  transition: background-color .3s ease;
+  transition-property: background-color;
 }
 
 .advertisement__calculation-link:hover {
@@ -301,8 +302,7 @@ button {
   font-weight: 700;
   color: #fff;
   background: transparent;
-  transition: border-color .3s ease;
-  transition: background-color .3s ease;
+  transition-property: border-color background-color;
 }
 
 .description-aboutus__btn-link:hover {
@@ -369,7 +369,7 @@ button {
 }
 
 .how-we-work__spoiler {
-  transition: color .3s ease;
+  transition-property: color;
 }
 
 .how-we-work__spoiler:hover {
@@ -406,7 +406,7 @@ button {
   display: inline-block;
   color: #fff;
   background-color: var(--hover-color);
-  transition: background-color .3s ease;
+  transition-property: background-color;
 }
 
 .how-we-work__btn-link--details:hover {
@@ -422,8 +422,7 @@ button {
   border: 1px solid #333;
   color: #333;
   background-color: #fff;
-  transition: border-color color .3s ease;
-  transition: background-color color .3s ease;
+  transition-property: border-color background-color color;
 }
 
 .how-we-work__btn-link--contract:hover {
@@ -474,7 +473,7 @@ button {
   padding: 30px 0;
   border-top: 1px solid #CACACA;
   line-height: 32px;
-  transition: border-color, color .3s ease;
+  transition-property: border-color color;
 }
 
 .faq__item:last-child {
@@ -524,8 +523,7 @@ button {
   width: 50px;
   height: 50px;
   cursor: pointer;
-  transition: transform .3s;
-  transition: fill .3 ease;
+  transition-property: transform fill;
 }
 
 .faq__item:hover .faq__cross ellipse{
@@ -573,7 +571,7 @@ button {
 .infoblock-footer__link {
   font-size: 18px;
   color: #CACACA;
-  transition: color .3 ease;
+  transition-property: color;
 }
 
 .infoblock-footer__link:hover {
@@ -588,7 +586,7 @@ button {
   margin-bottom: 118px;
 }
 
-.infoblock-footer__socials {
+.infoblock-footer__socials-list {
   display: flex;
 }
 
@@ -596,7 +594,7 @@ button {
   display: block;
   width: 60px;
   height: 60px;
-  transition: fill .3 ease;
+  transition-property: fill;
 }
 
 .infoblock-footer__social:not(:last-child) {
@@ -652,13 +650,17 @@ button {
 }
 
 .application-footer__button {
-  padding: 20px 52px;
+  padding: 20px 40px;
   margin-right: 20px;
   text-align: center;
   font-weight: 700;
   color: #fff;
   background-color: var(--hover-color);
-  transition: background-color .3s ease;
+  transition-property: background-color;
+}
+
+.application-footer__button:hover {
+  background-color: #F7B045;
 }
 
 .application-footer__button:active {
