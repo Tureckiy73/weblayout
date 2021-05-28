@@ -39,7 +39,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition: .2s ease-in-out;
+  transition: .3s ease;
 }
 
 html {
@@ -59,6 +59,10 @@ body {
   font-weight: 400;
   color: #333;
   background-color: #fff;
+}
+
+section {
+  margin-bottom: 100px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,8 +93,8 @@ button {
   padding: 14px 75px;
   max-height: 100px;
   align-items: center;
-  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
   margin-bottom: 1px;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
 }
 
 .header__logo {
@@ -103,8 +107,8 @@ button {
 }
 
 .nav-header__list {
-  margin-right: 66px;
   display: flex;
+  margin-right: 66px;
   flex-wrap: wrap;
 }
 
@@ -113,7 +117,7 @@ button {
   font-size: 18px;
   font-weight: 600;
   color: #333;
-  transition: border, color .1s;
+  transition: border, color .4s;
 }
 
 .nav-header__link:hover {
@@ -135,7 +139,7 @@ button {
 
 .nav-header__btn {
   background-color: white;
-  transition: fill, stroke;
+  transition: fill, stroke .3s ease;
 }
 
 .nav-header__magnifier {
@@ -165,10 +169,6 @@ button {
   margin-right: auto;
   width: 100%;
   max-width: 1920px;
-}
-
-section {
-  margin-bottom: 100px;
 }
 
 .invisible-header {
@@ -236,7 +236,7 @@ section {
   padding: 26px 37px;
   color: #fff;
   background-color: var(--hover-color);
-  transition: background-color;
+  transition: background-color .3s ease;
 }
 
 .advertisement__calculation-link:hover {
@@ -274,16 +274,16 @@ section {
   position: relative;
   margin-right: 30px;
   width: 870px;
-  height: 622px;
   background: url(../images_euclid/jpg+png/Worker.jpg) no-repeat;
+  background-size: cover;
 }
 
 .description-aboutus__reference {
   position: absolute;
   bottom: 0;
   display: flex;
-  align-items: center;
   padding: 44px 68px 42px 54px;
+  align-items: center;
   background: rgba(0,0,0,.5);
 }
 
@@ -298,10 +298,11 @@ section {
   display: inline-block;
   padding: 20px 38px;
   border: 3px solid var(--hover-color);
-  background: transparent;
   font-weight: 700;
   color: #fff;
-  transition: background-color, border-color;
+  background: transparent;
+  transition: border-color .3s ease;
+  transition: background-color .3s ease;
 }
 
 .description-aboutus__btn-link:hover {
@@ -309,8 +310,8 @@ section {
 }
 
 .description-aboutus__btn-link:active {
-  background-color: var(--active-color);
   border-color: var(--active-color);
+  background-color: var(--active-color);
 }
 
 .description-aboutus__advantages {
@@ -345,8 +346,11 @@ section {
 }
 
 .how-we-work__nav {
-  display: flex;
   margin-bottom: 47px;
+}
+
+.how-we-work__list {
+  display: flex;
 }
 
 .main__mini-title--how-we-work {
@@ -356,12 +360,24 @@ section {
 .how-we-work__steps {
   font-size: 18px;
   line-height: 22px;
-  cursor: pointer;
   color: #333;
+  cursor: pointer;
 }
 
 .how-we-work__steps:not(:last-child) {
   margin-right: 89px;
+}
+
+.how-we-work__spoiler {
+  transition: color .3s ease;
+}
+
+.how-we-work__spoiler:hover {
+  color: var(--hover-color);
+}
+
+.how-we-work__spoiler:active {
+  color: var(--active-color);
 }
 
 .how-we-work__content {
@@ -390,7 +406,11 @@ section {
   display: inline-block;
   color: #fff;
   background-color: var(--hover-color);
-  transition: background-color;
+  transition: background-color .3s ease;
+}
+
+.how-we-work__btn-link--details:hover {
+  background-color: #F7B045;
 }
 
 .how-we-work__btn-link--details:active {
@@ -400,19 +420,21 @@ section {
 .how-we-work__btn-link--contract {
   display: inline-block;
   border: 1px solid #333;
+  color: #333;
   background-color: #fff;
-  transition: background-color, border-color, color;
+  transition: border-color color .3s ease;
+  transition: background-color color .3s ease;
 }
 
 .how-we-work__btn-link--contract:hover {
-  background-color: #666;
   color: #fff;
+  background-color: #666;
 }
 
 .how-we-work__btn-link--contract:active {
-  background-color: #000;
   border-color:  #000;
   color: #fff;
+  background-color: #000;
 }
 
 .how-we-work__step {
@@ -439,6 +461,7 @@ section {
 
 .how-we-work__step--consulting, .how-we-work__step--estimate, .how-we-work__step--contractors, .how-we-work__step--inspection {
   background-position-y: 10px;
+  background-size: 870px 100%;
 }
 
 /* FAQ -------------------------------------------------------------------------------*/
@@ -451,7 +474,7 @@ section {
   padding: 30px 0;
   border-top: 1px solid #CACACA;
   line-height: 32px;
-  transition: border-color, color;
+  transition: border-color, color .3s ease;
 }
 
 .faq__item:last-child {
@@ -462,8 +485,12 @@ section {
   border-color: var(--hover-color);
 }
 
-.faq__item:hover + .faq__item{
+.faq__item:not(:nth-last-child(2)):hover + .faq__item{
   border-color: var(--hover-color);
+}
+
+.faq__item:nth-last-child(2):hover + .faq__item{
+  border-top-color: var(--hover-color);
 }
 
 .faq__item:hover .faq__question{
@@ -478,13 +505,13 @@ section {
 
 .faq__question {
   position: absolute;
-  transform: translateY(4px);
   display: block;
   margin-left: 4px;
   align-self: center;
   font-size: 24px;
   font-weight: 700;
   cursor: pointer;
+  transform: translateY(4px);
 }
 
 .faq__question-slash {
@@ -494,11 +521,19 @@ section {
 .faq__cross {
   display: block;
   margin-left: auto;
-  transition: transform .3s;
   width: 50px;
   height: 50px;
-  background: url(../images_euclid/svg/+.svg) center center no-repeat;
   cursor: pointer;
+  transition: transform .3s;
+  transition: fill .3 ease;
+}
+
+.faq__item:hover .faq__cross ellipse{
+  fill: var(--hover-color);
+}
+
+.faq__item:hover .faq__cross path{
+  fill: #fff;
 }
 
 .faq__text {
@@ -516,8 +551,8 @@ section {
 .footer {
   display: flex;
   padding: 48px 75px 80px 75px;
-  background-color: #222222;
   color: #CACACA;
+  background-color: #222222;
 }
 
 .footer__infoblock {
@@ -531,10 +566,6 @@ section {
   margin-right: auto;
 }
 
-.infoblock-footer__list {
-  margin: 0;
-}
-
 .infoblock-footer__item:not(:last-child) {
   margin-bottom: 16px;
 }
@@ -542,6 +573,15 @@ section {
 .infoblock-footer__link {
   font-size: 18px;
   color: #CACACA;
+  transition: color .3 ease;
+}
+
+.infoblock-footer__link:hover {
+  color: var(--hover-color);
+}
+
+.infoblock-footer__link:active {
+  color: var(--active-color)
 }
 
 .infoblock-footer__list {
@@ -556,22 +596,19 @@ section {
   display: block;
   width: 60px;
   height: 60px;
+  transition: fill .3 ease;
 }
 
 .infoblock-footer__social:not(:last-child) {
   margin-right: 20px;
 }
 
-.infoblock-footer__social--facebook {
-  background-image: url(../images_euclid/svg/fb.svg);
+.infoblock-footer__social:hover path {
+  fill: var(--hover-color);
 }
 
-.infoblock-footer__social--vk {
-  background-image: url(../images_euclid/svg/vk.svg);
-}
-
-.infoblock-footer__social--instagram {
-  background-image: url(../images_euclid/svg/instagram.svg);
+.infoblock-footer__social:active path {
+  fill: var(--active-color);
 }
 
 .footer__application {
@@ -599,10 +636,10 @@ section {
 .application-footer__field--name, .application-footer__field--mail, .application-footer__field--message {
   padding: 14px 24px;
   width: 100%;
-  background-color: #414141;
   border: none;
   line-height: 2;
   color: #CACACA;
+  background-color: #414141;
 }
 
 .application-footer__field--message {
@@ -618,10 +655,10 @@ section {
   padding: 20px 52px;
   margin-right: 20px;
   text-align: center;
-  background-color: var(--hover-color);
   font-weight: 700;
   color: #fff;
-  transition: background-color;
+  background-color: var(--hover-color);
+  transition: background-color .3s ease;
 }
 
 .application-footer__button:active {
@@ -646,8 +683,8 @@ section {
   display: inline-block;
   width: 20px;
   height: 20px;
-  transform: translateY(4px);
   background: url(../images_euclid/svg/check_box.svg) center center no-repeat;
+  transform: translateY(4px);
 }
 
 .application-footer__checkbox:focus + .fake {
@@ -656,15 +693,15 @@ section {
 }
 
 .fake::before {
-  display: block;
-  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  content: "";
   width: 10px;
   height: 8px;
   background: url(../images_euclid/svg/chackbox.svg) center center no-repeat;
+  transform: translate(-50%, -50%);
   opacity: 0;
 }
 
