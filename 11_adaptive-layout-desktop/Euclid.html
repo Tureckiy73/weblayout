@@ -53,11 +53,13 @@
       <div class="container">
         <!-- <h1 class="invisible-header">Евклид</h1> -->
         <div class="advertisement">
-          <h1 class="advertisement__top-title">Проектные решения любой сложности</h1>
-          <p class="advertisement__text">
-            Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов
-          </p>
-          <a class="advertisement__calculation-link" href="#">Заказать расчёт</a>
+          <div class="advertisement__info">
+            <h1 class="advertisement__top-title">Проектные решения любой сложности</h1>
+            <p class="advertisement__text">
+              Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов
+            </p>
+            <a class="advertisement__calculation-link" href="#">Заказать расчёт</a>
+          </div>
         </div>
       </div>
     </section>
@@ -75,7 +77,6 @@
           поставленных задач. Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта
           способствует повышению качества экспериментов.
         </p>
-        <!-- <img src="images_euclid/svg/i.svg"> -->
         <div class="aboutus__description description-aboutus">
           <div class="description-aboutus__details">
             <div class="description-aboutus__reference">
@@ -126,7 +127,7 @@
           </ul>
         </nav>
         <div class="how-we-work__content">
-          <div class="how-we-work__step how-we-work__step--consulting">
+          <div class="how-we-work__step">
             <div class="how-we-work__info-box">
               <h3 class="main__mini-title main__mini-title--how-we-work">Проводим консультацию</h3>
               <p class="main__text how-we-work__text">
@@ -142,6 +143,7 @@
               <a class="how-we-work__btn-link how-we-work__btn-link--details" href="#">Подробнее</a>
               <a class="how-we-work__btn-link how-we-work__btn-link--contract" href="#">Договор</a>
             </div>
+            <div class="how-we-work__step--consulting"></div>
           </div>
           <div class="how-we-work__step how-we-work__step--estimate">
             <div class="how-we-work__info-box">
@@ -312,7 +314,7 @@
 
   <footer>
     <div class="container footer">
-      <div class="footer__infoblock infoblock-footer">
+      <div class="footer__infoblock infoblock-footer footer__low-resolution">
         <a class="infoblock-footer__logo" href="#">
           <img class="infoblock-footer__img" src="images_euclid/jpg+png/Euclid-logo-footer.png" alt="Логотип Евклид">
         </a>
@@ -353,7 +355,7 @@
           </li>
         </ul>
       </div>
-      <div class="footer__application application-footer">
+      <div class="footer__application application-footer footer__low-resolution">
         <h2 class="application-footer__header">Оставить заявку</h2>
         <div class="application-footer__area">
           <form class="application-footer__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
@@ -373,7 +375,7 @@
           </form>
         </div>
       </div>
-      <div class="footer__other">
+      <div class="footer__other footer__low-resolution">
         <p class="footer__text">
           Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта:
           разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития.
