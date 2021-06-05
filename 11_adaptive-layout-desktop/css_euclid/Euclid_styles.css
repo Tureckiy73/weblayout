@@ -39,7 +39,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition: .3s ease;
 }
 
 html {
@@ -52,17 +51,19 @@ html {
 :root {
   --hover-color: #FF9900;
   --active-color: #E1670E;
+  --background-color: #fff;
 }
 
 body {
+  min-width: 320px;
   font-size: 16px;
   font-weight: 400;
   color: #333;
-  background-color: #fff;
+  background-color: var(--background-color);
 }
 
-section {
-  margin-bottom: 100px;
+.section {
+  padding-bottom: 100px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -84,14 +85,14 @@ img {
 button {
   border: unset;
   cursor: pointer;
-  background-color: #fff;
+  background-color: var(--background-color);
 }
 
 /* ------------------------------------------------------ header ------------------------------------------------------------------*/
 .header {
   display: flex;
-  padding: 14px 75px;
-  max-height: 100px;
+  padding: 14px 3.9%;
+  height: 100px;
   align-items: center;
   margin-bottom: 1px;
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
@@ -102,6 +103,8 @@ button {
 }
 
 .header__nav {
+  margin-top: 5px;
+  margin-right: 10px;
   display: flex;
   align-items: center;
 }
@@ -118,8 +121,8 @@ button {
   font-size: 18px;
   font-weight: 600;
   color: #333;
-  transition-property: border-bottom-color;
-  transition-property: color;
+  transition-property: border-bottom-color, color;
+  transition: .3s ease;
 }
 
 .nav-header__link:hover {
@@ -139,21 +142,16 @@ button {
   display: none;
 }
 
-.nav-header__btn {
-  background-color: white;
-  transition-property: fill;
-  transition-property: stroke;
+.nav-header__btn circle, rect{
+  transition-property: fill, stroke;
+  transition: .3s ease;
 }
 
-.nav-header__magnifier {
-  margin-right: 11px;
-}
-
-.nav-header__btn:hover .nav-header__magnifier circle{
+.nav-header__btn:hover circle{
   stroke: var(--hover-color);
 }
 
-.nav-header__btn:hover .nav-header__magnifier rect{
+.nav-header__btn:hover  rect{
   fill: var(--hover-color);
 }
 
@@ -208,6 +206,7 @@ button {
 .advertisement {
   padding: 103px 78px 91px 78px;
   min-height: 620px;
+  max-width: 1770px;
   color: #fff;
   background: url(../images_euclid/jpg+png/advertisement-1.jpg) no-repeat center center / cover;
   /* background-image: url(../images_euclid/jpg+png/advertisement-2.jpg);
@@ -245,6 +244,7 @@ button {
   color: #fff;
   background-color: var(--hover-color);
   transition-property: background-color;
+  transition: .3s ease;
 }
 
 .advertisement__calculation-link:hover {
@@ -257,7 +257,7 @@ button {
 
 /* ------------------------------------------------------ about us ------------------------------------------------------------------*/
 .aboutus__header {
-  margin-bottom: 26px;
+  margin-bottom: 20px;
 }
 
 .aboutus__description {
@@ -266,7 +266,7 @@ button {
 
 .aboutus__info {
   margin-bottom: 44px;
-  width: 69.77%;
+  width: 69.5%;
   line-height: 2;
 }
 
@@ -281,7 +281,6 @@ button {
 .description-aboutus__details {
   position: relative;
   margin-right: 30px;
-  min-height: 620px;
   width: 870px;
   background: url(../images_euclid/jpg+png/Worker.jpg) no-repeat center center / cover;
 }
@@ -309,8 +308,8 @@ button {
   font-weight: 700;
   color: #fff;
   background: transparent;
-  transition-property: border-color;
-  transition-property: background-color;
+  transition-property: border-color, background-color;
+  transition: .3s ease;
 }
 
 .description-aboutus__btn-link:hover {
@@ -324,12 +323,13 @@ button {
 
 .description-aboutus__advantages {
   align-self: center;
+
 }
 
 .description-aboutus__card {
   padding: 67px 115px 66px 300px;
-  max-width: 870px;
   border: 1px solid #CACACA;
+  max-width: 870px;
   background-position-x: 63px;
   background-position-y: 44%;
   background-repeat: no-repeat;
@@ -358,6 +358,7 @@ button {
 }
 
 .how-we-work__list {
+  padding: 0;
   display: flex;
 }
 
@@ -378,6 +379,7 @@ button {
 
 .how-we-work__spoiler {
   transition-property: color;
+  transition: .3s ease;
 }
 
 .how-we-work__spoiler:hover {
@@ -410,6 +412,7 @@ button {
   color: #fff;
   background-color: var(--hover-color);
   transition-property: background-color;
+  transition: .3s ease;
 }
 
 .how-we-work__btn-link--details:hover {
@@ -424,10 +427,8 @@ button {
   display: inline-block;
   border: 1px solid #333;
   color: #333;
-  background-color: #fff;
-  transition-property: border-color;
-  transition-property: background-color;
-  transition-property: color;
+  transition-property: border-color, background-color, color;
+  transition: .3s ease;
 }
 
 .how-we-work__btn-link--contract:hover {
@@ -446,43 +447,44 @@ button {
   min-height: 465px;
 }
 
-.how-we-work__step--consulting {
+.how-we-work__step:not(:first-child) {
+  display: none;
+}
+
+.how-we-work__background {
+  margin-left: auto;
+  margin-top: 10px;
+  min-width: 49.25%;
+  min-height: 460px;
+}
+
+.how-we-work__background--consulting {
   background: url(../images_euclid/jpg+png/step1-consultation.jpg) no-repeat center center / cover;
 }
 
-.how-we-work__step--estimate {
-  display: none;
+.how-we-work__background--estimate {
   background: url(../images_euclid/jpg+png/step2-estimate.jpg) top right no-repeat;
 }
 
-.how-we-work__step--contractors {
-  display: none;
+.how-we-work__background--contractors {
   background: url(../images_euclid/jpg+png/step3-contractor.jpg) top right no-repeat;
 }
 
-.how-we-work__step--inspection {
-  display: none;
+.how-we-work__background--inspection {
   background: url(../images_euclid/jpg+png/step4-inspect.jpg) top right no-repeat;
-}
-
-.how-we-work__step--consulting, .how-we-work__step--estimate, .how-we-work__step--contractors, .how-we-work__step--inspection {
-  margin-left: auto;
-  background-position-y: 10px;
-  min-width: 40%;
-  min-height: 465px;
 }
 
 /* ------------------------------------------------------ FAQ ------------------------------------------------------------------*/
 .faq__header {
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 
 .faq__item {
   padding: 30px 0;
   border-top: 1px solid #CACACA;
   line-height: 2;
-  transition-property: border-color;
-  transition-property: color;
+  transition-property: border-color, color;
+  transition: .3s ease;
 }
 
 .faq__item:last-child {
@@ -512,6 +514,7 @@ button {
 }
 
 .faq__question {
+  margin-left: 4px;
   display: block;
   align-self: center;
   font-size: 24px;
@@ -530,8 +533,8 @@ button {
   height: 50px;
   align-self: center;
   cursor: pointer;
-  transition-property: transform;
-  transition-property: fill;
+  transition-property: transform, fill;
+  transition: .3s ease;
 }
 
 .faq__item:hover .faq__cross ellipse{
@@ -555,13 +558,13 @@ button {
 /* ----------------------------------------------------- footer -----------------------------------------------------------------*/
 .footer {
   display: flex;
-  padding: 48px 75px 80px 75px;
+  padding: 48px 3.9% 80px 3.9%;
   color: #CACACA;
   background-color: #222222;
 }
 
 .footer__infoblock {
-  margin-right: 14.8%;
+  margin-right: 20%;
   max-width: 317px;
 }
 
@@ -569,6 +572,10 @@ button {
   display: block;
   margin-bottom: 19px;
   margin-right: auto;
+}
+
+.infoblock-footer__list {
+  margin-bottom: 113px;
 }
 
 .infoblock-footer__item:not(:last-child) {
@@ -579,6 +586,7 @@ button {
   font-size: 18px;
   color: #CACACA;
   transition-property: color;
+  transition: .3s ease;
 }
 
 .infoblock-footer__link:hover {
@@ -587,10 +595,6 @@ button {
 
 .infoblock-footer__link:active {
   color: var(--active-color)
-}
-
-.infoblock-footer__list {
-  margin-bottom: 118px;
 }
 
 .infoblock-footer__socials-list {
@@ -602,10 +606,11 @@ button {
   width: 60px;
   height: 60px;
   transition-property: fill;
+  transition: .3s ease;
 }
 
 .infoblock-footer__social:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 24px;
 }
 
 .infoblock-footer__social:hover path {
@@ -618,8 +623,8 @@ button {
 
 .footer__application {
   margin-right: 12.3%;
-  max-width: 570px;
-  transform: translateY(11px);
+  width: 570px;
+  transform: translateY(14px);
 }
 
 .application-footer__header {
@@ -630,24 +635,31 @@ button {
   line-height: 1.2;
 }
 
-.application-footer__field:last-child {
-  margin-bottom: 31px;
-}
-
-.application-footer__field:not(:last-child) {
-  margin-bottom: 23px;
-}
-
-.application-footer__field--name, .application-footer__field--mail, .application-footer__field--message {
+.application-footer__field {
   padding: 14px 24px;
-  width: 100%;
   border: none;
+  width: 100%;
   line-height: 2;
   color: #CACACA;
   background-color: #414141;
 }
 
+.application-footer__field {
+  margin-bottom: 23px;
+}
+
+.footer__application {
+  max-width: 570px;
+}
+
+.application-footer__form {
+  margin-left: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
 .application-footer__field--message {
+  margin-bottom: 31px;
   height: 150px;
   resize: none;
 }
@@ -657,13 +669,14 @@ button {
 }
 
 .application-footer__button {
-  padding: 20px 40px;
+  padding: 20px 50px;
   margin-right: 20px;
   text-align: center;
   font-weight: 700;
   color: #fff;
   background-color: var(--hover-color);
   transition-property: background-color;
+  transition: .3s ease;
 }
 
 .application-footer__button:hover {
@@ -728,7 +741,7 @@ button {
 }
 
 .footer__text {
-  line-height: 2.1;
+  line-height: 2;
   max-width: 363px;
   max-height: 100%;
 }
@@ -749,8 +762,8 @@ button {
 
 /*  ----------------------------------------------------------  1280  -------------------------------------------------------------------*/
 @media (max-width: 1280px) {
-  section {
-    margin-bottom: 75px;
+  .section {
+    padding-bottom: 75px;
   }
 
   .main__headers {
@@ -787,6 +800,10 @@ button {
     margin-bottom: 15px;
   }
 
+  .application-footer__button {
+    padding: 20px 35px;
+  }
+
   .footer__text {
     line-height: 1.6;
   }
@@ -794,8 +811,8 @@ button {
 
 /*  ----------------------------------------------------------  992  -------------------------------------------------------------------*/
 @media (max-width: 992px) {
-  section {
-    margin-bottom: 50px;
+  .section {
+    padding-bottom: 50px;
   }
 
   .container {
@@ -832,7 +849,7 @@ button {
   .description-aboutus__details {
     margin-right: 0;
     margin-bottom: 20px;
-    max-height: 620px;
+    height: 620px;
     width: 100%;
   }
 
@@ -868,7 +885,7 @@ button {
     background: none;
   }
 
-  .how-we-work__step--consulting, .how-we-work__step--estimate, .how-we-work__step--contractors, .how-we-work__step--inspection {
+  .how-we-work__background, .how-we-work__background, .how-we-work__background, .how-we-work__background {
     display: none;
   }
 
@@ -913,6 +930,11 @@ button {
     margin-bottom: 50px;
   }
 
+  .footer__application {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .footer__other {
     padding: 0;
   }
@@ -924,8 +946,8 @@ button {
 
 /*  ----------------------------------------------------------  567  -------------------------------------------------------------------*/
 @media (max-width: 576px) {
-  section {
-    margin-bottom: 25px;
+  .section {
+    padding-bottom: 25px;
   }
 
   body {
@@ -966,6 +988,10 @@ button {
 
   .aboutus__info {
     margin-bottom: 20px;
+  }
+
+  .description-aboutus__details {
+    height: 420px;
   }
 
   .description-aboutus__reference {
@@ -1012,6 +1038,10 @@ button {
     padding: 15px 10px;
     width: 40%;
     text-align: center;
+  }
+
+  .faq__list {
+    padding-left: 0;
   }
 
   .faq__item {
