@@ -52,13 +52,14 @@ html {
   --hover-color: #FF9900;
   --active-color: #E1670E;
   --background-color: #fff;
+  --main-text-color: #333;
 }
 
 body {
   min-width: 320px;
   font-size: 16px;
   font-weight: 400;
-  color: #333;
+  color: var(--main-text-color);
   background-color: var(--background-color);
 }
 
@@ -89,29 +90,49 @@ button {
 }
 
 /* ------------------------------------------------------ header ------------------------------------------------------------------*/
+.header-style {
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+}
+
 .header {
   display: flex;
-  padding: 14px 3.9%;
+  padding: 14px 75px;
   height: 100px;
-  align-items: center;
-  margin-bottom: 1px;
-  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+}
+
+.nav-header__burger-btn {
+  margin-right: auto;
+  display: none;
+  transition: .5s ease;
+  transition-property: fill, width;
+  transform: rotate(180deg);
+}
+
+.nav-header__burger-btn:active rect{
+  fill: var(--active-color);
+}
+.nav-header__burger-btn:active rect:nth-child(2){
+  width: 25px;
+}
+.nav-header__burger-btn:active rect:nth-child(1){
+  width: 18px;
 }
 
 .header__logo {
   margin-right: auto;
+  display: block;
+  align-self: center;
 }
 
 .header__nav {
-  margin-top: 5px;
-  margin-right: 10px;
   display: flex;
   align-items: center;
 }
 
 .nav-header__list {
   display: flex;
-  margin-right: 66px;
+  margin-right: 80px;
+  margin-left: 40px;
   flex-wrap: wrap;
 }
 
@@ -120,9 +141,9 @@ button {
   border-bottom: transparent solid 2px;
   font-size: 18px;
   font-weight: 600;
-  color: #333;
-  transition-property: border-bottom-color, color;
+  color: var(--main-text-color);
   transition: .3s ease;
+  transition-property: border-bottom-color, color;
 }
 
 .nav-header__link:hover {
@@ -143,8 +164,8 @@ button {
 }
 
 .nav-header__btn circle, rect{
-  transition-property: fill, stroke;
   transition: .3s ease;
+  transition-property: fill, stroke;
 }
 
 .nav-header__btn:hover circle{
@@ -192,8 +213,8 @@ button {
 .main__mini-title {
   margin: 0;
   max-width: 100%;
-  line-height: 32px;
   font-size: 24px;
+  line-height: 1.35;
   font-weight: 700;
 }
 
@@ -204,7 +225,7 @@ button {
 
 /* ------------------------------------------------------ advertisement ------------------------------------------------------------------*/
 .advertisement {
-  padding: 103px 78px 91px 78px;
+  padding: 105px 78px 91px 78px;
   min-height: 620px;
   max-width: 1770px;
   color: #fff;
@@ -219,16 +240,15 @@ button {
 }
 
 .advertisement__top-title {
-  margin-bottom: 18px;
+  margin-bottom: 24px;
   font-size: 70px;
   font-weight: 800;
-  line-height: 89px;
-  letter-spacing: 1.1px;
+  line-height: 1.21;
+  letter-spacing: 0.7px;
 }
 
 .advertisement__text {
- margin-bottom: 97px;
- letter-spacing: -0.3px;
+ margin-bottom: 92px;
 }
 
 .advertisement__text, .advertisement__calculation-link {
@@ -243,8 +263,8 @@ button {
   text-align: center;
   color: #fff;
   background-color: var(--hover-color);
-  transition-property: background-color;
   transition: .3s ease;
+  transition-property: background-color;
 }
 
 .advertisement__calculation-link:hover {
@@ -265,7 +285,7 @@ button {
 }
 
 .aboutus__info {
-  margin-bottom: 44px;
+  margin-bottom: 47px;
   width: 69.5%;
   line-height: 2;
 }
@@ -289,13 +309,19 @@ button {
   position: absolute;
   bottom: 0;
   display: flex;
-  padding: 40px 60px 40px 50px;
+  padding: 50px;
   align-items: center;
+  width: 100%;
   background: rgba(0,0,0,.5);
+}
+
+.description-aboutus__reference--mid-resolution {
+  display: none;
 }
 
 .description-aboutus__text {
   margin-right: 74px;
+  width: 454px;
   font-weight: 700;
   line-height: 2;
   color: #fff;
@@ -303,13 +329,14 @@ button {
 
 .description-aboutus__btn-link {
   display: inline-block;
+  margin-left: auto;
   padding: 20px 38px;
   border: 3px solid var(--hover-color);
   font-weight: 700;
   color: #fff;
   background: transparent;
-  transition-property: border-color, background-color;
   transition: .3s ease;
+  transition-property: border-color, background-color;
 }
 
 .description-aboutus__btn-link:hover {
@@ -323,16 +350,19 @@ button {
 
 .description-aboutus__advantages {
   align-self: center;
-
 }
 
 .description-aboutus__card {
-  padding: 67px 115px 66px 300px;
+  padding: 64px 115px 66px 300px;
   border: 1px solid #CACACA;
   max-width: 870px;
-  background-position-x: 63px;
-  background-position-y: 44%;
+  background-position-x: 58px;
+  background-position-y: 50%;
   background-repeat: no-repeat;
+}
+
+.main__mini-title--aboutus {
+  margin-bottom: 5px;
 }
 
 .description-aboutus__card:not(:last-child) {
@@ -345,7 +375,6 @@ button {
 
 .description-aboutus__card--intention {
   background-image: url(../images_euclid/svg/aboutus-intention.svg);
-  background-position-y: 38%;
 }
 
 /* ---------------------------------------------------- how we work ----------------------------------------------------------------*/
@@ -363,23 +392,23 @@ button {
 }
 
 .main__mini-title--how-we-work {
-  margin-bottom: 3px;
+  margin-bottom: 6px;
 }
 
 .how-we-work__steps {
   font-size: 18px;
   line-height: 1.2;
-  color: #333;
+  color: var(--main-text-color);
   cursor: pointer;
 }
 
 .how-we-work__steps:not(:last-child) {
-  margin-right: 89px;
+  margin-right: 86px;
 }
 
 .how-we-work__spoiler {
-  transition-property: color;
   transition: .3s ease;
+  transition-property: color;
 }
 
 .how-we-work__spoiler:hover {
@@ -396,11 +425,11 @@ button {
 }
 
 .how-we-work__text {
-  margin-bottom: 61px;
+  margin-bottom: 50px;
 }
 
 .how-we-work__btn-link {
-  padding: 20px 38px;
+  padding: 20px 39px;
 }
 
 .how-we-work__btn-link:not(:last-child) {
@@ -411,8 +440,8 @@ button {
   display: inline-block;
   color: #fff;
   background-color: var(--hover-color);
-  transition-property: background-color;
   transition: .3s ease;
+  transition-property: background-color;
 }
 
 .how-we-work__btn-link--details:hover {
@@ -425,10 +454,10 @@ button {
 
 .how-we-work__btn-link--contract {
   display: inline-block;
-  border: 1px solid #333;
-  color: #333;
-  transition-property: border-color, background-color, color;
+  border: 1px solid var(--main-text-color);
+  color: var(--main-text-color);
   transition: .3s ease;
+  transition-property: border-color, background-color, color;
 }
 
 .how-we-work__btn-link--contract:hover {
@@ -454,8 +483,9 @@ button {
 .how-we-work__background {
   margin-left: auto;
   margin-top: 10px;
-  min-width: 49.25%;
-  min-height: 460px;
+  width: 870px;
+  max-width: 870px;
+  min-width: 437px;
 }
 
 .how-we-work__background--consulting {
@@ -476,15 +506,15 @@ button {
 
 /* ------------------------------------------------------ FAQ ------------------------------------------------------------------*/
 .faq__header {
-  margin-bottom: 36px;
+  margin-bottom: 44px;
 }
 
 .faq__item {
   padding: 30px 0;
   border-top: 1px solid #CACACA;
   line-height: 2;
-  transition-property: border-color, color;
   transition: .3s ease;
+  transition-property: border-color, color;
 }
 
 .faq__item:last-child {
@@ -514,7 +544,6 @@ button {
 }
 
 .faq__question {
-  margin-left: 4px;
   display: block;
   align-self: center;
   font-size: 24px;
@@ -533,8 +562,8 @@ button {
   height: 50px;
   align-self: center;
   cursor: pointer;
-  transition-property: transform, fill;
   transition: .3s ease;
+  transition-property: transform, fill;
 }
 
 .faq__item:hover .faq__cross ellipse{
@@ -564,29 +593,27 @@ button {
 }
 
 .footer__infoblock {
-  margin-right: 20%;
-  max-width: 317px;
+  margin-right: 19.5%;
+  min-width: 254px;
 }
 
 .infoblock-footer__logo {
   display: block;
-  margin-bottom: 19px;
+  margin-bottom: 18px;
   margin-right: auto;
 }
 
 .infoblock-footer__list {
-  margin-bottom: 113px;
-}
-
-.infoblock-footer__item:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 90px;
 }
 
 .infoblock-footer__link {
   font-size: 18px;
+  font-weight: 600;
+  line-height: 2;
   color: #CACACA;
-  transition-property: color;
   transition: .3s ease;
+  transition-property: color;
 }
 
 .infoblock-footer__link:hover {
@@ -605,8 +632,8 @@ button {
   display: block;
   width: 60px;
   height: 60px;
-  transition-property: fill;
   transition: .3s ease;
+  transition-property: fill;
 }
 
 .infoblock-footer__social:not(:last-child) {
@@ -624,7 +651,8 @@ button {
 .footer__application {
   margin-right: 12.3%;
   width: 570px;
-  transform: translateY(14px);
+  max-width: 570px;
+  transform: translateY(5px);
 }
 
 .application-footer__header {
@@ -648,10 +676,6 @@ button {
   margin-bottom: 23px;
 }
 
-.footer__application {
-  max-width: 570px;
-}
-
 .application-footer__form {
   margin-left: 3px;
   display: flex;
@@ -666,17 +690,19 @@ button {
 
 .application-footer__submit {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .application-footer__button {
   padding: 20px 50px;
   margin-right: 20px;
+  width: 265px;
   text-align: center;
   font-weight: 700;
   color: #fff;
   background-color: var(--hover-color);
-  transition-property: background-color;
   transition: .3s ease;
+  transition-property: background-color;
 }
 
 .application-footer__button:hover {
@@ -741,41 +767,17 @@ button {
 }
 
 .footer__text {
+  margin-top: 10px;
   line-height: 2;
   max-width: 363px;
   max-height: 100%;
 }
 
 /* ------------------------------------------------------------ media ------------------------------------------------------------------*/
-/*  ----------------------------------------------------------  1920  ------------------------------------------------------------------*/
-@media (max-width: 1920px) {
-  .application-footer__submit {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .application-footer__button {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-}
-
 /*  ----------------------------------------------------------  1280  -------------------------------------------------------------------*/
 @media (max-width: 1280px) {
-  .section {
-    padding-bottom: 75px;
-  }
-
-  .main__headers {
-    font-size: 40px;
-  }
-
-  .nav-header__list {
-    display: none;
-  }
-
-  .nav-header__list {
-    display: none;
+  .nav-header__item:not(:last-child) {
+    margin-right: 30px;
   }
 
   .description-aboutus__reference {
@@ -786,6 +788,11 @@ button {
     margin-right: 0;
     margin-bottom: 15px;
     text-align: center;
+    width: 100%;
+  }
+
+  .description-aboutus__btn-link {
+    margin-left: 0;
   }
 
   .description-aboutus__card {
@@ -795,51 +802,90 @@ button {
     background-position-y: 44%;
   }
 
-  .application-footer__header {
-    font-size: 36px;
-    margin-bottom: 15px;
+  .footer__application {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .footer__infoblock {
+    margin-right: 13.5%;
   }
 
   .application-footer__button {
     padding: 20px 35px;
+    width: 240px;
   }
 
   .footer__text {
     line-height: 1.6;
   }
+
+  .footer__other {
+    display: none;
+  }
 }
 
-/*  ----------------------------------------------------------  992  -------------------------------------------------------------------*/
-@media (max-width: 992px) {
+/*  ----------------------------------------------------------  1024  -------------------------------------------------------------------*/
+@media (max-width: 1024px) {
+  .header {
+    padding: 26px 50px;
+    height: 100px;
+  }
+
+  .nav-header__burger-btn {
+    display: block;
+  }
+
+  .header__logo {
+    align-self: center;
+  }
+
+  .header__img {
+    max-width: 150px;
+  }
+
+  .nav-header__list {
+    display: none;
+  }
+
   .section {
-    padding-bottom: 50px;
+    padding-bottom: 80px;
   }
 
   .container {
-    padding: 0 30px;
+    padding: 0 50px;
   }
 
   .main__headers {
-    font-size: 32px;
+    font-size: 48px;
   }
 
   .advertisement {
-    padding: 50px;
-    min-height: 0;
-  }
-
-  .advertisement__text {
-    margin-bottom: 50px;
+    padding: 165px 90px 160px 77px;
+    max-width: unset;
   }
 
   .advertisement__top-title {
-    line-height: 1.3;
-    font-size: 40px;
+    margin-bottom: 17px;
+    font-size: 60px;
+  }
+
+  .advertisement__text {
+    margin-bottom: 60px;
+    font-size: 20px;
+  }
+
+  .aboutus__header {
+    margin-bottom: 8px;
   }
 
   .aboutus__info {
+    margin-bottom: 60px;
     width: 100%;
-    line-height: 1.5;
+  }
+
+  .aboutus__info-pic {
+    display: none;
   }
 
   .aboutus__description {
@@ -848,91 +894,167 @@ button {
 
   .description-aboutus__details {
     margin-right: 0;
-    margin-bottom: 20px;
-    height: 620px;
+    margin-bottom: 32px;
+    height: 640px;
     width: 100%;
   }
 
   .description-aboutus__reference {
-    padding: 25px 30px 25px 25px;
+    flex-direction: row;
   }
 
-  .description-aboutus__advantages {
-    margin-right: auto;
+  .description-aboutus__text {
+    margin-bottom: 0;
+    margin-right: 21.1%;
+    text-align: left;
+  }
+
+  .description-aboutus__btn-link {
+    margin-left: auto;
   }
 
   .description-aboutus__card {
-    padding: 30px 45px 30px 250px;
+    padding: 65px 150px 65px 317px;
+    max-width: 100%;
+    background-position-x: 75px;
+    background-position-y: 49%;
   }
 
   .description-aboutus__card:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
   }
 
   .how-we-work__nav, .how-we-work__header {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   .how-we-work__step {
     min-height: 0;
   }
 
+  .how-we-work__info-box {
+    max-width: 437px;
+    min-width: 356px;
+  }
+
   .how-we-work__text {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 
-  .how-we-work__step {
-    background: none;
+  .how-we-work__background {
+    width: 100%;
+    min-width: unset;
   }
 
-  .how-we-work__background, .how-we-work__background, .how-we-work__background, .how-we-work__background {
-    display: none;
-  }
-
-  .faq__item {
-    padding: 20px 0;
-    line-height: 1.5;
+  .faq__header {
+    margin-bottom: 32px;
   }
 
   .faq__question {
+    margin-right: 118px;
     font-size: 20px;
+    line-height: 1.6;
   }
 
   .footer {
-    padding: 20px 30px;
+    padding: 50px;
   }
 
-  .footer__infoblock, .footer__application {
-    margin-right: 7%;
+  .application-footer__field {
+    max-width: 541px;
   }
 }
 
-/*  ----------------------------------------------------------  850  -------------------------------------------------------------------*/
-@media (max-width: 850px) {
-  .footer {
-    flex-direction: column;
+/*  ----------------------------------------------------------  768  -------------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 50px 11px 50px;
+    height: 69px;
   }
 
-  .footer__low-resolution {
-    margin: 0;
-    align-self: center;
+  .advertisement {
+    padding: 163px 40px 160px 40px;
+  }
+
+  .advertisement__top-title {
+    font-size: 50px;
+
+  }
+
+  .advertisement__text {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
+  .description-aboutus__details {
+    height: 650px;
+    width: 100%;
+  }
+
+  .description-aboutus__reference {
+    padding: 34px 40px;
+  }
+
+  .description-aboutus__text {
+    margin-right: 47px;
+    width: 366px;
+    max-width: 366px;
+  }
+
+  .description-aboutus__card {
+    padding: 34px 44px 34px 170px;
+    max-width: 100%;
+    background-position-x: 40px;
+    background-position-y: 49%;
+    background-size: 114px 99px;
+  }
+
+  .how-we-work__list {
+    justify-content: space-between;
+  }
+
+  .how-we-work__step {
+    flex-direction: column-reverse;
+  }
+
+  .how-we-work__background {
+    margin-top: 0;
+    margin-bottom: 38px;
+    min-height: 284px;
+  }
+
+  .how-we-work__info-box {
+    margin-right: 0;
+    max-width: 100%;
+    min-width: unset;
+  }
+
+  .faq__header {
+    margin-bottom: 29px;
+  }
+
+  .faq__question {
+    margin-right: 45px;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer__application {
+    margin-bottom: 56px;
+  }
+
+  .infoblock-footer__logo {
+    margin-bottom: 14px;
+  }
+
+  .infoblock-footer__nav {
+    display: none;
   }
 
   .infoblock-footer__list {
     margin-bottom: 50px;
-  }
-
-  .infoblock-footer {
-    margin-bottom: 50px;
-  }
-
-  .application-footer {
-    margin-bottom: 50px;
-  }
-
-  .footer__application {
-    width: 100%;
-    max-width: 100%;
   }
 
   .footer__other {
@@ -944,14 +1066,18 @@ button {
   }
 }
 
-/*  ----------------------------------------------------------  567  -------------------------------------------------------------------*/
+/*  ----------------------------------------------------------  576  -------------------------------------------------------------------*/
 @media (max-width: 576px) {
   .section {
-    padding-bottom: 25px;
+    padding-bottom: 60px;
   }
 
   body {
-    font-size: 12px;
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 30px;
   }
 
   .main__headers {
@@ -961,65 +1087,104 @@ button {
 
   .main__mini-title {
     font-size: 18px;
+    font-weight: 500;
   }
 
   .advertisement {
-    padding: 20px 10px;
+    padding: 60px 21px;
+    min-height: unset;
+  }
+
+  .advertisement__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .advertisement__top-title {
-    font-size: 28px;
+    font-size: 32px;
+    text-align: center;
   }
 
   .advertisement__text {
+    margin-bottom: 32px;
     font-size: 16px;
-    margin-bottom: 25px;
-  }
-
-  .nav-header__btn {
-    display: none;
+    text-align: center;
   }
 
   .advertisement__calculation-link {
-    padding: 15px 20px;
-    width: 100%;
-    font-size: 18px;
+    padding: 15px 25px;
+    font-size: 16px;
   }
 
-  .aboutus__info {
-    margin-bottom: 20px;
+  .aboutus__description {
+    width: 100%;
   }
 
   .description-aboutus__details {
-    height: 420px;
+    height: unset;
+    width: unset;
+    height: 362px;
+  }
+
+  .description-aboutus__reference--low-resolution {
+    display: none;
+  }
+
+  .description-aboutus__reference--mid-resolution {
+    display: block;
   }
 
   .description-aboutus__reference {
-    padding: 15px;
+    position: unset;
+    padding: 0;
+    margin-bottom: 32px;
+    flex-direction: column;
+    background: unset;
+  }
+
+  .description-aboutus__text {
+    margin-right: auto;
+    margin-bottom: 15px;
+    width: 100%;
+    font-weight: 400;
+    line-height: 2;
+    color: var(--main-text-color);
   }
 
   .description-aboutus__btn-link {
     padding: 15px 15px;
-    width: 100%;
-    text-align: center;
+    margin-left: 0;
+    margin-right: auto;
+    color: var(--hover-color);
   }
 
   .description-aboutus__card {
-    background-position-x: 50%;
-    background-position-y: 15px;
-    padding: 125px 15px 15px 15px;
+    border: unset;
+    background-position-x: 0;
+    background-position-y: 0;
+    padding: 90px 0 0 0;
+    background-size: 23%;
   }
 
   .description-aboutus__card:not(:last-child) {
     margin-bottom: 20px;
   }
 
-  .description-aboutus__card {
-    background-size: 110px 90px;
+  .description-aboutus__card--consulting {
+    background-image: url(../images_euclid/svg/aboutus-consulting-2.svg);
+  }
+
+  .description-aboutus__card--intention {
+    background-image: url(../images_euclid/svg/aboutus-intention-2.svg);
   }
 
   .how-we-work__nav {
     margin-bottom: 20px;
+  }
+
+  .how-we-work__spoiler {
+    font-size: 14px;
   }
 
   .how-we-work__steps:not(:last-child) {
@@ -1028,6 +1193,10 @@ button {
 
   .how-we-work__info-box {
     margin-right: 0;
+  }
+
+  .how-we-work__background  {
+    min-height: 160px;
   }
 
   .how-we-work__text {
@@ -1049,7 +1218,9 @@ button {
   }
 
   .faq__question {
-    font-size: 16px;
+    margin-right: 17px;
+    font-size: 14px;
+    font-weight: 500;
   }
 
   .faq__cross, .faq__cross svg {
@@ -1057,28 +1228,188 @@ button {
     height: 30px;
   }
 
-  .footer {
-    display: flex;
+  .footer__application {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #595959;
+  }
+
+  .application-footer__header {
+    font-size: 36px;
+  }
+
+  .application-footer__submit {
     flex-direction: column;
   }
 
   .application-footer__button {
-    padding: 10px 20px;
+    padding: 12px 23px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    width: 180px;
+    align-self: center;
+    font-size: 12px;
+  }
+
+  .application-footer__condition-text {
+    font-size: 16px;
+  }
+
+  .footer__infoblock {
+    margin-right: 0;
+    align-self: center;
   }
 }
 
 /*  ----------------------------------------------------------  320  -------------------------------------------------------------------*/
 @media (max-width: 320px) {
-  .advertisement__calculation-link {
-    padding: 5px 10px;
+  .container {
+    padding: 0 15px;
+  }
+
+  .header__img {
+    max-width: 110px;
+  }
+
+  .advertisement__top-title {
+    font-size: 20px;
+    margin-bottom: 7px;
+  }
+
+  .advertisement__text, .advertisement__calculation-link {
+    font-size: 12px;
+  }
+
+  .aboutus__header {
+    margin-bottom: 20px;
+  }
+
+  .aboutus__info {
+    margin-bottom: 12px;
+  }
+
+  .description-aboutus__details {
+    height: 200px;
+    margin-bottom: 10px;
+    background-size: contain;
+  }
+
+  .description-aboutus__card {
+    padding: 60px 0 0 0;
+    background-size: 64px 49px;
+  }
+
+  .main__mini-title--aboutus {
+    margin-bottom: 2px;
+  }
+
+  .description-aboutus__text {
+    margin-bottom: 10px;
+  }
+
+  .description-aboutus__card:not(:last-child) {
+    margin-bottom: 29px;
+  }
+
+  .description-aboutus__btn-link {
+    padding: 10px 20px;
+    width: 162px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .how-we-work__header {
+    margin-bottom: 18px;
+  }
+
+  .how-we-work__nav {
+    margin-bottom: 13px;
+  }
+
+  .main__mini-title--how-we-work {
+    margin-bottom: 14px;
+  }
+
+  .how-we-work__text {
+    margin-bottom: 14px;
+  }
+
+  .how-we-work__btn-link:not(:last-child) {
+    margin: 0 10px 0 0;
+    min-width: 155px;
+  }
+
+  .how-we-work__btn-link--contract {
+    min-width: 118px;
+  }
+
+  .how-we-work__background {
+    margin-bottom: 20px;
   }
 
   .how-we-work__btn-link {
-    width: 100%;
+    font-size: 12px;
   }
 
-  .how-we-work__btn-link--details {
-    margin: 0 0 10px 0;
+  .faq__header {
+    margin-bottom: 12px;
+  }
+
+  .faq__question-box {
+    padding: 21px 0px;
+  }
+
+  .faq__question {
+    line-height: 1.65;
+  }
+
+  .footer {
+    padding: 32px 15px;
+  }
+
+  .footer__application {
+    margin-bottom: 20px;
+  }
+
+  .application-footer__header {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .application-footer__form {
+    margin-left: unset;
+  }
+
+  .application-footer__field {
+    margin-bottom: 25px;
+  }
+
+  .application-footer__field--name, .application-footer__field--mail {
+    height: 60px;
+  }
+
+  .footer__infoblock  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .application-footer__button {
+    margin-bottom: 15px;
+  }
+
+  .infoblock-footer__logo {
+    margin-right: unset;
+    margin-bottom: 10px;
+    width: 131px;
+  }
+
+  .sss,  .infoblock-footer__social {
+    width: 40px ;
+    height: 40px;
+  }
+
+  .infoblock-footer__social:not(:last-child) {
+    margin-right: 16px;
   }
 }
 
