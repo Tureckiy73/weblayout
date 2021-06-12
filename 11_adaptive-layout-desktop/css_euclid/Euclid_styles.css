@@ -545,6 +545,7 @@ body {
 
 .faq__question {
   display: block;
+  margin-right: 50px;
   align-self: center;
   font-size: 24px;
   font-weight: 700;
@@ -585,11 +586,14 @@ body {
 }
 
 /* ----------------------------------------------------- footer -----------------------------------------------------------------*/
+.footer-style {
+  background-color: #222222;
+}
+
 .footer {
   display: flex;
   padding: 48px 3.9% 80px 3.9%;
   color: #CACACA;
-  background-color: #222222;
 }
 
 .footer__infoblock {
@@ -774,25 +778,27 @@ body {
 }
 
 /* ------------------------------------------------------------ media ------------------------------------------------------------------*/
-/*  ----------------------------------------------------------  1280  -------------------------------------------------------------------*/
-@media (max-width: 1280px) {
-  .nav-header__item:not(:last-child) {
-    margin-right: 30px;
-  }
-
+/*  --------------------------------------------------------  1440 - 1280  -----------------------------------------------------------------*/
+@media (max-width: 1440px) {
   .description-aboutus__reference {
     flex-direction: column;
   }
 
   .description-aboutus__text {
     margin-right: 0;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-align: center;
     width: 100%;
   }
 
   .description-aboutus__btn-link {
     margin-left: 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  .nav-header__item:not(:last-child) {
+    margin-right: 30px;
   }
 
   .description-aboutus__card {
@@ -965,7 +971,24 @@ body {
   }
 }
 
-/*  ----------------------------------------------------------  768  -------------------------------------------------------------------*/
+/*  --------------------------------------------------------  668 - 768  -----------------------------------------------------------------*/
+@media (max-width: 668px) {
+  .description-aboutus__reference {
+    flex-direction: column;
+  }
+
+  .description-aboutus__text {
+    margin-right: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .description-aboutus__btn-link {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     padding: 10px 50px 11px 50px;
@@ -1144,9 +1167,9 @@ body {
   }
 
   .description-aboutus__text {
-    margin-right: auto;
     margin-bottom: 15px;
     width: 100%;
+    text-align: left;
     font-weight: 400;
     line-height: 2;
     color: var(--main-text-color);
