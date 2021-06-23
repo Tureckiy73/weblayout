@@ -1,0 +1,23 @@
+.swiper-container {
+  height: 800px;
+}
+
+/* .swiper-wrapper {
+  height: 500px;
+} */
+
+/* .sss {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+.sss-1 {
+  background: url('images_euclid/jpg+png/advertisement-1.jpg') no-repeat center / cover;
+}
+.sss-2 {
+  background: url('images_euclid/jpg+png/advertisement-2.jpg') no-repeat center / cover;
+}
+.sss-3 {
+  background: url('images_euclid/jpg+png/advertisement-3.jpg') no-repeat center / cover;
+}

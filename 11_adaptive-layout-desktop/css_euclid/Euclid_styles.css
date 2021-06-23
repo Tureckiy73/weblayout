@@ -95,6 +95,7 @@ body {
 }
 
 .header {
+  position: relative;
   display: flex;
   padding: 14px 75px;
   height: 100px;
@@ -116,6 +117,76 @@ body {
 }
 .header__burger-btn:active rect:nth-child(1){
   width: 18px;
+}
+
+.header__burger-menu {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 420px;
+  height: 768px;
+  padding: 40px 106px 50px 50px;
+  background-color: var(--background-color);
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+  transition: transform .3s ease-in-out;
+  transform: translateX(-101%);
+}
+
+.header__burger-isactive {
+  transform: none;
+}
+
+.header__cross {
+  display: inline-block;
+  margin-bottom: 100px;
+  cursor: pointer;
+  transition: .3s ease;
+  transition-property: fill;
+}
+
+.header__cross:hover, .header__cross:active rect{
+  fill: var(--active-color);
+}
+
+.header__link {
+  padding-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--main-text-color);
+  transition: .3s ease;
+  transition-property: color;
+}
+
+.header__burger-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__burger-item {
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: transparent solid 2px;
+  transition: .3s ease;
+  transition-property: border-bottom-color;
+}
+
+.header__burger-item:hover {
+  border-bottom-color: var(--hover-color);
+}
+
+.header__burger-item:active {
+  border-bottom-color: var(--active-color);
+  color: var(--active-color);
+}
+
+.header__link:active {
+  color: var(--active-color);
+}
+
+.header__burger-item:not(:last-child) {
+  margin-bottom: 60px;
 }
 
 .header__logo {
@@ -225,14 +296,33 @@ body {
 
 /* ------------------------------------------------------ advertisement ------------------------------------------------------------------*/
 .advertisement {
+  position: relative;
   padding: 105px 78px 91px 78px;
   min-height: 620px;
-  max-width: 1770px;
   color: #fff;
-  background: url(../images_euclid/jpg+png/advertisement-1.jpg) no-repeat center center / cover;
-  /* background-image: url(../images_euclid/jpg+png/advertisement-2.jpg);
-  background-image: url(../images_euclid/jpg+png/advertisement-3.jpg); */
-  /* background-size: cover; */
+}
+
+/* .swiper-slide {
+  min-width: 100%;
+} */
+
+.swiper-slide--1 {
+  background: url(../images_euclid/jpg+png/advertisement-1.jpg) no-repeat center / cover;
+}
+
+.swiper-slide--2 {
+  background: url(../images_euclid/jpg+png/advertisement-2.jpg) no-repeat center / cover;
+}
+
+.swiper-slide--3 {
+  background: url(../images_euclid/jpg+png/advertisement-3.jpg) no-repeat center / cover;
+}
+
+.swiper-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .advertisement__info {
@@ -411,7 +501,7 @@ body {
   transition-property: color;
 }
 
-.how-we-work__spoiler:hover {
+.how-we-work__spoiler:hover, .how-we-work__spoiler:focus {
   color: var(--hover-color);
 }
 
@@ -472,12 +562,12 @@ body {
 }
 
 .how-we-work__step {
-  display: flex;
+  display: none;
   min-height: 465px;
 }
 
-.how-we-work__step:not(:first-child) {
-  display: none;
+.how-we-work__step-active {
+  display: flex;
 }
 
 .how-we-work__background {
@@ -493,15 +583,15 @@ body {
 }
 
 .how-we-work__background--estimate {
-  background: url(../images_euclid/jpg+png/step2-estimate.jpg) top right no-repeat;
+  background: url(../images_euclid/jpg+png/step2-estimate.jpg) no-repeat center center / cover;
 }
 
 .how-we-work__background--contractors {
-  background: url(../images_euclid/jpg+png/step3-contractor.jpg) top right no-repeat;
+  background: url(../images_euclid/jpg+png/step3-contractor.jpg) no-repeat center center / cover;
 }
 
 .how-we-work__background--inspection {
-  background: url(../images_euclid/jpg+png/step4-inspect.jpg) top right no-repeat;
+  background: url(../images_euclid/jpg+png/step4-inspect.jpg) no-repeat center center / cover;
 }
 
 /* ------------------------------------------------------ FAQ ------------------------------------------------------------------*/
@@ -550,6 +640,8 @@ body {
   font-size: 24px;
   font-weight: 700;
   cursor: pointer;
+  transition: .3s ease;
+  transition-property: color;
 }
 
 .faq__question-slash {
@@ -565,6 +657,10 @@ body {
   cursor: pointer;
   transition: .3s ease;
   transition-property: transform, fill;
+}
+
+.faq__checkbox:checked + .faq__question-box .faq__spoiler .faq__cross {
+  transform: rotate(45deg);
 }
 
 .faq__item:hover .faq__cross ellipse{
@@ -838,7 +934,7 @@ body {
     height: 100px;
   }
 
-  .header__burger-btn {
+  .header__burger-btn, .header__burger-menu {
     display: block;
   }
 
@@ -868,7 +964,6 @@ body {
 
   .advertisement {
     padding: 165px 90px 160px 77px;
-    max-width: unset;
   }
 
   .advertisement__top-title {
@@ -995,6 +1090,11 @@ body {
     height: 69px;
   }
 
+  .header__burger-menu {
+    height: 731px;
+    padding-top: 21px;
+  }
+
   .advertisement {
     padding: 163px 40px 160px 40px;
   }
@@ -1097,6 +1197,27 @@ body {
 
   body {
     font-size: 14px;
+  }
+
+  .header__burger-menu {
+    text-align: right;
+    width: 320px;
+    height: 377px;
+    padding: 23px 15px 50px 50px;
+  }
+
+  .header__link {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .header__burger-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .header__cross {
+    margin-left: auto;
+    margin-bottom: 31px;
   }
 
   .container {

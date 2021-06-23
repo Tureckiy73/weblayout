@@ -5,8 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="css_euclid/normalize.css">
   <link rel="stylesheet" href="css_euclid/Euclid_styles.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <title>Проектные системы Евклид</title>
 </head>
 
@@ -14,13 +21,35 @@
 
   <header class="header-style">
     <div class="header container">
-      <button class="button-setup header__burger-btn" type="submit">
-        <svg width="30" height="23" viewbox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <button class="button-setup header__burger-btn">
+        <svg id="burger" width="30" height="23" viewbox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="3" fill="#333333"/>
           <rect y="10" width="30" height="3" fill="#333333"/>
           <rect y="20" width="30" height="3" fill="#333333"/>
         </svg>
       </button>
+      <div id="menu" class="header__burger-menu">
+        <span id="cross"  class="header__cross">
+          <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2.09082" width="29.5699" height="2.95699" transform="rotate(45 2.09082 0)" fill="#333333"/>
+            <rect y="20.9092" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9092)" fill="#333333"/>
+          </svg>
+        </span>
+        <ul class="list-reset header__burger-list">
+          <li class="list-reset header__burger-item">
+            <a class="link-reset header__link" href="#">О нас</a>
+          </li>
+          <li class="list-reset header__burger-item">
+            <a class="link-reset header__link" href="#">Как мы работаем</a>
+          </li>
+          <li class="list-reset header__burger-item">
+            <a class="link-reset header__link" href="#">Часто задаваемые вопросы</a>
+          </li>
+          <li class="list-reset header__burger-item">
+            <a class="link-reset header__link" href="#">Оставить заявку</a>
+          </li>
+        </ul>
+      </div>
       <a class="link-reset header__logo" href="#">
         <img class="img-setup header__img" src="images_euclid/jpg+png/Euclid-logo.png" alt="Логотип Евклид">
       </a>
@@ -58,8 +87,7 @@
   <main class="main">
     <section class="section">
       <div class="container">
-        <!-- <h1 class="header-reset invisible-header">Евклид</h1> -->
-        <div class="advertisement">
+        <div class="advertisement swiper-container">
           <div class="advertisement__info">
             <h1 class="header-reset advertisement__top-title">Проектные решения любой сложности</h1>
             <p class="advertisement__text">
@@ -67,13 +95,22 @@
             </p>
             <a class="link-reset advertisement__calculation-link" href="#">Заказать расчёт</a>
           </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide--1"></div>
+            <div class="swiper-slide swiper-slide--2"></div>
+            <div class="swiper-slide swiper-slide--3"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
+
       </div>
     </section>
 
     <section class="section">
       <div class="container aboutus">
-        <h2 class="header-reset main__headers aboutus__header header-reset">О нас</h2>
+        <h2 class="header-reset main__headers aboutus__header">О нас</h2>
         <p class="aboutus__info">
           Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда
           внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности. А
@@ -127,21 +164,22 @@
         <nav class="how-we-work__nav">
           <ul class="list-reset how-we-work__list">
             <li class="list-reset how-we-work__steps how-we-work__steps--first">
-              <button class="button-setup how-we-work__spoiler">1 шаг</button>
+              <button id="first-step" class="button-setup how-we-work__spoiler" data-path="one">1 шаг</button>
             </li>
             <li class="list-reset how-we-work__steps how-we-work__steps--first">
-              <button class="button-setup how-we-work__spoiler">2 шаг</button>
+              <button class="button-setup how-we-work__spoiler" data-path="two">2 шаг</button>
             </li>
             <li class="list-reset how-we-work__steps how-we-work__steps--first">
-              <button class="button-setup how-we-work__spoiler">3 шаг</button>
+              <button class="button-setup how-we-work__spoiler" data-path="three">3 шаг</button>
             </li>
             <li class="list-reset how-we-work__steps how-we-work__steps--first">
-              <button class="button-setup how-we-work__spoiler">4 шаг</button>
+              <button class="button-setup how-we-work__spoiler" data-path="four">4 шаг</button>
             </li>
+
           </ul>
         </nav>
         <div class="how-we-work__content">
-          <div class="how-we-work__step">
+          <div class="how-we-work__step how-we-work__step-active" data-target="one">
             <div class="how-we-work__info-box">
               <h3 class="header-reset main__mini-title main__mini-title--how-we-work">Проводим консультацию</h3>
               <p class="main__text how-we-work__text">
@@ -159,7 +197,7 @@
             </div>
             <div class="how-we-work__background how-we-work__background--consulting"></div>
           </div>
-          <div class="how-we-work__step">
+          <div class="how-we-work__step how-we-work__step-active" data-target="two">
             <div class="how-we-work__info-box">
               <h3 class="header-reset main__mini-title main__mini-title--how-we-work">Составляем смету</h3>
               <p class="main__text how-we-work__text">
@@ -172,7 +210,7 @@
             </div>
             <div class="how-we-work__background how-we-work__background--estimate"></div>
           </div>
-          <div class="how-we-work__step">
+          <div class="how-we-work__step how-we-work__step-active" data-target="three">
             <div class="how-we-work__info-box">
               <h3 class="header-reset main__mini-title main__mini-title--how-we-work">Привлекаем подрядчиков</h3>
               <p class="main__text how-we-work__text">
@@ -188,7 +226,7 @@
             </div>
             <div class="how-we-work__background how-we-work__background--contractors"></div>
           </div>
-          <div class="how-we-work__step">
+          <div class="how-we-work__step how-we-work__step-active" data-target="four">
             <div class="how-we-work__info-box">
               <h3 class="header-reset main__mini-title main__mini-title--how-we-work">Инспектируем все этапы работ</h3>
               <p class="main__text how-we-work__text">
@@ -210,7 +248,7 @@
     <section class="section">
       <div class="container faq">
         <h2 class="header-reset main__headers faq__header">Часто задаваемые вопросы</h2>
-        <ul class="list-reset faq__list">
+        <ul id="accordion" class="list-reset faq__list">
           <li class="list-reset faq__item">
             <div class="faq__question-box">
               <h3 class="header-reset faq__question">
@@ -323,6 +361,119 @@
             </div>
           </li>
         </ul>
+        <!-- <ul id="accordion" class="list-reset faq__list">
+          <li class="list-reset faq__item">
+            <div class="faq__question-box">
+              <h3 class="header-reset faq__question">
+                Из чего формируется конечная стоимость проекта?
+              </h3>
+              <span class="faq__cross">
+                <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+                </svg>
+              </span>
+            </div>
+            <div class="faq__content">
+              <p class="faq__text">
+                Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
+                нас к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но
+                высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё
+                некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского
+                типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет
+                сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою
+                очередь, должны быть указаны как претенденты на роль ключевых факторов.
+              </p>
+              <p class="faq__text">
+                Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к
+                ответу. Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а
+                значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а
+                также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть
+                представлены в исключительно положительном свете.
+              </p>
+            </div>
+          </li>
+          <li class="list-reset faq__item">
+            <div class="faq__question-box">
+              <h3 class="header-reset faq__question">
+                У меня есть свой проект. Сможем ли мы его доработать <span class="faq__question-slash">/</span> реализовать?
+              </h3>
+              <span class="faq__cross">
+                <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+                </svg>
+              </span>
+            </div>
+            <div class="faq__content">
+              <p class="faq__text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut odit nam aperiam perspiciatis incidunt alias. Obcaecati pariatur fugit dolore maiores repudiandae? Enim tempore ipsum consequuntur pariatur reiciendis, praesentium modi aliquam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ipsam enim fuga. Accusantium, at similique. Eaque corporis error, porro, magnam aliquid distinctio in deleniti ab suscipit neque assumenda reprehenderit blanditiis!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe alias, ipsa architecto molestias blanditiis dolores delectus totam id sint maiores, consequuntur placeat eveniet eum accusamus dolor suscipit cum aut sed.
+              </p>
+            </div>
+          </li>
+          <li class="list-reset faq__item">
+            <div class="faq__question-box">
+              <h3 class="header-reset faq__question">
+                Я выбираю между разными компаниями. В чём ваше отличие?
+              </h3>
+              <span class="faq__cross">
+                <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+                </svg>
+              </span>
+            </div>
+            <div class="faq__content">
+              <p class="faq__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam est labore porro quis eum aliquam eveniet! Amet officiis earum excepturi illum molestiae repellendus ea, minima maiores non omnis reprehenderit similique?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae repellendus doloribus maiores nihil numquam sequi! Temporibus, quod sunt, magni est repudiandae id sapiente, reiciendis sequi maxime modi pariatur commodi quisquam.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cumque repellendus sed praesentium veniam quae iure quos nemo incidunt dolore ipsam deleniti tempora reiciendis, recusandae iste quibusdam eius temporibus? Exercitationem.
+              </p>
+            </div>
+          </li>
+          <li class="list-reset faq__item">
+            <div class="faq__question-box">
+              <h3 class="header-reset faq__question">
+                Могу ли я делегировать вам работу <span class="faq__question-slash">/</span> согласование с подрядчиком <span class="faq__question-slash">/</span> организацией?
+              </h3>
+              <span class="faq__cross">
+                <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+                </svg>
+              </span>
+            </div>
+            <div class="faq__content">
+              <p class="faq__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam vitae velit praesentium nobis assumenda blanditiis inventore fugiat! Soluta ipsam quod officiis voluptate iste accusantium omnis, facilis possimus in eveniet nisi.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, suscipit doloremque id at neque, unde laborum nesciunt, nam animi natus ratione nulla et ad quae. Ea incidunt atque excepturi error.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus voluptates nisi possimus laborum aut velit ex repellat consequatur repudiandae amet ad, laudantium repellendus vero unde incidunt iste quis accusamus.
+              </p>
+            </div>
+          </li>
+          <li class="list-reset faq__item">
+            <div class="faq__question-box">
+              <h3 class="header-reset faq__question">
+                Могу ли я вернуть деньги на каком-либо из этапов работ?
+              </h3>
+              <span class="faq__cross">
+                <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+                </svg>
+              </span>
+            </div>
+            <div class="faq__content">
+              <p class="faq__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias soluta quibusdam numquam blanditiis ratione dolorum tempore error eos, repudiandae beatae dolor delectus iste optio id eaque culpa? Assumenda, similique necessitatibus?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, perferendis? Excepturi voluptas modi nisi illo laudantium eos, harum exercitationem. Ratione nulla, iure maiores earum aliquam facere omnis porro accusamus dolore!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ea consectetur nesciunt, aliquam rerum recusandae dolores, quam eius in repellendus error eligendi dolorum reprehenderit hic eum molestiae totam, commodi veniam.
+              </p>
+            </div>
+          </li>
+        </ul> -->
       </div>
 
     </section>
@@ -402,7 +553,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="Euclid.js"></script>
 </body>
 
 </html>
