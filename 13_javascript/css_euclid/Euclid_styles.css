@@ -297,14 +297,9 @@ body {
 /* ------------------------------------------------------ advertisement ------------------------------------------------------------------*/
 .advertisement {
   position: relative;
-  padding: 105px 78px 91px 78px;
   min-height: 620px;
   color: #fff;
 }
-
-/* .swiper-slide {
-  min-width: 100%;
-} */
 
 .swiper-slide--1 {
   background: url(../images_euclid/jpg+png/advertisement-1.jpg) no-repeat center / cover;
@@ -326,6 +321,7 @@ body {
 }
 
 .advertisement__info {
+  padding: 105px 78px 91px 78px;
   max-width: 837px;
 }
 
@@ -677,6 +673,10 @@ body {
 
 .faq__content {
   display: none;
+}
+
+.faq__item--active .faq__content {
+  display: block;
 }
 
 .faq__text {

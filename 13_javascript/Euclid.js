@@ -39,17 +39,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 })
 
-// $( function() {
-//   $( ".faq__item" ).accordion({
-//     header: "faq__question-box",
-//     collapsible: true
-//   });
-// } );
-
-
 $(document).ready(function() {
   $('.faq__question-box').click(function() {
-    $(this).next('.faq__content').slideToggle(200);
-    $(this).children('.faq__cross').toggleClass('faq__cross--rotate');
+    // $(this).next('.faq__content').slideToggle(200);
+    const parent = $(this).parent();
+
+    if (parent.hasClass('faq__item--active')) {
+      parent.removeClass('faq__item--active');
+      $(this).children('.faq__cross').removeClass('faq__cross--rotate');
+    }
+    else {
+      $('.faq__item').removeClass('faq__item--active')
+      parent.addClass('faq__item--active')
+      $('.faq__cross').removeClass('faq__cross--rotate');
+      $(this).children('.faq__cross').addClass('faq__cross--rotate');
+    }
+
   })
 })
