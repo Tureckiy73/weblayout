@@ -1,0 +1,1660 @@
+/* ------------------------------------------------------ common styles ------------------------------------------------------------------*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts_euclid/montserrat-bold-webfont.woff2') format('woff2'),
+    url('../fonts_euclid/montserrat-bold-webfont.woff') format('woff');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts_euclid/montserrat-light-webfont.woff2') format('woff2'),
+    url('../fonts_euclid/montserrat-light-webfont.woff') format('woff');
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts_euclid/montserrat-medium-webfont.woff2') format('woff2'),
+    url('../fonts_euclid/montserrat-medium-webfont.woff') format('woff');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts_euclid/montserrat-regular-webfont.woff2') format('woff2'),
+    url('../fonts_euclid/montserrat-regular-webfont.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  word-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:root {
+  --hover-color: #FF9900;
+  --active-color: #E1670E;
+  --background-color: #fff;
+  --main-text-color: #333;
+}
+
+body {
+  min-width: 320px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--main-text-color);
+  background-color: var(--background-color);
+}
+
+.section {
+  padding-bottom: 100px;
+}
+
+.header-reset {
+  margin: 0;
+}
+
+.link-reset {
+  text-decoration: none;
+}
+
+.list-reset {
+  list-style: none;
+}
+
+.img-setup {
+  max-width: 100%;
+}
+
+.button-setup {
+  border: unset;
+  cursor: pointer;
+  background-color: var(--background-color);
+}
+
+/* ---------------------------------------- focus ------------------------------------------*/
+.infoblock-footer__logo:focus, .header__logo:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 2px;
+}
+
+.nav-header__link:focus, .header__burger-link:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 3px;
+}
+
+.nav-header__search-btn:focus, .header__burger-btn:focus, .header__cross:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 2px;
+}
+
+.advertisement__calculation-link:focus {
+  background-color: rgba(255, 153, 0, 0.7);
+  outline: unset;
+}
+
+.description-aboutus__btn-link:focus {
+  background-color: var(--hover-color);
+  outline: unset;
+}
+
+.how-we-work__spoiler:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 3px;
+}
+
+.how-we-work__btn-link--details:focus {
+  background-color: #F7B045;
+  outline: unset;
+}
+
+.how-we-work__btn-link--contract:focus {
+  background-color: #666;
+  outline: unset;
+  color: #fff;
+}
+
+.faq__cross:focus ellipse {
+  fill: var(--hover-color);
+}
+
+.faq__cross:focus path {
+  fill: #fff;
+}
+
+.faq__cross:focus {
+  outline: unset;
+}
+
+.infoblock-footer__link:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 3px;
+}
+
+.infoblock-footer__facebook:focus, .infoblock-footer__instagram:focus, .infoblock-footer__vk:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 3px;
+}
+
+.application-footer__field:focus {
+  background-color: #666;
+  outline: unset;
+}
+
+.application-footer__button:focus {
+  background-color: #F7B045;
+  outline: unset;
+}
+
+/* ------------------------------------------------------ header ------------------------------------------------------------------*/
+.header-style {
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  position: relative;
+  display: flex;
+  padding: 14px 75px;
+  height: 100px;
+}
+
+.header__burger-btn {
+  margin-right: auto;
+  display: none;
+  align-self: center;
+  transition: .5s ease;
+  transition-property: fill, width;
+  transform: rotate(180deg);
+}
+
+.header__burger-btn:active rect{
+  fill: var(--active-color);
+}
+.header__burger-btn:active rect:nth-child(2){
+  width: 25px;
+}
+.header__burger-btn:active rect:nth-child(1){
+  width: 18px;
+}
+
+.header__burger-menu {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 420px;
+  height: 768px;
+  padding: 40px 106px 50px 50px;
+  background-color: var(--background-color);
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+  transition: transform .3s ease-in-out;
+  transform: translateX(-101%);
+}
+
+.header__burger-isactive {
+  transform: none;
+}
+
+.header__cross {
+  display: inline-block;
+  margin-bottom: 100px;
+  border: unset;
+  background-color: var(--background-color);
+  cursor: pointer;
+  transition: .3s ease;
+  transition-property: fill;
+}
+
+.header__cross:hover, .header__cross:active rect{
+  fill: var(--active-color);
+}
+
+.header__burger-link {
+  /* padding-bottom: 10px; */
+  border-bottom: transparent solid 2px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--main-text-color);
+  transition: .3s ease;
+  transition-property: border-bottom-color, color;
+}
+
+.header__burger-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__burger-item {
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: transparent solid 2px;
+  transition: .3s ease;
+  transition-property: border-bottom-color;
+}
+
+.header__burger-link:hover {
+  border-bottom-color: var(--hover-color);
+}
+
+.header__burger-link:active {
+  border-bottom-color: var(--active-color);
+  color: var(--active-color);
+}
+
+.header__burger-link:active {
+  color: var(--active-color);
+}
+
+.header__burger-item:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.header__logo {
+  margin-right: auto;
+  display: block;
+  align-self: center;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-header__list {
+  display: flex;
+  margin-right: 80px;
+  margin-left: 40px;
+  flex-wrap: wrap;
+}
+
+.nav-header__link {
+  /* padding-bottom: 10px; */
+  border-bottom: transparent solid 2px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--main-text-color);
+  transition: .3s ease;
+  transition-property: border-bottom-color, color;
+}
+
+.nav-header__link:hover {
+  border-bottom-color: var(--hover-color);
+}
+
+.nav-header__link:active {
+  border-bottom-color: var(--active-color);
+  color: var(--active-color);
+}
+
+.nav-header__item:not(:last-child) {
+  margin-right: 85px;
+}
+
+.nav-header__input {
+  display: none;
+}
+
+.nav-header__search-btn circle, rect{
+  transition: .3s ease;
+  transition-property: fill, stroke;
+}
+
+.nav-header__search-btn:hover circle{
+  stroke: var(--hover-color);
+}
+
+.nav-header__search-btn:hover rect{
+  fill: var(--hover-color);
+}
+
+.nav-header__search-btn:active .nav-header__magnifier circle{
+  stroke: var(--active-color);
+}
+
+.nav-header__search-btn:active .nav-header__magnifier rect{
+  fill: var(--active-color);
+}
+
+/* ------------------------------------------------------ main ------------------------------------------------------------------*/
+.container {
+  padding: 0 75px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1920px;
+}
+
+.invisible-header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main__headers {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.main__mini-title {
+  margin: 0;
+  max-width: 100%;
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.main__text {
+  margin: 0;
+  line-height: 2;
+}
+
+/* ------------------------------------------------------ advertisement ------------------------------------------------------------------*/
+.advertisement {
+  position: relative;
+  min-height: 620px;
+  color: #fff;
+}
+
+.swiper-slide--1 {
+  background: url(../images_euclid/jpg+png/advertisement-1.jpg) no-repeat center / cover;
+}
+
+.swiper-slide--2 {
+  background: url(../images_euclid/jpg+png/advertisement-2.jpg) no-repeat center / cover;
+}
+
+.swiper-slide--3 {
+  background: url(../images_euclid/jpg+png/advertisement-3.jpg) no-repeat center / cover;
+}
+
+.swiper-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.advertisement__info {
+  padding: 105px 78px 91px 78px;
+  max-width: 837px;
+}
+
+.advertisement__top-title {
+  margin-bottom: 24px;
+  font-size: 70px;
+  font-weight: 800;
+  line-height: 1.21;
+  letter-spacing: 0.7px;
+}
+
+.advertisement__text {
+ margin-bottom: 92px;
+}
+
+.advertisement__text, .advertisement__calculation-link {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.advertisement__calculation-link {
+  display: inline-block;
+  padding: 26px 37px;
+  text-align: center;
+  color: #fff;
+  background-color: var(--hover-color);
+  transition: .3s ease;
+  transition-property: background-color;
+}
+
+.advertisement__calculation-link:hover {
+  background-color: rgba(255, 153, 0, 0.6);;
+}
+
+.advertisement__calculation-link:active {
+  background-color: var(--active-color);
+}
+
+/* ------------------------------------------------------ about us ------------------------------------------------------------------*/
+.aboutus__header {
+  margin-bottom: 20px;
+}
+
+.aboutus__description {
+  display: flex;
+}
+
+.aboutus__info {
+  margin-bottom: 47px;
+  width: 69.5%;
+  line-height: 2;
+}
+
+.aboutus__info-pic {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../images_euclid/svg/i.svg) center center no-repeat;
+  cursor: pointer;
+}
+
+.description-aboutus__details {
+  position: relative;
+  margin-right: 30px;
+  width: 870px;
+  background: url(../images_euclid/jpg+png/Worker.jpg) no-repeat center center / cover;
+}
+
+.description-aboutus__reference {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  padding: 50px;
+  align-items: center;
+  width: 100%;
+  background: rgba(0,0,0,.5);
+}
+
+.description-aboutus__reference--mid-resolution {
+  display: none;
+}
+
+.description-aboutus__text {
+  margin-right: 74px;
+  width: 454px;
+  font-weight: 700;
+  line-height: 2;
+  color: #fff;
+}
+
+.description-aboutus__btn-link {
+  display: inline-block;
+  margin-left: auto;
+  padding: 20px 38px;
+  border: 3px solid var(--hover-color);
+  font-weight: 700;
+  color: #fff;
+  background: transparent;
+  transition: .3s ease;
+  transition-property: border-color, background-color;
+}
+
+.description-aboutus__btn-link:hover {
+  background-color: var(--hover-color);
+}
+
+.description-aboutus__btn-link:active {
+  border-color: var(--active-color);
+  background-color: var(--active-color);
+}
+
+.description-aboutus__advantages {
+  align-self: center;
+}
+
+.description-aboutus__card {
+  padding: 64px 115px 66px 300px;
+  border: 1px solid #CACACA;
+  max-width: 870px;
+  background-position-x: 58px;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+}
+
+.main__mini-title--aboutus {
+  margin-bottom: 5px;
+}
+
+.description-aboutus__card:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.description-aboutus__card--consulting {
+  background-image: url(../images_euclid/svg/aboutus-consulting.svg);
+}
+
+.description-aboutus__card--intention {
+  background-image: url(../images_euclid/svg/aboutus-intention.svg);
+}
+
+/* ---------------------------------------------------- how we work ----------------------------------------------------------------*/
+.how-we-work__header {
+  margin-bottom: 47px;
+}
+
+.how-we-work__nav {
+  margin-bottom: 47px;
+}
+
+.how-we-work__list {
+  padding: 0;
+  display: flex;
+}
+
+.main__mini-title--how-we-work {
+  margin-bottom: 6px;
+}
+
+.how-we-work__steps {
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--main-text-color);
+  cursor: pointer;
+}
+
+.how-we-work__steps:not(:last-child) {
+  margin-right: 86px;
+}
+
+.how-we-work__spoiler {
+  transition: .3s ease;
+  transition-property: color;
+}
+
+.how-we-work__spoiler:hover, .how-we-work__spoiler:checked {
+  color: var(--hover-color);
+}
+
+.how-we-work__spoiler:active {
+  color: var(--active-color);
+}
+
+.how-we-work__info-box {
+  margin-right: 50px;
+  max-width: 758px;
+}
+
+.how-we-work__text--wtih-links {
+  margin-bottom: 50px;
+}
+
+.how-we-work__btn-link {
+  padding: 20px 39px;
+}
+
+.how-we-work__btn-link:not(:last-child) {
+  margin-right: 26px;
+}
+
+.how-we-work__btn-link--details {
+  display: inline-block;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--hover-color);
+
+  transition: .3s ease;
+  transition-property: background-color;
+}
+
+.how-we-work__btn-link--details:hover {
+  background-color: #F7B045;
+}
+
+.how-we-work__btn-link--details:active {
+  background-color: var(--active-color);
+}
+
+.how-we-work__btn-link--contract {
+  display: inline-block;
+  border: 1px solid var(--main-text-color);
+  color: var(--main-text-color);
+  transition: .3s ease;
+  transition-property: border-color, background-color, color;
+}
+
+.how-we-work__btn-link--contract:hover {
+  color: #fff;
+  background-color: #666;
+}
+
+.how-we-work__btn-link--contract:active {
+  border-color:  #000;
+  color: #fff;
+  background-color: #000;
+}
+
+.how-we-work__step {
+  display: none;
+  min-height: 465px;
+}
+
+.how-we-work__spoiler-active {
+  color: var(--hover-color);
+}
+
+.how-we-work__step-active {
+  display: flex;
+}
+
+.how-we-work__background {
+  margin-left: auto;
+  margin-top: 10px;
+  width: 870px;
+  max-width: 870px;
+  min-width: 437px;
+}
+
+.how-we-work__background--consulting {
+  background: url(../images_euclid/jpg+png/step1-consultation.jpg) no-repeat center center / cover;
+}
+
+.how-we-work__background--estimate {
+  background: url(../images_euclid/jpg+png/step2-estimate.jpg) no-repeat center center / cover;
+}
+
+.how-we-work__background--contractors {
+  background: url(../images_euclid/jpg+png/step3-contractor.jpg) no-repeat center center / cover;
+}
+
+.how-we-work__background--inspection {
+  background: url(../images_euclid/jpg+png/step4-inspect.jpg) no-repeat center center / cover;
+}
+
+/* ------------------------------------------------------ FAQ ------------------------------------------------------------------*/
+.faq__header {
+  margin-bottom: 44px;
+}
+
+.faq__item {
+  padding: 30px 0;
+  border-top: 1px solid #CACACA;
+  line-height: 2;
+  transition: .3s ease;
+  transition-property: border-color, color;
+}
+
+.faq__item:last-child {
+  border-bottom: 1px solid #CACACA;
+}
+
+.faq__item:hover {
+  border-color: var(--hover-color);
+}
+
+.faq__item:not(:nth-last-child(2)):hover + .faq__item{
+  border-color: var(--hover-color);
+}
+
+.faq__item:nth-last-child(2):hover + .faq__item{
+  border-top-color: var(--hover-color);
+}
+
+.faq__item:hover .faq__question{
+  color: var(--hover-color);
+}
+
+.faq__question-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq__question {
+  display: block;
+  margin-right: 50px;
+  align-self: center;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s ease;
+  transition-property: color;
+}
+
+.faq__question-slash {
+  color: #CACACA;
+}
+
+.faq__cross {
+  display: block;
+  margin-left: auto;
+  width: 50px;
+  height: 50px;
+  align-self: center;
+  cursor: pointer;
+  transition: .3s ease;
+  transition-property: transform, fill;
+}
+
+.faq__cross--rotate {
+  transform: rotate(45deg);
+}
+
+.faq__item:hover .faq__cross ellipse{
+  fill: var(--hover-color);
+}
+
+.faq__item:hover .faq__cross path{
+  fill: #fff;
+}
+
+.faq__content {
+  display: none;
+}
+
+.faq__item--active .faq__content {
+  display: block;
+}
+
+.faq__text {
+  max-width: 90%;
+}
+
+.faq__text:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+/* ----------------------------------------------------- footer -----------------------------------------------------------------*/
+.footer-style {
+  background-color: #222222;
+}
+
+.footer {
+  display: flex;
+  padding: 48px 3.9% 80px 3.9%;
+  color: #CACACA;
+}
+
+.footer__infoblock {
+  margin-right: 19.5%;
+  min-width: 254px;
+}
+
+.infoblock-footer__logo {
+  display: block;
+  margin-bottom: 18px;
+  margin-right: auto;
+}
+
+.infoblock-footer__list {
+  margin-bottom: 90px;
+}
+
+.infoblock-footer__link {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 2;
+  color: #CACACA;
+  transition: .3s ease;
+  transition-property: color;
+}
+
+.infoblock-footer__link:hover {
+  color: var(--hover-color);
+}
+
+.infoblock-footer__link:active {
+  color: var(--active-color)
+}
+
+.infoblock-footer__socials-list {
+  display: flex;
+}
+
+.infoblock-footer__social {
+  display: block;
+  width: 60px;
+  height: 60px;
+  transition: .3s ease;
+  transition-property: fill;
+}
+
+.infoblock-footer__social:not(:last-child) {
+  margin-right: 24px;
+}
+
+.infoblock-footer__social:hover path {
+  fill: var(--hover-color);
+}
+
+.infoblock-footer__social:active path {
+  fill: var(--active-color);
+}
+
+.footer__application {
+  margin-right: 12.3%;
+  width: 570px;
+  max-width: 570px;
+  transform: translateY(5px);
+}
+
+.application-footer__header {
+  display: block;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.application-footer__field {
+  padding: 14px 24px;
+  border: none;
+  width: 100%;
+  line-height: 2;
+  color: #CACACA;
+  background-color: #414141;
+}
+
+.application-footer__field {
+  margin-bottom: 23px;
+}
+
+.application-footer__form {
+  margin-left: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.application-footer__field--message {
+  margin-bottom: 31px;
+  height: 150px;
+  resize: none;
+}
+
+.application-footer__submit {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.application-footer__button {
+  padding: 20px 50px;
+  margin-right: 20px;
+  width: 265px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--hover-color);
+  transition: .3s ease;
+  transition-property: background-color;
+}
+
+.application-footer__button:hover {
+  background-color: #F7B045;
+}
+
+.application-footer__button:active {
+  background-color: var(--active-color);
+}
+
+.application-footer__conditions {
+  align-self: center;
+}
+
+.application-footer__condition {
+  cursor: pointer;
+}
+
+.application-footer__checkbox {
+  position: absolute;
+  appearance: none;
+}
+
+.fake {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../images_euclid/svg/check_box.svg) center center no-repeat;
+  transform: translateY(4px);
+}
+
+.application-footer__checkbox:focus + .fake {
+  border: 1px solid #fff;
+  border-radius: 2px;
+}
+
+.fake::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  content: "";
+  width: 10px;
+  height: 8px;
+  background: url(../images_euclid/svg/chackbox.svg) center center no-repeat;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.application-footer__checkbox:checked + .fake::before{
+  opacity: 1;
+}
+
+.application-footer__condition-text {
+  margin-left: -2px;
+}
+
+.footer__other {
+  padding-top: 78px;
+  margin-left: auto;
+}
+
+.footer__text {
+  margin-top: 10px;
+  line-height: 2;
+  max-width: 363px;
+  max-height: 100%;
+}
+
+/* ------------------------------------------------------------ media ------------------------------------------------------------------*/
+/*  --------------------------------------------------------  1440 - 1280  -----------------------------------------------------------------*/
+@media (max-width: 1440px) {
+  .description-aboutus__reference {
+    flex-direction: column;
+  }
+
+  .description-aboutus__text {
+    margin-right: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .description-aboutus__btn-link {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  .nav-header__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .description-aboutus__card {
+    padding: 35px 60px 35px 250px;
+    max-width: 870px;
+    background-position-x: 35px;
+    background-position-y: 44%;
+  }
+
+  .footer__application {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .footer__infoblock {
+    margin-right: 13.5%;
+  }
+
+  .application-footer__button {
+    padding: 20px 35px;
+    width: 240px;
+  }
+
+  .footer__text {
+    line-height: 1.6;
+  }
+
+  .footer__other {
+    display: none;
+  }
+}
+
+/*  ----------------------------------------------------------  1024  -------------------------------------------------------------------*/
+@media (max-width: 1024px) {
+  .header {
+    padding: 26px 50px;
+    height: 100px;
+  }
+
+  .header__burger-btn, .header__burger-menu {
+    display: block;
+  }
+
+  .header__logo {
+    align-self: center;
+  }
+
+  .header__img {
+    max-width: 150px;
+  }
+
+  .nav-header__list {
+    display: none;
+  }
+
+  .section {
+    padding-bottom: 80px;
+  }
+
+  .container {
+    padding: 0 50px;
+  }
+
+  .main__headers {
+    font-size: 48px;
+  }
+
+  .advertisement__info {
+    padding: 165px 90px 160px 77px;
+  }
+
+  .advertisement__top-title {
+    margin-bottom: 17px;
+    font-size: 60px;
+  }
+
+  .advertisement__text {
+    margin-bottom: 60px;
+    font-size: 20px;
+  }
+
+  .aboutus__header {
+    margin-bottom: 8px;
+  }
+
+  .aboutus__info {
+    margin-bottom: 60px;
+    width: 100%;
+  }
+
+  .aboutus__info-pic {
+    display: none;
+  }
+
+  .aboutus__description {
+    flex-direction: column;
+  }
+
+  .description-aboutus__details {
+    margin-right: 0;
+    margin-bottom: 32px;
+    height: 640px;
+    width: 100%;
+  }
+
+  .description-aboutus__reference {
+    flex-direction: row;
+  }
+
+  .description-aboutus__text {
+    margin-bottom: 0;
+    margin-right: 21.1%;
+    text-align: left;
+  }
+
+  .description-aboutus__btn-link {
+    margin-left: auto;
+  }
+
+  .description-aboutus__card {
+    padding: 65px 150px 65px 317px;
+    max-width: 100%;
+    background-position-x: 75px;
+    background-position-y: 49%;
+  }
+
+  .description-aboutus__card:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .how-we-work__nav, .how-we-work__header {
+    margin-bottom: 50px;
+  }
+
+  .how-we-work__step {
+    min-height: 0;
+  }
+
+  .how-we-work__info-box {
+    max-width: 437px;
+    min-width: 356px;
+  }
+
+  .how-we-work__text--wtih-links {
+    margin-bottom: 25px;
+  }
+
+  .how-we-work__background {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .faq__header {
+    margin-bottom: 32px;
+  }
+
+  .faq__question {
+    margin-right: 118px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .footer {
+    padding: 50px;
+  }
+
+  .application-footer__field {
+    max-width: 541px;
+  }
+}
+
+/*  --------------------------------------------------------  668 - 768  -----------------------------------------------------------------*/
+@media (max-width: 668px) {
+  .description-aboutus__reference {
+    flex-direction: column;
+  }
+
+  .description-aboutus__text {
+    margin-right: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .description-aboutus__btn-link {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 50px 11px 50px;
+    height: 69px;
+  }
+
+  .header__burger-menu {
+    height: 731px;
+    padding-top: 21px;
+  }
+
+  .advertisement__info {
+    padding: 163px 40px 160px 40px;
+  }
+
+  .advertisement__top-title {
+    font-size: 50px;
+
+  }
+
+  .advertisement__text {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
+  .description-aboutus__details {
+    height: 650px;
+    width: 100%;
+  }
+
+  .description-aboutus__reference {
+    padding: 34px 40px;
+  }
+
+  .description-aboutus__text {
+    margin-right: 47px;
+    width: 366px;
+    max-width: 366px;
+  }
+
+  .description-aboutus__card {
+    padding: 34px 44px 34px 170px;
+    max-width: 100%;
+    background-position-x: 40px;
+    background-position-y: 49%;
+    background-size: 114px 99px;
+  }
+
+  .how-we-work__list {
+    justify-content: space-between;
+  }
+
+  .how-we-work__step {
+    flex-direction: column-reverse;
+  }
+
+  .how-we-work__background {
+    margin-top: 0;
+    margin-bottom: 38px;
+    min-height: 284px;
+  }
+
+  .how-we-work__info-box {
+    margin-right: 0;
+    max-width: 100%;
+    min-width: unset;
+  }
+
+  .faq__header {
+    margin-bottom: 29px;
+  }
+
+  .faq__question {
+    margin-right: 45px;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer__application {
+    margin-bottom: 56px;
+  }
+
+  .infoblock-footer__logo {
+    margin-bottom: 14px;
+  }
+
+  .infoblock-footer__nav {
+    display: none;
+  }
+
+  .infoblock-footer__list {
+    margin-bottom: 50px;
+  }
+
+  .footer__other {
+    padding: 0;
+  }
+
+  .footer__text {
+    max-width: 100%;
+  }
+}
+
+/*  ----------------------------------------------------------  576  -------------------------------------------------------------------*/
+@media (max-width: 576px) {
+  .section {
+    padding-bottom: 60px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .header__burger-menu {
+    text-align: right;
+    width: 320px;
+    height: 377px;
+    padding: 23px 15px 50px 50px;
+  }
+
+  .header__burger-link {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .header__burger-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .header__cross {
+    margin-left: auto;
+    margin-bottom: 31px;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+
+  .main__headers {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .main__mini-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .advertisement {
+    min-height: unset;
+  }
+
+  .advertisement__info {
+    padding: 60px 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .advertisement__top-title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .advertisement__text {
+    margin-bottom: 32px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .advertisement__calculation-link {
+    padding: 15px 25px;
+    font-size: 16px;
+  }
+
+  .aboutus__description {
+    width: 100%;
+  }
+
+  .description-aboutus__details {
+    height: unset;
+    width: unset;
+    height: 362px;
+  }
+
+  .description-aboutus__reference--low-resolution {
+    display: none;
+  }
+
+  .description-aboutus__reference--mid-resolution {
+    display: block;
+  }
+
+  .description-aboutus__reference {
+    position: unset;
+    padding: 0;
+    margin-bottom: 32px;
+    flex-direction: column;
+    background: unset;
+  }
+
+  .description-aboutus__text {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+    font-weight: 400;
+    line-height: 2;
+    color: var(--main-text-color);
+  }
+
+  .description-aboutus__btn-link {
+    padding: 15px 15px;
+    margin-left: 0;
+    margin-right: auto;
+    color: var(--hover-color);
+  }
+
+  .description-aboutus__card {
+    border: unset;
+    background-position-x: 0;
+    background-position-y: 0;
+    padding: 90px 0 0 0;
+    background-size: 23%;
+  }
+
+  .description-aboutus__card:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .description-aboutus__card--consulting {
+    background-image: url(../images_euclid/svg/aboutus-consulting-2.svg);
+  }
+
+  .description-aboutus__card--intention {
+    background-image: url(../images_euclid/svg/aboutus-intention-2.svg);
+  }
+
+  .how-we-work__nav {
+    margin-bottom: 20px;
+  }
+
+  .how-we-work__spoiler {
+    font-size: 14px;
+  }
+
+  .how-we-work__steps:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .how-we-work__info-box {
+    margin-right: 0;
+  }
+
+  .how-we-work__background  {
+    min-height: 160px;
+  }
+
+  .how-we-work__text--wtih-links {
+    margin-bottom: 20px;
+  }
+
+  .how-we-work__btn-link {
+    padding: 15px 10px;
+    width: 40%;
+    text-align: center;
+  }
+
+  .faq__list {
+    padding-left: 0;
+  }
+
+  .faq__item {
+    padding: 10px 0;
+  }
+
+  .faq__question {
+    margin-right: 17px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .faq__cross, .faq__cross svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer {
+    padding: 32px 25px;
+  }
+
+  .footer__application {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #595959;
+  }
+
+  .application-footer__header {
+    font-size: 36px;
+  }
+
+  .application-footer__submit {
+    flex-direction: column;
+  }
+
+  .application-footer__button {
+    padding: 12px 23px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    width: 180px;
+    align-self: center;
+    font-size: 12px;
+  }
+
+  .application-footer__condition-text {
+    font-size: 16px;
+  }
+
+  .footer__infoblock {
+    margin-right: 0;
+    align-self: center;
+  }
+}
+
+/*  ----------------------------------------------------------  320  -------------------------------------------------------------------*/
+@media (max-width: 320px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .header__img {
+    max-width: 110px;
+  }
+
+  .advertisement__top-title {
+    font-size: 20px;
+    margin-bottom: 7px;
+  }
+
+  .advertisement__text, .advertisement__calculation-link {
+    font-size: 12px;
+  }
+
+  .aboutus__header {
+    margin-bottom: 20px;
+  }
+
+  .aboutus__info {
+    margin-bottom: 12px;
+  }
+
+  .description-aboutus__details {
+    height: 200px;
+    margin-bottom: 10px;
+    background-size: contain;
+  }
+
+  .description-aboutus__card {
+    padding: 60px 0 0 0;
+    background-size: 64px 49px;
+  }
+
+  .main__mini-title--aboutus {
+    margin-bottom: 2px;
+  }
+
+  .description-aboutus__text {
+    margin-bottom: 10px;
+  }
+
+  .description-aboutus__card:not(:last-child) {
+    margin-bottom: 29px;
+  }
+
+  .description-aboutus__btn-link {
+    padding: 10px 20px;
+    width: 162px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .how-we-work__header {
+    margin-bottom: 18px;
+  }
+
+  .how-we-work__nav {
+    margin-bottom: 13px;
+  }
+
+  .main__mini-title--how-we-work {
+    margin-bottom: 14px;
+  }
+
+  .how-we-work__text--wtih-links {
+    margin-bottom: 14px;
+  }
+
+  .how-we-work__btn-link:not(:last-child) {
+    margin: 0 10px 0 0;
+    min-width: 155px;
+  }
+
+  .how-we-work__btn-link--contract {
+    min-width: 118px;
+  }
+
+  .how-we-work__background {
+    margin-bottom: 20px;
+  }
+
+  .how-we-work__btn-link {
+    font-size: 12px;
+  }
+
+  .faq__header {
+    margin-bottom: 12px;
+  }
+
+  .faq__question-box {
+    padding: 21px 0px;
+  }
+
+  .faq__question {
+    line-height: 1.65;
+  }
+
+  .footer {
+    padding: 32px 15px;
+  }
+
+  .footer__application {
+    margin-bottom: 20px;
+  }
+
+  .application-footer__header {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .application-footer__form {
+    margin-left: unset;
+  }
+
+  .application-footer__field {
+    margin-bottom: 25px;
+  }
+
+  .application-footer__field--name, .application-footer__field--mail {
+    height: 60px;
+  }
+
+  .footer__infoblock  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .application-footer__button {
+    margin-bottom: 15px;
+  }
+
+  .infoblock-footer__logo {
+    margin-right: unset;
+    margin-bottom: 10px;
+    width: 131px;
+  }
+
+  .infoblock-footer__social-img,  .infoblock-footer__social {
+    width: 40px ;
+    height: 40px;
+  }
+
+  .infoblock-footer__social:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+/* ---------------------------------------------------  JS  ------------------------------------------------------------------ */
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  opacity: .4;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
