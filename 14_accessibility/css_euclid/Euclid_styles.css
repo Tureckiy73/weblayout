@@ -89,80 +89,6 @@ body {
   background-color: var(--background-color);
 }
 
-/* ---------------------------------------- focus ------------------------------------------*/
-.infoblock-footer__logo:focus, .header__logo:focus {
-  outline: 2px solid #FF9900;
-  outline-offset: 2px;
-}
-
-.nav-header__link:focus, .header__burger-link:focus {
-  outline: 2px solid #FF9900;
-  outline-offset: 3px;
-}
-
-.nav-header__search-btn:focus, .header__burger-btn:focus, .header__cross:focus {
-  outline: 2px solid #FF9900;
-  outline-offset: 2px;
-}
-
-.advertisement__calculation-link:focus {
-  background-color: rgba(255, 153, 0, 0.7);
-  outline: unset;
-}
-
-.description-aboutus__btn-link:focus {
-  background-color: var(--hover-color);
-  outline: unset;
-}
-
-.how-we-work__spoiler:focus {
-  outline: 2px solid #FF9900;
-  outline-offset: 3px;
-}
-
-.how-we-work__btn-link--details:focus {
-  background-color: #F7B045;
-  outline: unset;
-}
-
-.how-we-work__btn-link--contract:focus {
-  background-color: #666;
-  outline: unset;
-  color: #fff;
-}
-
-.faq__cross:focus ellipse {
-  fill: var(--hover-color);
-}
-
-.faq__cross:focus path {
-  fill: #fff;
-}
-
-.faq__cross:focus {
-  outline: unset;
-}
-
-.infoblock-footer__link:focus {
-  outline: 2px solid #FF9900;
-  outline-offset: 3px;
-}
-
-.infoblock-footer__facebook:focus, .infoblock-footer__instagram:focus, .infoblock-footer__vk:focus {
-  outline: 2px solid #FF9900;
-  outline-offset: 3px;
-}
-
-.application-footer__field:focus {
-  background-color: #666;
-  outline: unset;
-}
-
-.application-footer__button:focus {
-  background-color: #F7B045;
-  outline: unset;
-}
-
 /* ------------------------------------------------------ header ------------------------------------------------------------------*/
 .header-style {
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
@@ -1657,4 +1583,91 @@ body {
 
 .swiper-pagination-bullet-active {
   opacity: 1;
+}
+
+/* ---------------------------------------------------------- focus ------------------------------------------------------------ */
+.infoblock-footer__logo:focus, .header__logo:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 2px;
+}
+
+.nav-header__link:focus, .header__burger-link:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 3px;
+}
+
+.nav-header__search-btn:focus, .header__burger-btn:focus, .header__cross:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 2px;
+}
+
+.advertisement__calculation-link:focus {
+  background-color: rgba(255, 153, 0, 0.7);
+  outline: unset;
+}
+
+.description-aboutus__btn-link:focus {
+  background-color: var(--hover-color);
+  outline: unset;
+}
+
+.how-we-work__spoiler:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 3px;
+}
+
+.how-we-work__btn-link--details:focus {
+  background-color: #F7B045;
+  outline: unset;
+}
+
+.how-we-work__btn-link--contract:focus {
+  background-color: #666;
+  outline: unset;
+  color: #fff;
+}
+
+.faq__item:focus {
+  border-color: var(--hover-color);
+  outline: unset;
+}
+
+.faq__item:not(:nth-last-child(2)):focus + .faq__item {
+  border-color: var(--hover-color);
+}
+
+.faq__item:nth-last-child(2):focus + .faq__item {
+  border-top-color: var(--hover-color);
+}
+
+.faq__item:focus .faq__question {
+  color: var(--hover-color);
+}
+
+.faq__item:focus .faq__cross ellipse {
+  fill: var(--hover-color);
+}
+
+.faq__item:focus .faq__cross path {
+  fill: #fff;
+}
+
+.infoblock-footer__link:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 3px;
+}
+
+.infoblock-footer__facebook:focus, .infoblock-footer__instagram:focus, .infoblock-footer__vk:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 3px;
+}
+
+.application-footer__field:focus {
+  background-color: #666;
+  outline: unset;
+}
+
+.application-footer__button:focus {
+  background-color: #F7B045;
+  outline: unset;
 }
