@@ -35,36 +35,34 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 })
 
+// $(document).ready(function() {
+//   $('.faq__question-box').click(function() {
+//     const parent = $(this).parent();
+//     if (parent.hasClass('faq__item--active')) {
+//       parent.removeClass('faq__item--active');
+//       $(this).children('.faq__cross').removeClass('faq__cross--rotate');
+//     }
+//     else {
+//       $('.faq__item').removeClass('faq__item--active');
+//       parent.addClass('faq__item--active');
+//       $('.faq__cross').removeClass('faq__cross--rotate');
+//       $(this).children('.faq__cross').addClass('faq__cross--rotate');
+//     }
+//   })
+// })
+
 $(document).ready(function() {
-  $('.faq__question-box').click(function() {
-    const parent = $(this).parent();
-    if (parent.hasClass('faq__item--active')) {
-      parent.removeClass('faq__item--active');
-      $(this).children('.faq__cross').removeClass('faq__cross--rotate');
+  $('.faq__item').click(function() {
+    const par = $(this).children('.faq__question-box');
+    if ($(this).hasClass('faq__item--active')) {
+      $(this).removeClass('faq__item--active');
+      par.children('.faq__cross').removeClass('faq__cross--rotate');
     }
     else {
       $('.faq__item').removeClass('faq__item--active');
-      parent.addClass('faq__item--active');
+      $(this).addClass('faq__item--active');
       $('.faq__cross').removeClass('faq__cross--rotate');
-      $(this).children('.faq__cross').addClass('faq__cross--rotate');
+      par.children('.faq__cross').addClass('faq__cross--rotate');
     }
-  })
-})
-
-$(document).ready(function() {
-  $('.faq__item').focus(function() {
-    $('.faq__item').click(function() {
-      const par = $(this).children('.faq__question-box');
-      if (this.hasClass('faq__item--active')) {
-        (this).removeClass('faq__item--active');
-        $(par).children('.faq__cross').removeClass('faq__cross--rotate');
-      }
-      else {
-        $('.faq__item').removeClass('faq__item--active');
-        (this).addClass('faq__item--active');
-        $('.faq__cross').removeClass('faq__cross--rotate');
-        $(par).children('.faq__cross').addClass('faq__cross--rotate');
-      }
-    })
   })
 })
