@@ -110,13 +110,13 @@ body {
   transform: rotate(180deg);
 }
 
-.header__burger-btn:active rect{
+.header__burger-btn:active rect {
   fill: var(--active-color);
 }
-.header__burger-btn:active rect:nth-child(2){
+.header__burger-btn:active rect:nth-child(2) {
   width: 25px;
 }
-.header__burger-btn:active rect:nth-child(1){
+.header__burger-btn:active rect:nth-child(1) {
   width: 18px;
 }
 
@@ -154,7 +154,6 @@ body {
 }
 
 .header__burger-link {
-  /* padding-bottom: 10px; */
   border-bottom: transparent solid 2px;
   font-size: 24px;
   font-weight: 700;
@@ -212,7 +211,6 @@ body {
 }
 
 .nav-header__link {
-  /* padding-bottom: 10px; */
   border-bottom: transparent solid 2px;
   font-size: 18px;
   font-weight: 600;

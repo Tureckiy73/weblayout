@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Custom</title>
+</head>
+<body>
+  <section class="section section_checkbox">
+    <div class="checkbox_block">
+      <h1 class="invis"></h1>
+      <h2 class="headers">Категории:</h2>
+      <ul>
+        <li class="checkbox_item">
+          <label class="checkbox_label" for="dino">
+            <input class="checkbox" type="checkbox" name="checkbox" id="dino">Динозавры
+            <span class="checkbox_span"></span>
+          </label>
+        </li>
+        <li class="checkbox_item">
+          <label class="checkbox_label" for="bear">
+            <input class="checkbox" type="checkbox" name="checkbox" id="bear">Медведи
+            <span class="checkbox_span"></span>
+          </label>
+        </li>
+        <li class="checkbox_item">
+          <label class="checkbox_label" for="deer">
+            <input class="checkbox" type="checkbox" name="checkbox" id="deer">Косули
+            <span class="checkbox_span"></span>
+          </label>
+        </li>
+        <li class="checkbox_item">
+          <label class="checkbox_label" for="fox">
+            <input class="checkbox" type="checkbox" name="checkbox" id="fox">Лисы
+            <span class="checkbox_span"></span>
+          </label>
+        </li>
+        <li class="checkbox_item">
+          <label class="checkbox_label" for="wolf">
+            <input class="checkbox" type="checkbox" name="checkbox" id="wolf">Волки
+            <span class="checkbox_span"></span>
+          </label>
+        </li>
+        <li class="checkbox_item">
+          <label class="checkbox_label" for="moose">
+            <input class="checkbox" type="checkbox" name="checkbox" id="moose">Олени и лоси
+            <span class="checkbox_span"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <section class="section section--select">
+    <select name="test_select">
+      <option value="">Древесина</option>
+      <option value="">Металл</option>
+      <option value="">Камень</option>
+      <option value="">Пластик</option>
+      <option value="">Композитный</option>
+      <option value="">Гипс</option>
+    </select>
+  </section>
+  <div class="divider"></div>
+
+  <section class="section section_map">
+    <div class="mymap" id="map"></div>
+  </section>
+  <div class="divider"></div>
+
+  <section class="section section_scroll">
+    <div class="customScroll" data-simplebar>
+      Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для первоочередных требований. Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для первоочередных требований.
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <section class="section section_form">
+    <form action="" class="form">
+      <div>
+        <div class="form_block">
+          <label class="form_label" for="name">Как вас зовут?</label>
+          <input type="text" class="form__item" placeholder="Имя*" data-validate-field="name" name="Имя" id="name">
+        </div>
+        <div class="form_block">
+          <label class="form_label" for="tel">Укажите ваш телефон</label>
+          <input type="tel" class="form__item" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone" name="tel" id="tel">
+        </div>
+        <div class="form_block">
+          <label class="form_label" for="email">Укажите ваш e-mail</label>
+          <input type="email" class="form__item" placeholder="E-mail*" data-validate-field="mail" name="email" id="email">
+        </div>
+      </div>
+      <button class="form__btn">Закзать</button>
+    </form>
+  </section>
+  <div class="divider"></div>
+
+  <section class="section section-tooltip">
+    <div class="text">
+      Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+      <div class="tooltip">
+        <svg class="tooltip_marker" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z" fill="#BCBCBC"/>
+        </svg>
+        <span class="tooltip_text">
+          Глава 2, страница 176
+        </span>
+        <!-- <span class="tooltip_text">
+          Глава 2
+        </span> -->
+      </div>
+    </div>
+    <span></span>
+  </section>
+  <div class="divider"></div>
+
+  <script src="choices.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script src="inputmask.min.js"></script>
+  <script src="just-validate.min.js"></script>
+  <script src="custom.js"></script>
+</body>
+</html>
