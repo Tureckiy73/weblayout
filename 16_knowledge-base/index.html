@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
-  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <link rel="stylesheet" href="css/justValidateTooltip.min.css">
+  <script defer src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <link rel="stylesheet" href="css/styles.css">
   <title>Custom</title>
 </head>
@@ -59,9 +60,8 @@
   <div class="divider"></div>
 
   <section class="section section--select">
-    <select name="test_select">
-      <!-- <option>Материал</option> -->
-      <!-- <option class="sss" hidden disabled selected>Материал</option> -->
+    <select name="test_select" required>
+      <option value="" disabled selected>Материал</option>
       <option value="Древесина">Древесина</option>
       <option value="Металл">Металл</option>
       <option value="Камень">Камень</option>
@@ -85,19 +85,25 @@
   <div class="divider"></div>
 
   <section class="section section_form">
-    <form action="#" class="form">
-      <div>
-        <div class="form_block">
-          <label class="form_label" for="name">Как вас зовут?</label>
-          <input type="text" class="form__item" placeholder="Имя*" data-validate-field="name" name="Имя" id="name">
+    <form action="#" class="js-form form">
+      <div class="row">
+        <div class="form_block form-group col-md-6">
+          <!-- <label class="form_label js-validate-error-label" for="name">Как вас зовут?</label> -->
+          <div class="just-validate-tooltip-container">
+          <input type="text" class="form__item form__input form-control" placeholder="Имя*" data-validate-field="name" name="Имя" id="name">
+          </div>
         </div>
-        <div class="form_block">
-          <label class="form_label" for="tel">Укажите ваш телефон</label>
-          <input type="tel" class="form__item" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone" name="tel" id="tel">
+        <div class="form_block form-group">
+          <!-- <label class="form_label" for="tel">Укажите ваш телефон</label> -->
+          <div class="just-validate-tooltip-container">
+            <input type="tel" class="form__item form__input form-control" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone" name="tel" id="tel">
+          </div>
         </div>
-        <div class="form_block">
-          <label class="form_label" for="email">Укажите ваш e-mail</label>
-          <input type="email" class="form__item" placeholder="E-mail*" data-validate-field="mail" name="email" id="email">
+        <div class="form_block form-group col-md-6">
+          <!-- <label class="form_label" for="email">Укажите ваш e-mail</label> -->
+          <div class="just-validate-tooltip-container">
+            <input type="email" class="form__item" placeholder="E-mail*" data-validate-field="mail" name="email" id="email">
+          </div>
         </div>
       </div>
       <button class="form__btn">Закзать</button>
@@ -121,10 +127,9 @@
   </section>
   <div class="divider"></div>
 
-  <script src="choices.min.js"></script>
-
-  <script src="inputmask.min.js"></script>
-  <script src="just-validate.min.js"></script>
-  <script src="custom.js"></script>
+  <script defer src="js/choices.min.js"></script>
+  <script defer src="js/inputmask.min.js"></script>
+  <script defer src="js/just-validate.min.js"></script>
+  <script defer src="js/custom.js"></script>
 </body>
 </html>

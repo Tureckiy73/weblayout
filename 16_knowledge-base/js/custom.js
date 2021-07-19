@@ -4,11 +4,7 @@ const choices = new Choices(element, {
   searchChoices: false,
   shouldSort: false,
   itemSelectText: '',
-  // prependValue: 'Материал',
-  // renderSelectedChoices: 'материал',
-  // appendValue: 'материал',
-  // placeholderValue: 'материал',
-  noChoicesText: 'Материал',
+  position: 'bottom',
 });
 
 // Функция ymaps.ready() будет вызвана, когда
@@ -68,21 +64,19 @@ new JustValidate('.form', {
       required: true,
       function: (name, value) => {
         const phone = selector.inputmask.unmaskedvalue()
-
         return Number(phone) && phone.length === 10
       },
     },
+
+    // messages: {
+    //   name: {
+    //     minLength: 'My custom message about only minLength rule'
+    //   },
+    //   email: 'My custom message about error (one error message for all rules)'
+    // },
   },
 });
 
-// f.prototype={
-//   defaultMessages: {
-//     required:"The field is requiredsss",
-//     email:"Please, type a valid emailsss",
-//     maxLength:"The field must contain a maximum of :value characters",
-//     minLength:"The field must contain a minimum of :value characters",
-//     remote:"Email already exists",
-//     strength:"Password must contents at least one uppercase letter, one lowercase letter and one number",
-//     "function":"Function returned false"
-//   }
-// }
+// new window.JustValidate('.just-validate-tooltip-container', {
+//   colorWrong: 'red'
+// });

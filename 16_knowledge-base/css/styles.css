@@ -103,6 +103,10 @@ ul, li {
   height: 300px;
 }
 
+.choices__item--disabled {
+  display: none;
+}
+
 .choices {
   width: 176px;
   margin: 0 4px 0 0px;
@@ -223,7 +227,7 @@ ul, li {
 }
 
 .form {
-  padding: 21px 30px 39px 30px;
+  padding: 38px 30px;
   width: 440px;
   min-height: 410px;
   border-radius: 10px;
@@ -232,10 +236,6 @@ ul, li {
 }
 
 .form_block {
-  margin-bottom: 14px;
-}
-
-.form_block:last-child {
   margin-bottom: 31px;
 }
 
@@ -282,7 +282,8 @@ ul, li {
 
 .tooltip {
   position: relative;
-  display: inline;
+  display: inline-block;
+  line-height: 8px;
 }
 
 .tooltip_marker {
@@ -293,9 +294,26 @@ ul, li {
   fill: #CCB26E;
 }
 
-.tooltip_text {
+.tooltip::before {
+  content: '';
   position: absolute;
   bottom: 25px;
+  transform: rotate(90deg);
+  width: 14px;
+  height: 14px;
+  background-color: #666;
+  transform: rotate(45deg);
+  transition-property: display;
+  display: none;
+}
+
+.tooltip:hover::before {
+  display: unset;
+}
+
+.tooltip_text {
+  position: absolute;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
   padding: 7px 15px 11px 15px;
@@ -308,13 +326,10 @@ ul, li {
   font-size: 12px;
   line-height: 16px;
   transition-property: display;
-  transition: z-index, opacity .3s ease-in-out;
-  opacity: 0;
-  z-index: -1;
+  display: none;
 }
 
 .tooltip_marker:hover + .tooltip_text {
-  opacity: 1;
-  z-index: 1;
+  display: unset;
 }
 
