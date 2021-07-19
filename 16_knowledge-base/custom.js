@@ -4,6 +4,11 @@ const choices = new Choices(element, {
   searchChoices: false,
   shouldSort: false,
   itemSelectText: '',
+  // prependValue: 'Материал',
+  // renderSelectedChoices: 'материал',
+  // appendValue: 'материал',
+  // placeholderValue: 'материал',
+  noChoicesText: 'Материал',
 });
 
 // Функция ymaps.ready() будет вызвана, когда

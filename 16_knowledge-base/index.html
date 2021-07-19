@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <link rel="stylesheet" href="css/styles.css">
   <title>Custom</title>
 </head>
 <body>
   <section class="section section_checkbox">
     <div class="checkbox_block">
-      <h1 class="invis"></h1>
-      <h2 class="headers">Категории:</h2>
+      <span class="checkbox_header">Категории:</span>
       <ul>
         <li class="checkbox_item">
           <label class="checkbox_label" for="dino">
@@ -60,12 +60,14 @@
 
   <section class="section section--select">
     <select name="test_select">
-      <option value="">Древесина</option>
-      <option value="">Металл</option>
-      <option value="">Камень</option>
-      <option value="">Пластик</option>
-      <option value="">Композитный</option>
-      <option value="">Гипс</option>
+      <!-- <option>Материал</option> -->
+      <!-- <option class="sss" hidden disabled selected>Материал</option> -->
+      <option value="Древесина">Древесина</option>
+      <option value="Металл">Металл</option>
+      <option value="Камень">Камень</option>
+      <option value="Пластик">Пластик</option>
+      <option value="Композитный">Композитный</option>
+      <option value="Гипс">Гипс</option>
     </select>
   </section>
   <div class="divider"></div>
@@ -83,7 +85,7 @@
   <div class="divider"></div>
 
   <section class="section section_form">
-    <form action="" class="form">
+    <form action="#" class="form">
       <div>
         <div class="form_block">
           <label class="form_label" for="name">Как вас зовут?</label>
@@ -113,9 +115,6 @@
         <span class="tooltip_text">
           Глава 2, страница 176
         </span>
-        <!-- <span class="tooltip_text">
-          Глава 2
-        </span> -->
       </div>
     </div>
     <span></span>
@@ -123,7 +122,7 @@
   <div class="divider"></div>
 
   <script src="choices.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+
   <script src="inputmask.min.js"></script>
   <script src="just-validate.min.js"></script>
   <script src="custom.js"></script>

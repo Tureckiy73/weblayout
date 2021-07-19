@@ -7,21 +7,11 @@
 
 body {
   padding: 30px;
+  background-color: #424242;
 }
 
 h2 {
   margin: 0;
-}
-
-.invis {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .section {
@@ -31,6 +21,7 @@ h2 {
 ul, li {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .divider {
@@ -41,8 +32,15 @@ ul, li {
 }
 
 /* --------------------------------- checkbox --------------------------------- */
+.checkbox_block {
+  padding: 21px 30px 30px 30px;
+  width: max-content;
+  border-radius: 10px;
+  background-color: white;
+}
 
-.headers {
+.checkbox_header {
+  display: inline-block;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -107,12 +105,31 @@ ul, li {
 
 .choices {
   width: 176px;
+  margin: 0 4px 0 0px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.choices[aria-expanded="true"] {
+  border-left: 1px solid #CCB26E;
+  border-right: 1px solid #CCB26E;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: white;
 }
 
 .choices__inner {
-  border: unset;
+  width: 176px;
+  margin-left: -1px;
   padding: 9px 15px 11px 15px;
+  min-height: unset;
+  border: unset;
+  border-radius: 10px;
   background-color: white;
+}
+
+.choices__list--single {
+  padding: 0;
 }
 
 .is-open > .choices__inner {
@@ -124,8 +141,17 @@ ul, li {
   background-color: yellow;
 }
 
-.choices__list {
-  padding-top: 8px;
+.choices[data-type*=select-one]::after {
+  content: url(../img/select.svg);
+  right: 25px;
+  top: 25%;
+  margin-top: 0;
+  border: unset;
+}
+
+.choices[data-type*=select-one].is-open::after {
+  content: url(../img/select_dropdown.svg);
+  margin-top: 2px;
 }
 
 .choices__list--dropdown .choices__item {
@@ -137,11 +163,13 @@ ul, li {
 }
 
 .is-open .choices__list--dropdown {
+  width: 176px;
+  margin-left: -1px;
   border: 1px solid #CCB26E;
   border-top: unset;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  transform: translateY(-8px);
+  transform: translateY(1px);
   z-index: 0;
 }
 
@@ -168,7 +196,7 @@ ul, li {
   opacity: 1;
 }
 
-/* --------------------------------- scrpllbar --------------------------------- */
+/* --------------------------------- scrollbar --------------------------------- */
 .customScroll {
   padding: 20px 30px;
   width: 399px;
@@ -176,6 +204,7 @@ ul, li {
   font-size: 14px;
   line-height: 24px;
   overflow-x: hidden;
+  background-color: white;
 }
 
 .simplebar-content-wrapper {
@@ -243,10 +272,12 @@ ul, li {
 }
 
 .text {
-  width: 268px;
+  padding: 20px 78px 20px 29px;
+  width: 375px;
   color: #333;
   font-size: 14px;
   line-height: 24px;
+  background-color: white;
 }
 
 .tooltip {
@@ -263,25 +294,27 @@ ul, li {
 }
 
 .tooltip_text {
-  display: inline-block;
   position: absolute;
   bottom: 25px;
-  left: -73px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 7px 15px 11px 15px;
-  width: 163px;
-  /* max-width: 163px; */
-  min-height: 31px;
-  text-align: center;
-  background: url('../img/Union.svg') center bottom no-repeat;
-  background-size: cover;
-  /* background-color: #666; */
+  width: max-content;
+  max-width: 163px;
+  /* background: url('../img/Union.svg') center bottom no-repeat;
+  background-size: cover; */
+  background-color: #666;
   color: white;
   font-size: 12px;
   line-height: 16px;
+  transition-property: display;
+  transition: z-index, opacity .3s ease-in-out;
   opacity: 0;
-  transition: opacity .3s ease-in-out;
+  z-index: -1;
 }
 
 .tooltip_marker:hover + .tooltip_text {
   opacity: 1;
+  z-index: 1;
 }
+
