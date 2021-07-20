@@ -197,7 +197,7 @@ ul, li {
 
 .choices__placeholder {
   color: #333;
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 /* --------------------------------- scrollbar --------------------------------- */
@@ -319,8 +319,6 @@ ul, li {
   padding: 7px 15px 11px 15px;
   width: max-content;
   max-width: 163px;
-  /* background: url('../img/Union.svg') center bottom no-repeat;
-  background-size: cover; */
   background-color: #666;
   color: white;
   font-size: 12px;

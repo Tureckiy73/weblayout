@@ -50,11 +50,14 @@ var im = new Inputmask("+7 (999) 999-99-99");
 im.mask(selector);
 
 new JustValidate('.form', {
+  // colorWrong: 'yellow',
   rules: {
+    // colorWrong: 'yellow',
     name: {
       required: true,
       minLength: 2,
-      maxLength: 30
+      maxLength: 30,
+      colorWrong: 'yellow',
     },
     mail: {
       required: true,
@@ -67,16 +70,19 @@ new JustValidate('.form', {
         return Number(phone) && phone.length === 10
       },
     },
-
-    // messages: {
-    //   name: {
-    //     minLength: 'My custom message about only minLength rule'
-    //   },
-    //   email: 'My custom message about error (one error message for all rules)'
-    // },
+  },
+  messages: {
+    // colorWrong: 'yellow',
+    name: {
+      // colorWrong: 'yellow',
+      minLength: 'Поле должно содержать не менее :value символов',
+      maxLength: 'Поле может содержать не более :value символов',
+      required: 'Как вас зовут?',
+    },
+    mail: {
+      required: 'Укажите ваш e-mail',
+      email: 'Почта должна содержать домен и знак @'
+    },
+    tel: 'Укажите ваш телефон',
   },
 });
-
-// new window.JustValidate('.just-validate-tooltip-container', {
-//   colorWrong: 'red'
-// });
