@@ -103,7 +103,7 @@ ul, li {
   height: 300px;
 }
 
-.choices__item--disabled {
+.choices__list--dropdown .choices__placeholder {
   display: none;
 }
 
@@ -185,6 +185,10 @@ ul, li {
   display: none;
 }
 
+/* .js-validate-error-label {
+  color: yellow;
+} */
+
 /* ----------------------------------- map ----------------------------------- */
 .mymap {
   width: 600px;
@@ -197,7 +201,6 @@ ul, li {
 
 .choices__placeholder {
   color: #333;
-  /* opacity: 1; */
 }
 
 /* --------------------------------- scrollbar --------------------------------- */

@@ -57,7 +57,7 @@ new JustValidate('.form', {
       required: true,
       minLength: 2,
       maxLength: 30,
-      colorWrong: 'yellow',
+      // colorWrong: 'yellow',
     },
     mail: {
       required: true,
