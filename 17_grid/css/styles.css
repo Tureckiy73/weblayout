@@ -98,17 +98,13 @@ body {
   padding: 0 165px;
   margin: 0 auto;
   max-width: 1440px;
-  min-height: 80px;
+  height: 80px;
   background-color: #3F2AFF;
 }
 
 .header__skillbox-link {
-  font-size: 20px;
+  font-size: 28px;
   margin-right: auto;
-}
-
-.header__skillbox-link {
-  font-size: 18px;
 }
 
 .header__nav-link, .header__skillbox-link {
@@ -123,7 +119,7 @@ body {
   margin-right: 56px;
 }
 
-/* ------------------------------------------------------------------- */
+/* ----------------------------- burger -------------------------------------- */
 .header__burger-btn {
   margin-left: auto;
   display: none;
@@ -220,12 +216,12 @@ body {
 /* ------------------------------- hero --------------------------------- */
 .hero__container {
   padding-top: 130px;
-  padding-bottom: 135px;
+  padding-bottom: 130px;
   height: max-content;
   background: url('../img/hero_background.png') no-repeat, radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
-  background-position-x: 80%;
-  background-position-y: center;
-  background-size: auto 90% ;
+  background-position-x: 77%;
+  background-position-y: 38%;
+  background-size: auto 90%;
 }
 
 .hero__header {
@@ -258,7 +254,7 @@ body {
 
 .advantages__info-title {
   max-width: 380px;
-  margin-bottom: 30px;
+  margin-bottom: 17px;
   font-size: 40px;
   line-height: 1;
   color: #2E2B44;
@@ -270,7 +266,7 @@ body {
 }
 
 .advantages__info-row {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 
 .advantages__item-goal, .advantages__item-acquaintance, .advantages__item-attention {
@@ -286,21 +282,26 @@ body {
 }
 
 .advantages__item-acquaintance {
-  background: url('../img/advantages_speaker.svg') left center no-repeat;
-}
-
-.advantages__item-attention {
   background: url('../img/advantages_fingers.svg') left center no-repeat;
 }
 
+.advantages__item-attention {
+  background: url('../img/advantages_speaker.svg') left center no-repeat;
+}
+
 /* ----------------------------------------- lecturers -------------------------------------- */
+.lecturers {
+  padding-bottom: 70px;
+}
+
 .lecturers__container {
-  padding: 50px 165px;
+  padding-top: 75px;
+  padding-bottom: 45px;
   background-color: var(--header-text-color);
 }
 
 .lecturers__main-title {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-size: 40px;
   color: var(--contrast-text-color);
 }
@@ -316,7 +317,7 @@ body {
 }
 
 .lecturers__sub-title {
-  margin-bottom: 15px;
+  margin-bottom: 6px;
   font-size: 18px;
   color: var(--contrast-text-color);
 }
@@ -342,10 +343,6 @@ body {
 }
 
 /* ----------------------------------------- courses -------------------------------------- */
-.courses__section {
-  padding-bottom: 80px;
-}
-
 .courses__main-title {
   margin-bottom: 30px;
   font-size: 40px;
@@ -353,6 +350,7 @@ body {
 }
 
 .courses__card {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 210px 30px 30px 30px;
@@ -364,16 +362,68 @@ body {
   background: url('../img/courses_cinema.jpg') center top no-repeat, #EDF0F9;
 }
 
+.courses__card--cinema::before {
+  position: absolute;
+  top: 1.5%;
+  right: 1.2%;
+  content: '60 часов';
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: white;
+  padding-left: 30px;
+  background: url('../img/mdi_access_time.svg') left center no-repeat;
+  background-size: 25px 25px;
+}
+
 .courses__card--blender {
   background: url('../img/courses_blender.jpg') center top no-repeat, #EDF0F9;
+}
+
+.courses__card--blender::before {
+  position: absolute;
+  top: 1.5%;
+  right: 1.2%;
+  content: '40 часов';
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: white;
+  padding-left: 30px;
+  background: url('../img/mdi_access_time.svg') left center no-repeat;
+  background-size: 25px 25px;
 }
 
 .courses__card--3dsmax {
   background: url('../img/courses_3dsmax.jpg') center top no-repeat, #EDF0F9;
 }
 
+.courses__card--3dsmax::before {
+  position: absolute;
+  top: 1.5%;
+  right: 1.2%;
+  content: '40 часов';
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: white;
+  padding-left: 30px;
+  background: url('../img/mdi_access_time.svg') left center no-repeat;
+  background-size: 25px 25px;
+}
+
 .courses__card--zbrush {
   background: url('../img/courses_zbrush.jpg') center top no-repeat, #EDF0F9;
+}
+
+.courses__card--zbrush::before {
+  position: absolute;
+  top: 1.5%;
+  right: 1.2%;
+  content: '80 часов';
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: white;
+  padding-left: 30px;
+  background: url('../img/mdi_access_time.svg') left center no-repeat;
+  background-size: 25px 25px;
 }
 
 .courses__sub-title {
@@ -402,10 +452,13 @@ body {
 }
 
 /* -------------------------------------------- footer ------------------------------------------- */
-
+.footer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .footer__socials {
   padding: 30px 70px;
-  min-height: 80px;
+  height: 80px;
   background-color: #2E2B44;
 }
 
@@ -421,6 +474,11 @@ body {
 
 .footer__copyrights-text {
   text-align: center;
+  font-size: 13px;
+}
+
+.footer__copyrights-sign {
+  color: var(--main-theme-color);
 }
 
 /* ------------------------------------------------------------- media ------------------------------------------------- */
@@ -478,7 +536,7 @@ body {
 
   .hero__header {
     font-size: 50px;
-    max-width: 385;
+    max-width: 385px;
   }
 
   .hero__description-text {
@@ -513,6 +571,8 @@ body {
   .header__container {
     flex-direction: column;
     padding: 30px 33px;
+    height: unset;
+    min-height: 80px;
   }
 
   .header__skillbox-link {
@@ -562,6 +622,8 @@ body {
 @media (max-width: 450px) {
   .header__container {
     flex-direction: row;
+    height: 80px;
+    min-height: unset;
   }
 
   .header__skillbox-link {
