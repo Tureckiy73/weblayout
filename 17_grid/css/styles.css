@@ -17,13 +17,11 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 .section {
-  padding-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .container {
@@ -68,8 +66,6 @@ body {
 }
 
 .list-reset {
-  padding: 0;
-  margin: 0;
   list-style: none;
 }
 
@@ -92,31 +88,36 @@ body {
 }
 
 /* ---------------------------------- header ------------------------------ */
+.header {
+  background-color: #3F2AFF;
+}
+
 .header__container {
   display: flex;
   align-items: center;
   padding: 0 165px;
   margin: 0 auto;
-  max-width: 1440px;
   height: 80px;
-  background-color: #3F2AFF;
+}
+
+.header__nav  {
+  width: 100%;
 }
 
 .header__skillbox-link {
   font-size: 28px;
-  margin-right: auto;
 }
 
 .header__nav-link, .header__skillbox-link {
   color: var(--contrast-text-color);
 }
 
-.header__list {
-  display: flex;
+.header__list-block {
+  align-self: center;
 }
 
-.header__item:not(:last-child) {
-  margin-right: 56px;
+.header__item:last-child {
+  padding-right: 0;
 }
 
 /* ----------------------------- burger -------------------------------------- */
@@ -214,14 +215,17 @@ body {
 }
 
 /* ------------------------------- hero --------------------------------- */
-.hero__container {
-  padding-top: 130px;
-  padding-bottom: 130px;
-  height: max-content;
+.hero {
   background: url('../img/hero_background.png') no-repeat, radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
   background-position-x: 77%;
   background-position-y: 38%;
   background-size: auto 90%;
+}
+
+.hero__container {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  height: max-content;
 }
 
 .hero__header {
@@ -291,13 +295,12 @@ body {
 
 /* ----------------------------------------- lecturers -------------------------------------- */
 .lecturers {
-  padding-bottom: 70px;
+  background-color: var(--header-text-color);
 }
 
 .lecturers__container {
   padding-top: 75px;
   padding-bottom: 45px;
-  background-color: var(--header-text-color);
 }
 
 .lecturers__main-title {
@@ -311,9 +314,13 @@ body {
 }
 
 .lecturers__card {
-  padding-top: 210px;
-  border-radius: 20px 20px 0px 0px;
   line-height: 1.5;
+}
+
+.lecturers__photo {
+  margin-bottom: 30px;
+  width: 100%;
+  border-radius: 12% 12% 0px 0px;
 }
 
 .lecturers__sub-title {
@@ -326,27 +333,20 @@ body {
   color: #85859B;
 }
 
-.lecturers__card--petrov {
-  background: url('../img/lecturer_petrov.png') center top no-repeat;
-}
-
-.lecturers__card--sergeev {
-  background: url('../img/lecturer_sergeev.png') center top no-repeat;
-}
-
-.lecturers__card--andreev {
-  background: url('../img/lecturer_andreev.png') center top no-repeat;
-}
-
-.lecturers__card--dmitriev {
-  background: url('../img/lecturer_dmitiev.png') center top no-repeat;
-}
-
 /* ----------------------------------------- courses -------------------------------------- */
+.courses {
+  margin-bottom: 50px;
+}
+
 .courses__main-title {
   margin-bottom: 30px;
   font-size: 40px;
   color: var(--header-text-color);
+}
+
+.courses__card-block {
+  display: flex;
+  margin-bottom: 30px;
 }
 
 .courses__card {
@@ -447,34 +447,24 @@ body {
   color: var(--contrast-text-color);
 }
 
-.courses__card-block {
-  display: flex;
-}
-
 /* -------------------------------------------- footer ------------------------------------------- */
 .footer {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-.footer__socials {
-  padding: 30px 70px;
-  height: 80px;
   background-color: #2E2B44;
 }
 
-.footer__socials-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.footer__socials {
+  padding: 30px 70px;
+  height: 80px;
 }
 
-.footer__socials-item:not(:last-child) {
-  margin-right: 35px;
+.footer__copyrights {
+  background-color: var(--background-color);
 }
 
 .footer__copyrights-text {
   text-align: center;
   font-size: 13px;
+  color: #2E2B44;
 }
 
 .footer__copyrights-sign {
@@ -526,8 +516,8 @@ body {
     padding: 30px 39px;
   }
 
-  .header__item:not(:last-child) {
-    margin-right: 35px;
+  .header__skillbox-link {
+    font-size: 24px;
   }
 
   .hero__container {
@@ -552,8 +542,22 @@ body {
     background-size: 211px 187px;
   }
 
+  .courses__card--cinema {
+    background: url('../img/courses_cinema_low_res.jpg') center top no-repeat, #EDF0F9;
+  }
+  .courses__card--blender {
+    background: url('../img/courses_blender_low_res.jpg') center top no-repeat, #EDF0F9;
+  }
+  .courses__card--3dsmax {
+    background: url('../img/courses_3dsmax_low_res.jpg') center top no-repeat, #EDF0F9;
+  }
+  .courses__card--zbrush {
+    background: url('../img/courses_zbrush_low_res.jpg') center top no-repeat, #EDF0F9;
+  }
+
   .courses__card {
     min-height: 556px;
+    background-size: 100% 180px;
   }
 
   .courses__button {
@@ -577,7 +581,11 @@ body {
 
   .header__skillbox-link {
     margin-bottom: 31px;
-    margin-left: auto;
+    text-align: center;
+  }
+
+  .header__list {
+    justify-content: center !important;
   }
 
   .hero__container {
@@ -618,8 +626,8 @@ body {
   }
 }
 
-/* --------------------------------- 450 ----------------------------- */
-@media (max-width: 450px) {
+/* --------------------------------- 452 ----------------------------- */
+@media (max-width: 452px) {
   .header__container {
     flex-direction: row;
     height: 80px;
@@ -631,23 +639,40 @@ body {
     margin-left: 0;
   }
 
-  .header__nav {
+  .header__list-block {
     display: none;
+  }
+
+  .header__skillbox-link {
+    text-align: left;
   }
 
   .header__burger-btn, .header__burger-menu {
     display: block;
   }
 
+  .lecturers__container {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
   .lecturers__main-title {
     font-size: 20px;
+  }
+
+  .courses  {
+    margin-bottom: 20px;
   }
 }
 
 /* --------------------------------- 340 ----------------------------- */
 @media (max-width: 340px) {
   .section {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
+  }
+
+  .courses  {
+    margin-bottom: 20px;
   }
 
   .container {
