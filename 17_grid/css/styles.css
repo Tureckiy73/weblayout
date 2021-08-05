@@ -16,10 +16,6 @@
   font-style: normal;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .section {
   margin-bottom: 80px;
 }
@@ -31,8 +27,6 @@
 
 *, *:after, *:before {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 html {
@@ -57,7 +51,7 @@ body {
   color: var(--main-text-color);
 }
 
-.header-reset {
+.header-reset, .p-reset {
   margin: 0;
 }
 
@@ -67,6 +61,8 @@ body {
 
 .list-reset {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .img-setup {
@@ -117,101 +113,20 @@ body {
 }
 
 .header__item:last-child {
-  padding-right: 0;
+  padding-right: 0 !important;
+}
+
+.header__item:first-child {
+  padding-left: 0 !important;
 }
 
 /* ----------------------------- burger -------------------------------------- */
 .header__burger-btn {
-  margin-left: auto;
   display: none;
-  transition: .5s ease;
-  background-color: var(--main-theme-color);
-  transition-property: fill, width;
-  transform: rotate(180deg);
-}
-
-.header__burger-btn:active rect {
-  fill: yellow;
-}
-.header__burger-btn:active rect:nth-child(2) {
-  width: 25px;
-}
-.header__burger-btn:active rect:nth-child(1) {
-  width: 18px;
-}
-
-.header__burger-menu {
-  position: absolute;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  display: none;
-  width: 100%;
-  min-width: 320px;
-  min-height: 555px;
-  padding: 30px 20px 50px 15px;
-  background-color: #2F2C45;
-  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
-  transition: transform .3s ease-in-out;
-  transform: translateX(-100%);
-}
-
-.header__burger-isactive {
-  transform: none;
 }
 
 .header__cross {
-  display: block;
-  margin-left: auto;
-  margin-bottom: 28px;
-  border: unset;
-  background-color: #2F2C45;
-  cursor: pointer;
-  transition: .3s ease;
-  transition-property: fill;
-}
-
-.header__cross:hover, .header__cross:active rect{
-  fill: yellow;
-}
-
-.header__burger-link {
-  border-bottom: transparent solid 2px;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--contrast-text-color);
-  transition: .3s ease;
-  transition-property: border-bottom-color, color;
-}
-
-.header__burger-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.header__burger-item {
-  display: inline-block;
-  padding-bottom: 10px;
-  border-bottom: transparent solid 2px;
-  transition: .3s ease;
-  transition-property: border-bottom-color;
-}
-
-.header__burger-link:hover {
-  border-bottom-color: yellow;
-}
-
-.header__burger-link:active {
-  border-bottom-color: red;
-  color: yellow;
-}
-
-.header__burger-link:active {
-  color: yellow;
-}
-
-.header__burger-item:not(:last-child) {
-  margin-bottom: 56px;
+  display: none;
 }
 
 /* ------------------------------- hero --------------------------------- */
@@ -663,6 +578,92 @@ body {
   .courses  {
     margin-bottom: 20px;
   }
+
+  /* ----------------------------- burger -------------------------------------- */
+  .header {
+    position: relative;
+  }
+
+  .header__burger-btn {
+    margin-left: auto;
+    display: block;
+    transition: .5s ease;
+    background-color: var(--main-theme-color);
+    transition-property: fill, width;
+    transform: rotate(180deg);
+  }
+
+  .header__burger-btn:active rect {
+    fill: yellow;
+  }
+  .header__burger-btn:active rect:nth-child(2) {
+    width: 25px;
+  }
+  .header__burger-btn:active rect:nth-child(1) {
+    width: 18px;
+  }
+
+  .header__burger-menu {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-width: 320px;
+    height: 450px;
+    padding: 30px 20px 50px 15px;
+    background-color: #2F2C45;
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+    transition: transform .3s ease-in-out;
+    transform: translateX(-100%);
+  }
+
+  .header__burger-isactive {
+    transform: none;
+  }
+
+  .header__cross {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 28px;
+    border: unset;
+    background-color: #2F2C45;
+    cursor: pointer;
+  }
+
+  .header__burger-link {
+    border-bottom: transparent solid 2px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--contrast-text-color);
+    transition: .3s ease;
+    transition-property: border-bottom-color, color;
+  }
+
+  .header__burger-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__burger-item {
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: transparent solid 2px;
+    transition: .3s ease;
+    transition-property: border-bottom-color;
+  }
+
+  .header__item {
+    padding-left: 0 !important;
+  }
+
+  .header__burger-link:hover {
+    border-bottom-color: yellow;
+  }
+
+  .header__burger-item:not(:last-child) {
+    margin-bottom: 56px;
+  }
 }
 
 /* --------------------------------- 340 ----------------------------- */
@@ -691,11 +692,14 @@ body {
 
   .hero__header {
     font-size: 30px;
+    margin-bottom: 15px;
     max-width: 100%;
   }
 
   .hero__description-text {
+    margin-bottom: 50px;
     max-width: 100%;
+    font-size: 16px;
   }
 
   .advantages__info-title {

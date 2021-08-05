@@ -14,18 +14,24 @@
     <div class="header__container container">
       <nav class="header__nav row justify-content-between">
         <a href="#" class="link-reset header__skillbox-link col-12 col-sm-3">Skillbox</a>
-        <div class="header__list-block col-12 col-sm-9">
-          <ul class="list-reset header__list row justify-content-end">
-            <li class="header__item col-auto px-lg-4 px-md-3 px-sm-2">
+        <div id="menu" class="header__list-block header__burger-menu col-12 col-sm-9">
+          <button id="cross" class="header__cross" aria-label="закрыть меню-бургер">
+            <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2.09082" width="29.5699" height="2.95699" transform="rotate(45 2.09082 0)" fill="#fff"/>
+              <rect y="20.9092" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9092)" fill="#fff"/>
+            </svg>
+          </button>
+          <ul class="list-reset header__list header__burger-list row justify-content-end">
+            <li class="header__item header__burger-item col-auto px-lg-4 px-md-3 px-sm-2">
               <a class="link-reset header__nav-link" href="#">Главная</a>
             </li>
-            <li class="header__item col-auto px-lg-4 px-md-3 px-sm-2">
+            <li class="header__item header__burger-item col-auto px-lg-4 px-md-3 px-sm-2">
               <a class="link-reset header__nav-link" href="#">О нас</a>
             </li>
-            <li class="header__item col-auto px-lg-4 px-md-3 px-sm-2">
+            <li class="header__item header__burger-item col-auto px-lg-4 px-md-3 px-sm-2">
               <a class="link-reset header__nav-link" href="#">Преподаватели</a>
             </li>
-            <li class="header__item col-auto px-lg-4 px-md-3 px-sm-2">
+            <li class="header__item header__burger-item col-auto px-lg-4 px-md-3 px-sm-2">
               <a class="link-reset header__nav-link" href="#">Курсы</a>
             </li>
           </ul>
@@ -38,30 +44,6 @@
           <rect y="20" width="30" height="3" fill="#fff"/>
         </svg>
       </button>
-      <div id="menu" class="header__burger-menu">
-        <button id="cross" class="header__cross" aria-label="закрыть меню-бургер">
-          <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2.09082" width="29.5699" height="2.95699" transform="rotate(45 2.09082 0)" fill="#fff"/>
-            <rect y="20.9092" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9092)" fill="#fff"/>
-          </svg>
-        </button>
-        <nav class="header__burger-navigation">
-          <ul class="list-reset header__burger-list">
-            <li class="list-reset header__burger-item">
-              <a class="link-reset header__burger-link" href="#">Главная</a>
-            </li>
-            <li class="list-reset header__burger-item">
-              <a class="link-reset header__burger-link" href="#">О нас</a>
-            </li>
-            <li class="list-reset header__burger-item">
-              <a class="link-reset header__burger-link" href="#">Преподаватели</a>
-            </li>
-            <li class="list-reset header__burger-item">
-              <a class="link-reset header__burger-link" href="#">Курсы</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
     </div>
   </header>
 
@@ -71,7 +53,7 @@
         <div class="row">
           <div class="col-12">
             <h1 class="header-reset hero__header">Курсы 3D моделирования</h1>
-            <p class="hero__description-text">Следует отметить, что существующая теория способствует повышению качества благоприятных перспектив. Не следует, однако, забывать.</p>
+            <p class="p-reset hero__description-text">Следует отметить, что существующая теория способствует повышению качества благоприятных перспектив. Не следует, однако, забывать.</p>
             <a class="link-reset button-link hero__button-link" href="#">Выбрать курс</a>
           </div>
         </div>
@@ -84,24 +66,24 @@
           <div class="col-12">
             <div class="advantages__info">
               <h2 class="header-reset advantages__info-title">Преимущества обучения в skillbox</h2>
-              <p class="advantages__info-text">Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут рассмотрены исключительно в разрезе маркетинговых предпосылок.
+              <p class="p-reset advantages__info-text">Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут рассмотрены исключительно в разрезе маркетинговых предпосылок.
               </p>
             </div>
           </div>
         </div>
         <ul class="list-reset advantages__list row">
           <li class="advantages__item col-12 col-sm-4">
-            <p class="advantages__item-goal">
+            <p class="p-reset advantages__item-goal">
               Результат вашего обучения является самым важным для нас приоритетом
             </p>
           </li>
           <li class="advantages__item col-12 col-sm-4">
-            <p class="advantages__item-acquaintance">
+            <p class="p-reset advantages__item-acquaintance">
               Лично познакомитесь с одним из своих будущих преподавателей
             </p>
           </li>
           <li class="advantages__item col-12 col-sm-4">
-            <p class="advantages__item-attention">
+            <p class="p-reset advantages__item-attention">
               Значимость этих проблем очевидна, поэтому стоит всегда быть внимательным
             </p>
           </li>
@@ -120,7 +102,7 @@
                 <img class="lecturers__photo" src="img/lecturer_petrov.jpg" alt="Владимир Петров">
               </picture>
               <h3 class="header-reset lecturers__sub-title">Владимир Петров</h3>
-              <p class="lecturers__text">Лишь непосредственные участники технического прогресса неоднозначны и будут в равной степени предоставлены сами себе.</p>
+              <p class="p-reset lecturers__text">Лишь непосредственные участники технического прогресса неоднозначны и будут в равной степени предоставлены сами себе.</p>
             </div>
           </li>
           <li class="lecturers__card-block col-12 col-sm-6 col-lg-3">
@@ -130,7 +112,7 @@
                 <img class="lecturers__photo" src="img/lecturer_sergeev.jpg" alt="Денис Сергеев">
               </picture>
               <h3 class="header-reset lecturers__sub-title">Денис Сергеев</h3>
-              <p class="lecturers__text">Безусловно, разбавленное изрядной долей эмпатии, рациональное мышление.</p>
+              <p class="p-reset lecturers__text">Безусловно, разбавленное изрядной долей эмпатии, рациональное мышление.</p>
             </div>
           </li>
           <li class="lecturers__card-block col-12 col-sm-6 col-lg-3">
@@ -140,7 +122,7 @@
                 <img class="lecturers__photo" src="img/lecturer_andreev.jpg" alt="Михаил Андреев">
               </picture>
               <h3 class="header-reset lecturers__sub-title">Михаил Андреев</h3>
-              <p class="lecturers__text">Ясность нашей позиции очевидна: высокое качество позиционных исследований напрямую зависит от вывода.</p>
+              <p class="p-reset lecturers__text">Ясность нашей позиции очевидна: высокое качество позиционных исследований напрямую зависит от вывода.</p>
             </div>
           </li>
           <li class="lecturers__card-block col-12 col-sm-6 col-lg-3">
@@ -150,7 +132,7 @@
                 <img class="lecturers__photo" src="img/lecturer_dmitiev.jpg" alt="Константин Дмитриев">
               </picture>
               <h3 class="header-reset lecturers__sub-title">Константин Дмитриев</h3>
-              <p class="lecturers__text">Мы вынуждены отталкиваться от того, что существующая теория, в своём классическом представлении.</p>
+              <p class="p-reset lecturers__text">Мы вынуждены отталкиваться от того, что существующая теория, в своём классическом представлении.</p>
             </div>
           </li>
         </ul>
@@ -164,28 +146,28 @@
           <li class="courses__card-block col-12 col-sm-6">
             <div class="courses__card courses__card--cinema">
               <h3 class="courses__sub-title">Cinema 4d для начинающих</h3>
-              <p class="courses__text">Учитывая ключевые сценарии поведения, базовый вектор развития напрямую зависит от системы массового участия. Следует отметить, что сложившаяся структура организации напрямую зависит от стандартных подходов.</p>
+              <p class="p-reset courses__text">Учитывая ключевые сценарии поведения, базовый вектор развития напрямую зависит от системы массового участия. Следует отметить, что сложившаяся структура организации напрямую зависит от стандартных подходов.</p>
               <a class="link-reset courses__button" href="#">Подробнее</a>
             </div>
           </li>
           <li class="courses__card-block col-12 col-sm-6">
             <div class="courses__card courses__card--blender">
               <h3 class="header-reset courses__sub-title">Blender: продвинутый уровень</h3>
-              <p class="courses__text">Но убеждённость некоторых оппонентов в значительной степени обусловливает важность форм воздействия. Внезапно, тщательные исследования конкурентов представлены.</p>
+              <p class="p-reset courses__text">Но убеждённость некоторых оппонентов в значительной степени обусловливает важность форм воздействия. Внезапно, тщательные исследования конкурентов представлены.</p>
               <a class="link-reset courses__button" href="#">Подробнее</a>
             </div>
           </li>
           <li class="courses__card-block col-12 col-sm-6">
             <div class="courses__card courses__card--3dsmax">
               <h3 class="header-reset courses__sub-title">Визуализация в 3ds Max</h3>
-              <p class="courses__text">Повседневная практика показывает, что сложившаяся структура организации обеспечивает актуальность кластеризации усилий.</p>
+              <p class="p-reset courses__text">Повседневная практика показывает, что сложившаяся структура организации обеспечивает актуальность кластеризации усилий.</p>
               <a class="link-reset courses__button" href="#">Подробнее</a>
             </div>
           </li>
           <li class="courses__card-block col-12 col-sm-6">
             <div class="courses__card courses__card--zbrush">
               <h3 class="header-reset courses__sub-title">Скульптинг в ZBrush</h3>
-              <p class="courses__text">Разнообразный и богатый опыт говорит нам, что граница обучения кадров требует определения и уточнения прогресса профессионального сообщества! В частности, постоянный количественный рост и сфера нашей активности.</p>
+              <p class="p-reset courses__text">Разнообразный и богатый опыт говорит нам, что граница обучения кадров требует определения и уточнения прогресса профессионального сообщества! В частности, постоянный количественный рост и сфера нашей активности.</p>
               <a class="link-reset courses__button" href="#">Подробнее</a>
             </div>
           </li>
@@ -227,7 +209,7 @@
         </ul>
       </div>
       <div class="footer__copyrights row">
-        <p class="footer__copyrights-text col-12">SKILLBOX <span class="footer__copyrights-sign">®</span> 2021</p>
+        <p class="p-reset footer__copyrights-text col-12">SKILLBOX <span class="footer__copyrights-sign">®</span> 2021</p>
       </div>
     </footer>
   </main>
